@@ -1,0 +1,157 @@
+﻿@using WK.TaxFormalizer.Core.Models
+
+@{
+    Layout = null;
+}
+
+    <p id="maintainTransactionTaxesCustomError"></p>
+
+    @(Html.Kendo().Grid<TransactionTaxDetailsModel>()
+                        .Name("transactionTaxDetailsGrid")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(e => e.TaxableSaleAmount).Hidden(true).Format("{0:c3}");
+                            columns.Bound(e => e.TaxableQuantity).Hidden(true);
+                          
+                            columns.Bound(e => e.TaxExemptAmount).Hidden(true).Format("{0:c3}");
+                            columns.Bound(e => e.TaxExemptQuantity).Hidden(true);
+
+                            columns.Bound(e => e.TaxableTaxAmount).Hidden(true).Format("{0:c3}");
+                            columns.Bound(e => e.NonTaxableAmount).Hidden(true).Format("{0:c3}");
+                            columns.Bound(e => e.NonTaxableQuantity).Hidden(true);
+
+                            columns.Bound(e => e.PassOnRule).Hidden(true);
+                            columns.Bound(e => e.AppearsOnBillAs).Hidden(true);
+                            columns.Bound(e => e.TaxIsImposedOn).Hidden(true);
+
+                            columns.Bound(o => o.SystemOrCustom).Title("S/C*").Width(90)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.TaxAuthorityDescription).Width(150).Title("Tax Authority")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.TaxTypeDescription).Title("Tax Type").Width(130)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.TaxCategoryDescription).Width(190).Title("Tax Category")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.TaxApplied).Width(190).Title("Tax Applied")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false))).ClientTemplate("#=FormatAmountInGridColumn(kendo.toString(TaxApplied,'c3'))#");
+                            columns.Bound(o => o.FeeApplied).Title("Fee Applied").Width(120)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false))).ClientTemplate("#=FormatAmountInGridColumn(kendo.toString(FeeApplied,'c3'))#");
+                        })
+                                                                         .Pageable()
+                                                                         .Scrollable()
+                                                                         .Filterable(ftb => ftb.Mode(GridFilterMode.Row))
+                                                                         .Sortable()
+                                                                         .Selectable(t => t.Mode(GridSelectionMode.Single).Type(GridSelectionType.Row))
+                                                                         .Events(events => events.DataBound("TransactionTaxDetailsGrid_On_DataBound").Change("TransactionTaxDetailsGrid_On_Change"))
+                                                                         .AutoBind(true)
+                                                                         .DataSource(dataSource => dataSource
+                                                                             .Ajax()
+                                                                             .PageSize(10)
+                                                                             .Model(model =>
+                                                                                 {
+                                                                                     model.Id(p => p.TransactionId);
+                                                                                 })
+                                                                             .Sort(sort => sort.Add(x => x.TransactionId).Descending())
+                                                                             .ServerOperation(true)
+                                                                          .Events(events => events.Error("TransactionTaxDetailsGrid_error_handler"))
+                                                                          .Read(read => read.Action("TransactionTaxDetails_Read", "Transactions").Data("getTransactionId").Type(HttpVerbs.Post)))
+                        )
+
+    <label style="margin-top:12px;">*S/C- system or sustom</label>
+
+    <div id="divTransactionTaxDetails">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxApplied" class="control-label col-xs-4">Tax applied:</label>
+                        <label id="lblTransactionTaxAppliedVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxableSaleAmount" class="control-label col-xs-4">Taxable sale amt:</label>
+                        <label id="lblTransactionTaxableSaleAmountVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxableQuantity" class="control-label col-xs-4">Taxable quantity:</label>
+                        <label id="lblTransactionTaxableQuantityVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionFeeApplied" class="control-label col-xs-4">Fee applied:</label>
+                        <label id="lblTransactionFeeAppliedVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 transinfo ">
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxExemptAmount" class="control-label col-xs-4">Tax exempt amt:</label>
+                        <label id="lblTransactionTaxExemptAmountVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxExemptQuantity" class="control-label col-xs-4">Tax exempt qty:</label>
+                        <label id="lblTransactionTaxExemptQuantityVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxableTaxAmount" class="control-label col-xs-4">Taxable tax amt:</label>
+                        <label id="lblTransactionTaxableTaxAmountVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionNonTaxableAmount" class="control-label col-xs-4">Non taxable amt:</label>
+                        <label id="lblTransactionNonTaxableAmountVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 transinfo">
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionNonTaxableQuantity" class="control-label col-xs-4">Non taxable qty:</label>
+                        <label id="lblTransactionNonTaxableQuantityVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionPassOnRule" class="control-label col-xs-4">Pass on rule:</label>
+                        <label id="lblTransactionPassOnRuleVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionAppearsOnBillAs" class="control-label col-xs-4">Appears on bill as:</label>
+                        <label id="lblTransactionAppearsOnBillAsVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="row">
+                        <label id="lblTransactionTaxIsImposedOn" class="control-label col-xs-4">Tax is imposed on:</label>
+                        <label id="lblTransactionTaxIsImposedOnVal" class="col-xs-5 trans_details"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

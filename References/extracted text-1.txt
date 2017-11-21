@@ -1,0 +1,17 @@
+WK MATTERS
+May 12, 2016
+INVOICE# 98123
+Bill To
+Customer Niranjan Bhurke Customer ID# 007
+Address Academy Dr, Daphne, Baldwin, Alabama, us, 36526
+Ship To
+Recipient Niranjan Bhurke
+Address Academy Dr, Daphne, Baldwin, Alabama, us, 36526
+Qty. Item# Description Unit Price Discount Line Total
+1 1 iPhone-6S $749 $0 $749
+1 2 iWatch $349 $0 $349
+Total Discount $0
+Subtotal $1098
+Sales Tax $104.31
+Total $1202.31
+Thank you for your business!

@@ -1,0 +1,63 @@
+﻿/*Created on 09-05-2014. Author: Kunal Deshmukh*/
+
+body {
+}
+/*Custom CSS*/
+.sidebar-default {
+    background-color: AppWorkspace;
+}
+
+.nav-tabs-text {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+
+
+/*Boot Strap Overrides for navigation*/
+.nav {
+    padding-top: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: Tahoma;
+    color: white;
+}
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 3px 15px 3px 15px;
+    }
+
+.nav-tabs {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav > li > a {
+    background-color: #0184c3;
+    border-bottom-color: #f0f0f0;
+    font-family: Tahoma;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    border-color: #07a7fe #07a7fe #07a7fe;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: #07a7fe #07a7fe #07a7fe;
+    border-bottom-color: #f0f0f0;
+    background-color: #01608f;
+    font-family: Tahoma;
+    color: #f0f0f0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    font-family: Tahoma;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+    border: 1px solid #f0f0f0;
+    border-bottom-color: transparent;
+}

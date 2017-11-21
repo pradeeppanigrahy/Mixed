@@ -1,0 +1,1816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STO4DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DIVISIONT">
+    <Key>
+      <PropertyRef Name="DivisionSurrogate" />
+    </Key>
+    <Property Name="DivisionSurrogate" Type="Int32" Nullable="false" />
+    <Property Name="DIVISION_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ACOPDS" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Plus4" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="EntitySurrogate" Type="Int32" />
+    <NavigationProperty Name="ENTITYT" Relationship="Self.DIVISIONT_2_FK" FromRole="DIVISIONT" ToRole="ENTITYT" />
+    <NavigationProperty Name="TransLogTs" Relationship="Self.TransLogT_FK" FromRole="DIVISIONT" ToRole="TransLogT" />
+    <NavigationProperty Name="ProductItemT" Relationship="STO4DBModel.DIVISIONT_FK" FromRole="DIVISIONT" ToRole="ProductItemT" />
+    <NavigationProperty Name="ExemptionClassTs" Relationship="STO4DBModel.ExemptionClassT_FK" FromRole="DIVISIONT" ToRole="ExemptionClassT" />
+    <NavigationProperty Name="TaxabilityOverrideTs" Relationship="STO4DBModel.TaxabilityOverrideT_FK" FromRole="DIVISIONT" ToRole="TaxabilityOverrideT" />
+  </EntityType>
+  <EntityType Name="ENTITYT">
+    <Key>
+      <PropertyRef Name="EntitySurrogate" />
+    </Key>
+    <Property Name="ACORDS" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="EntitySurrogate" Type="Int32" Nullable="false" />
+    <Property Name="ENTITY_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Plus4" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ItemID" Type="Int32" />
+    <NavigationProperty Name="DIVISIONTs" Relationship="Self.DIVISIONT_2_FK" FromRole="ENTITYT" ToRole="DIVISIONT" />
+    <NavigationProperty Name="ProductItemT" Relationship="STO4DBModel.ENTITYT_FK" FromRole="ENTITYT" ToRole="ProductItemT" />
+    <NavigationProperty Name="ProductGroupTs" Relationship="STO4DBModel.ProductGroupT_FK" FromRole="ENTITYT" ToRole="ProductGroupT" />
+    <NavigationProperty Name="TaxAuthorityTaxTs" Relationship="STO4DBModel.TaxAuthorityTaxT_FK" FromRole="ENTITYT" ToRole="TaxAuthorityTaxT" />
+  </EntityType>
+  <EntityType Name="TransErrorLogT">
+    <Key>
+      <PropertyRef Name="ErrorLogID" />
+    </Key>
+    <Property Name="ErrorLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorCode" Type="Int32" />
+    <Property Name="ErrorClass" Type="Int32" />
+    <Property Name="TransactionID" Type="Int32" />
+    <Property Name="ErrorShortMessage" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorLevel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ErrorLongMessage" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="UsrLineItemID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TSINS" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TransItemAT">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="LineItemID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="LineItemID" Type="Int32" Nullable="false" />
+    <Property Name="ProductGroup" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Item" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="UserData" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Customer" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Provider" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="SitusSolicitedOutside" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusCanRejectDelivery" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusFOB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusMailOrder" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusDeliveryBy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusShipFromPOB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OriginalLineItemID" Type="Int32" />
+    <NavigationProperty Name="TransItemT" Relationship="Self.TransItemAT_FK" FromRole="TransItemAT" ToRole="TransItemT" />
+  </EntityType>
+  <EntityType Name="TransItemT">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="LineItemID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="LineItemID" Type="Int32" Nullable="false" />
+    <Property Name="UsrLineItemID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SKUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="AvgUnitPrice" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="LineItemAmount" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="CLASSCODE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NXSShipToGeoID" Type="Int32" />
+    <Property Name="NXSShipFromGeoID" Type="Int32" />
+    <Property Name="OrderPlacementGeoID" Type="Int32" />
+    <Property Name="OrderApprovalGeoID" Type="Int32" />
+    <Property Name="LocationSurrogate" Type="Int32" />
+    <Property Name="DataString" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="OrderApprovalAddressId" Type="Int32" />
+    <Property Name="OrderPlacementAddressId" Type="Int32" />
+    <Property Name="ShipFromAddressId" Type="Int32" />
+    <Property Name="ShipToAddressId" Type="Int32" />
+    <NavigationProperty Name="TransItemAT" Relationship="Self.TransItemAT_FK" FromRole="TransItemT" ToRole="TransItemAT" />
+    <NavigationProperty Name="TransLogT" Relationship="Self.TransItemT_FK" FromRole="TransItemT" ToRole="TransLogT" />
+    <NavigationProperty Name="TransItemTaxTs" Relationship="Self.TransItemTaxT_FK" FromRole="TransItemT" ToRole="TransItemTaxT" />
+  </EntityType>
+  <EntityType Name="TransItemTaxT">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="LineItemID" />
+      <PropertyRef Name="TaxID" />
+      <PropertyRef Name="TaxRateID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="LineItemID" Type="Int32" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="TaxRateID" Type="Int32" Nullable="false" />
+    <Property Name="CONTRIBUTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TaxableAmount" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="ExemptTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="NonTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="TaxableQuantity" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="ExemptTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="NonTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="TaxApplied3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="FeeApplied3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="TaxableTaxAmount3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="CT39zA" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Situs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CustomTransInfo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NonTaxReason" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CEMCertificateID" Type="Int32" />
+    <Property Name="PartialRateID" Type="Int32" />
+    <Property Name="ReducedRateID" Type="Int32" />
+    <Property Name="RateChangeType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TaxRate" Type="Decimal" Precision="17" Scale="6" />
+    <NavigationProperty Name="TransItemT" Relationship="Self.TransItemTaxT_FK" FromRole="TransItemTaxT" ToRole="TransItemT" />
+    <NavigationProperty Name="TransTaxOnTaxTs" Relationship="Self.TransTaxOnTaxT_FK" FromRole="TransItemTaxT" ToRole="TransTaxOnTaxT" />
+    <NavigationProperty Name="TaxAuthorityTaxT" Relationship="STO4DBModel.TransItemTaxT_2_FK" FromRole="TransItemTaxT" ToRole="TaxAuthorityTaxT" />
+    <NavigationProperty Name="TaxRateT" Relationship="STO4DBModel.TransItemTaxT_3_FK" FromRole="TransItemTaxT" ToRole="TaxRateT" />
+  </EntityType>
+  <EntityType Name="TransLogT">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionSurrogate" Type="Int32" />
+    <Property Name="InvoiceID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="TransactionDate" Type="DateTime" Precision="3" />
+    <Property Name="SourceSystem" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionStatus" Type="Int16" />
+    <Property Name="TransactionType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="LiabilityType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TestTransaction" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NXSShipToGeoID" Type="Int32" />
+    <Property Name="NXSShipFromGeoID" Type="Int32" />
+    <Property Name="OrderPlacementGeoID" Type="Int32" />
+    <Property Name="OrderApprovalGeoID" Type="Int32" />
+    <Property Name="SitusSolicitedOutside" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusCanRejectDelivery" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusFOB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusMailOrder" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusDeliveryBy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusShipFromPOB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CustomerID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Customer" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Provider" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="OriginalTransactionID" Type="Int64" />
+    <Property Name="SUID" Type="Int32" />
+    <Property Name="TransactionDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="TSINS" Type="DateTime" Precision="3" />
+    <Property Name="TSCHG" Type="DateTime" Precision="3" />
+    <Property Name="OrderApprovalAddressId" Type="Int32" />
+    <Property Name="OrderPlacementAddressId" Type="Int32" />
+    <Property Name="ShipFromAddressId" Type="Int32" />
+    <Property Name="ShipToAddressId" Type="Int32" />
+    <Property Name="TransactionReturnStatus" Type="Int32" />
+    <NavigationProperty Name="DIVISIONT" Relationship="Self.TransLogT_FK" FromRole="TransLogT" ToRole="DIVISIONT" />
+    <NavigationProperty Name="TransItemTs" Relationship="Self.TransItemT_FK" FromRole="TransLogT" ToRole="TransItemT" />
+    <NavigationProperty Name="USERPROFILET" Relationship="Self.TransLogT_2_FK" FromRole="TransLogT" ToRole="USERPROFILET" />
+    <NavigationProperty Name="TransTaxTs" Relationship="STO4DBModel.TransTaxT_FK" FromRole="TransLogT" ToRole="TransTaxT" />
+  </EntityType>
+  <EntityType Name="TransTaxOnTaxT">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="LineItemID" />
+      <PropertyRef Name="TaxID" />
+      <PropertyRef Name="TaxRateID" />
+      <PropertyRef Name="ContributingTransactionID" />
+      <PropertyRef Name="ContributingLineItemID" />
+      <PropertyRef Name="CONTRIBUTING_TAXID" />
+      <PropertyRef Name="CONTRIBUTING_TAXRATEID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="LineItemID" Type="Int32" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="TaxRateID" Type="Int32" Nullable="false" />
+    <Property Name="ContributingTransactionID" Type="Int64" Nullable="false" />
+    <Property Name="ContributingLineItemID" Type="Int32" Nullable="false" />
+    <Property Name="CONTRIBUTING_TAXID" Type="Int32" Nullable="false" />
+    <Property Name="CONTRIBUTING_TAXRATEID" Type="Int32" Nullable="false" />
+    <Property Name="TaxableTaxAmount3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="TaxAmount" Type="Decimal" Precision="17" Scale="6" />
+    <NavigationProperty Name="TransItemTaxT" Relationship="Self.TransTaxOnTaxT_FK" FromRole="TransTaxOnTaxT" ToRole="TransItemTaxT" />
+  </EntityType>
+  <EntityType Name="USERPROFILET">
+    <Key>
+      <PropertyRef Name="SUID" />
+    </Key>
+    <Property Name="SUID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="APPLICATION_LOGIN_ID" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="PWDCNL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ACUSER" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ACFNAM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ACMNAM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ACLNAM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ACPEDT" Type="DateTime" Precision="3" />
+    <Property Name="ACPXDT" Type="DateTime" Precision="3" />
+    <Property Name="PasswordHash" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ACUPPD" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="ACPCDT" Type="DateTime" Precision="3" />
+    <Property Name="ACALYWSLOG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PhExt" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="IsLocked" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TransLogTs" Relationship="Self.TransLogT_2_FK" FromRole="USERPROFILET" ToRole="TransLogT" />
+  </EntityType>
+  <Association Name="DIVISIONT_2_FK">
+    <End Role="ENTITYT" Type="Self.ENTITYT" Multiplicity="0..1" />
+    <End Role="DIVISIONT" Type="Self.DIVISIONT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENTITYT">
+        <PropertyRef Name="EntitySurrogate" />
+      </Principal>
+      <Dependent Role="DIVISIONT">
+        <PropertyRef Name="EntitySurrogate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransLogT_FK">
+    <End Role="DIVISIONT" Type="Self.DIVISIONT" Multiplicity="0..1" />
+    <End Role="TransLogT" Type="Self.TransLogT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIVISIONT">
+        <PropertyRef Name="DivisionSurrogate" />
+      </Principal>
+      <Dependent Role="TransLogT">
+        <PropertyRef Name="DivisionSurrogate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransItemAT_FK">
+    <End Role="TransItemT" Type="Self.TransItemT" Multiplicity="1" />
+    <End Role="TransItemAT" Type="Self.TransItemAT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TransItemT">
+        <PropertyRef Name="TransactionID" />
+        <PropertyRef Name="LineItemID" />
+      </Principal>
+      <Dependent Role="TransItemAT">
+        <PropertyRef Name="TransactionID" />
+        <PropertyRef Name="LineItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransItemT_FK">
+    <End Role="TransLogT" Type="Self.TransLogT" Multiplicity="1" />
+    <End Role="TransItemT" Type="Self.TransItemT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransLogT">
+        <PropertyRef Name="TransactionID" />
+      </Principal>
+      <Dependent Role="TransItemT">
+        <PropertyRef Name="TransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransItemTaxT_FK">
+    <End Role="TransItemT" Type="Self.TransItemT" Multiplicity="1" />
+    <End Role="TransItemTaxT" Type="Self.TransItemTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransItemT">
+        <PropertyRef Name="TransactionID" />
+        <PropertyRef Name="LineItemID" />
+      </Principal>
+      <Dependent Role="TransItemTaxT">
+        <PropertyRef Name="TransactionID" />
+        <PropertyRef Name="LineItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransTaxOnTaxT_FK">
+    <End Role="TransItemTaxT" Type="Self.TransItemTaxT" Multiplicity="1" />
+    <End Role="TransTaxOnTaxT" Type="Self.TransTaxOnTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransItemTaxT">
+        <PropertyRef Name="TransactionID" />
+        <PropertyRef Name="LineItemID" />
+        <PropertyRef Name="TaxID" />
+        <PropertyRef Name="TaxRateID" />
+      </Principal>
+      <Dependent Role="TransTaxOnTaxT">
+        <PropertyRef Name="TransactionID" />
+        <PropertyRef Name="LineItemID" />
+        <PropertyRef Name="TaxID" />
+        <PropertyRef Name="TaxRateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransLogT_2_FK">
+    <End Role="USERPROFILET" Type="Self.USERPROFILET" Multiplicity="0..1" />
+    <End Role="TransLogT" Type="Self.TransLogT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERPROFILET">
+        <PropertyRef Name="SUID" />
+      </Principal>
+      <Dependent Role="TransLogT">
+        <PropertyRef Name="SUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="STO4DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DIVISIONTs" EntityType="Self.DIVISIONT" />
+    <EntitySet Name="ENTITYTs" EntityType="Self.ENTITYT" />
+    <EntitySet Name="TransErrorLogTs" EntityType="Self.TransErrorLogT" />
+    <EntitySet Name="TransItemATs" EntityType="Self.TransItemAT" />
+    <EntitySet Name="TransItemTs" EntityType="Self.TransItemT" />
+    <EntitySet Name="TransItemTaxTs" EntityType="Self.TransItemTaxT" />
+    <EntitySet Name="TransLogTs" EntityType="Self.TransLogT" />
+    <EntitySet Name="TransTaxOnTaxTs" EntityType="Self.TransTaxOnTaxT" />
+    <EntitySet Name="USERPROFILETs" EntityType="Self.USERPROFILET" />
+    <AssociationSet Name="DIVISIONT_2_FK" Association="Self.DIVISIONT_2_FK">
+      <End Role="ENTITYT" EntitySet="ENTITYTs" />
+      <End Role="DIVISIONT" EntitySet="DIVISIONTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransLogT_FK" Association="Self.TransLogT_FK">
+      <End Role="DIVISIONT" EntitySet="DIVISIONTs" />
+      <End Role="TransLogT" EntitySet="TransLogTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransItemAT_FK" Association="Self.TransItemAT_FK">
+      <End Role="TransItemT" EntitySet="TransItemTs" />
+      <End Role="TransItemAT" EntitySet="TransItemATs" />
+    </AssociationSet>
+    <AssociationSet Name="TransItemT_FK" Association="Self.TransItemT_FK">
+      <End Role="TransLogT" EntitySet="TransLogTs" />
+      <End Role="TransItemT" EntitySet="TransItemTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransItemTaxT_FK" Association="Self.TransItemTaxT_FK">
+      <End Role="TransItemT" EntitySet="TransItemTs" />
+      <End Role="TransItemTaxT" EntitySet="TransItemTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransTaxOnTaxT_FK" Association="Self.TransTaxOnTaxT_FK">
+      <End Role="TransItemTaxT" EntitySet="TransItemTaxTs" />
+      <End Role="TransTaxOnTaxT" EntitySet="TransTaxOnTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransLogT_2_FK" Association="Self.TransLogT_2_FK">
+      <End Role="USERPROFILET" EntitySet="USERPROFILETs" />
+      <End Role="TransLogT" EntitySet="TransLogTs" />
+    </AssociationSet>
+    <EntitySet Name="TaxonTaxTs" EntityType="STO4DBModel.TaxonTaxT" />
+    <EntitySet Name="TransactionTypeTs" EntityType="STO4DBModel.TransactionTypeT" />
+    <EntitySet Name="TransTaxTs" EntityType="STO4DBModel.TransTaxT" />
+    <EntitySet Name="TransactionStatusTs" EntityType="STO4DBModel.TransactionStatusT" />
+    <AssociationSet Name="TransTaxT_FK" Association="STO4DBModel.TransTaxT_FK">
+      <End Role="TransLogT" EntitySet="TransLogTs" />
+      <End Role="TransTaxT" EntitySet="TransTaxTs" />
+    </AssociationSet>
+    <EntitySet Name="CustomerTs" EntityType="STO4DBModel.CustomerT" />
+    <EntitySet Name="ExemptionClassTs" EntityType="STO4DBModel.ExemptionClassT" />
+    <EntitySet Name="Geocode1T" EntityType="STO4DBModel.Geocode1T" />
+    <EntitySet Name="Geocode2T" EntityType="STO4DBModel.Geocode2T" />
+    <EntitySet Name="ProductGroupTs" EntityType="STO4DBModel.ProductGroupT" />
+    <EntitySet Name="ProductItemTs" EntityType="STO4DBModel.ProductItemT" />
+    <EntitySet Name="ProviderTs" EntityType="STO4DBModel.ProviderT" />
+    <EntitySet Name="ReleaseTs" EntityType="STO4DBModel.ReleaseT" />
+    <EntitySet Name="TaxabilityStateTs" EntityType="STO4DBModel.TaxabilityStateT" />
+    <EntitySet Name="TaxabilityTs" EntityType="STO4DBModel.TaxabilityT" />
+    <EntitySet Name="TaxAuthorityTs" EntityType="STO4DBModel.TaxAuthorityT" />
+    <EntitySet Name="TaxAuthorityTaxTs" EntityType="STO4DBModel.TaxAuthorityTaxT" />
+    <EntitySet Name="TaxCatTs" EntityType="STO4DBModel.TaxCatT" />
+    <EntitySet Name="TaxJurisdictionTs" EntityType="STO4DBModel.TaxJurisdictionT" />
+    <EntitySet Name="TaxOverrideReasonTs" EntityType="STO4DBModel.TaxOverrideReasonT" />
+    <EntitySet Name="TaxRateTs" EntityType="STO4DBModel.TaxRateT" />
+    <EntitySet Name="TaxTypeTs" EntityType="STO4DBModel.TaxTypeT" />
+    <EntitySet Name="ExemptionClassesTs" EntityType="STO4DBModel.ExemptionClassesT" />
+    <EntitySet Name="FOBTypeTs" EntityType="STO4DBModel.FOBTypeT" />
+    <EntitySet Name="LiabilityTypeTs" EntityType="STO4DBModel.LiabilityTypeT" />
+    <EntitySet Name="MailOrderTypeTs" EntityType="STO4DBModel.MailOrderTypeT" />
+    <EntitySet Name="NonTaxReasonTs" EntityType="STO4DBModel.NonTaxReasonT" />
+    <EntitySet Name="TransLog1" EntityType="STO4DBModel.TransLog1" />
+    <AssociationSet Name="CustomerT_FK" Association="STO4DBModel.CustomerT_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="CustomerT" EntitySet="CustomerTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityStateT_2_FK" Association="STO4DBModel.TaxabilityStateT_2_FK">
+      <End Role="CustomerT" EntitySet="CustomerTs" />
+      <End Role="TaxabilityStateT" EntitySet="TaxabilityStateTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityT_2_FK" Association="STO4DBModel.TaxabilityT_2_FK">
+      <End Role="CustomerT" EntitySet="CustomerTs" />
+      <End Role="TaxabilityT" EntitySet="TaxabilityTs" />
+    </AssociationSet>
+    <AssociationSet Name="DIVISIONT_FK" Association="STO4DBModel.DIVISIONT_FK">
+      <End Role="ProductItemT" EntitySet="ProductItemTs" />
+      <End Role="DIVISIONT" EntitySet="DIVISIONTs" />
+    </AssociationSet>
+    <AssociationSet Name="ExemptionClassT_FK" Association="STO4DBModel.ExemptionClassT_FK">
+      <End Role="DIVISIONT" EntitySet="DIVISIONTs" />
+      <End Role="ExemptionClassT" EntitySet="ExemptionClassTs" />
+    </AssociationSet>
+    <AssociationSet Name="ENTITYT_FK" Association="STO4DBModel.ENTITYT_FK">
+      <End Role="ProductItemT" EntitySet="ProductItemTs" />
+      <End Role="ENTITYT" EntitySet="ENTITYTs" />
+    </AssociationSet>
+    <AssociationSet Name="ProductGroupT_FK" Association="STO4DBModel.ProductGroupT_FK">
+      <End Role="ENTITYT" EntitySet="ENTITYTs" />
+      <End Role="ProductGroupT" EntitySet="ProductGroupTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxAuthorityTaxT_FK" Association="STO4DBModel.TaxAuthorityTaxT_FK">
+      <End Role="ENTITYT" EntitySet="ENTITYTs" />
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="Geocode1T_2_FK" Association="STO4DBModel.Geocode1T_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="Geocode1T" EntitySet="Geocode1T" />
+    </AssociationSet>
+    <AssociationSet Name="Geocode1T_3_FK" Association="STO4DBModel.Geocode1T_3_FK">
+      <End Role="Geocode2T" EntitySet="Geocode2T" />
+      <End Role="Geocode1T" EntitySet="Geocode1T" />
+    </AssociationSet>
+    <AssociationSet Name="Geocode2T_FK" Association="STO4DBModel.Geocode2T_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="Geocode2T" EntitySet="Geocode2T" />
+    </AssociationSet>
+    <AssociationSet Name="TaxJurisdictionT_2_FK" Association="STO4DBModel.TaxJurisdictionT_2_FK">
+      <End Role="Geocode2T" EntitySet="Geocode2T" />
+      <End Role="TaxJurisdictionT" EntitySet="TaxJurisdictionTs" />
+    </AssociationSet>
+    <AssociationSet Name="ProductItemT_FK" Association="STO4DBModel.ProductItemT_FK">
+      <End Role="ProductGroupT" EntitySet="ProductGroupTs" />
+      <End Role="ProductItemT" EntitySet="ProductItemTs" />
+    </AssociationSet>
+    <AssociationSet Name="ProviderT_FK" Association="STO4DBModel.ProviderT_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="ProviderT" EntitySet="ProviderTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityStateT_3_FK" Association="STO4DBModel.TaxabilityStateT_3_FK">
+      <End Role="ProviderT" EntitySet="ProviderTs" />
+      <End Role="TaxabilityStateT" EntitySet="TaxabilityStateTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityT_3_FK" Association="STO4DBModel.TaxabilityT_3_FK">
+      <End Role="ProviderT" EntitySet="ProviderTs" />
+      <End Role="TaxabilityT" EntitySet="TaxabilityTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityStateT_5_FK" Association="STO4DBModel.TaxabilityStateT_5_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxabilityStateT" EntitySet="TaxabilityStateTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityT_5_FK" Association="STO4DBModel.TaxabilityT_5_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxabilityT" EntitySet="TaxabilityTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxAuthorityT_2_FK" Association="STO4DBModel.TaxAuthorityT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxAuthorityT" EntitySet="TaxAuthorityTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxAuthorityTaxT_3_FK" Association="STO4DBModel.TaxAuthorityTaxT_3_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxCatT_2_FK" Association="STO4DBModel.TaxCatT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxCatT" EntitySet="TaxCatTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxJurisdictionT_3_FK" Association="STO4DBModel.TaxJurisdictionT_3_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxJurisdictionT" EntitySet="TaxJurisdictionTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxonTaxT_2_FK" Association="STO4DBModel.TaxonTaxT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxonTaxT" EntitySet="TaxonTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxOverrideReasonT_2_FK" Association="STO4DBModel.TaxOverrideReasonT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxOverrideReasonT" EntitySet="TaxOverrideReasonTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxRateT_2_FK" Association="STO4DBModel.TaxRateT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxRateT" EntitySet="TaxRateTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxTypeT_2_FK" Association="STO4DBModel.TaxTypeT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TaxTypeT" EntitySet="TaxTypeTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransactionTypeT_2_FK" Association="STO4DBModel.TransactionTypeT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="TransactionTypeT" EntitySet="TransactionTypeTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityStateT_4_FK" Association="STO4DBModel.TaxabilityStateT_4_FK">
+      <End Role="TransactionTypeT" EntitySet="TransactionTypeTs" />
+      <End Role="TaxabilityStateT" EntitySet="TaxabilityStateTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityT_4_FK" Association="STO4DBModel.TaxabilityT_4_FK">
+      <End Role="TransactionTypeT" EntitySet="TransactionTypeTs" />
+      <End Role="TaxabilityT" EntitySet="TaxabilityTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityT_FK" Association="STO4DBModel.TaxabilityT_FK">
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+      <End Role="TaxabilityT" EntitySet="TaxabilityTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxAuthorityTaxT_2_FK" Association="STO4DBModel.TaxAuthorityTaxT_2_FK">
+      <End Role="TaxAuthorityT" EntitySet="TaxAuthorityTs" />
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxJurisdictionT_FK" Association="STO4DBModel.TaxJurisdictionT_FK">
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+      <End Role="TaxJurisdictionT" EntitySet="TaxJurisdictionTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxOverrideReasonT_FK" Association="STO4DBModel.TaxOverrideReasonT_FK">
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+      <End Role="TaxOverrideReasonT" EntitySet="TaxOverrideReasonTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransItemTaxT_2_FK" Association="STO4DBModel.TransItemTaxT_2_FK">
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+      <End Role="TransItemTaxT" EntitySet="TransItemTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransTaxT_2_FK" Association="STO4DBModel.TransTaxT_2_FK">
+      <End Role="TaxAuthorityTaxT" EntitySet="TaxAuthorityTaxTs" />
+      <End Role="TransTaxT" EntitySet="TransTaxTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxJurisdictionT_4_FK" Association="STO4DBModel.TaxJurisdictionT_4_FK">
+      <End Role="TaxOverrideReasonT" EntitySet="TaxOverrideReasonTs" />
+      <End Role="TaxJurisdictionT" EntitySet="TaxJurisdictionTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxJurisdictionT_5_FK" Association="STO4DBModel.TaxJurisdictionT_5_FK">
+      <End Role="TaxOverrideReasonT" EntitySet="TaxOverrideReasonTs" />
+      <End Role="TaxJurisdictionT" EntitySet="TaxJurisdictionTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxJurisdictionT_6_FK" Association="STO4DBModel.TaxJurisdictionT_6_FK">
+      <End Role="TaxOverrideReasonT" EntitySet="TaxOverrideReasonTs" />
+      <End Role="TaxJurisdictionT" EntitySet="TaxJurisdictionTs" />
+    </AssociationSet>
+    <AssociationSet Name="TransItemTaxT_3_FK" Association="STO4DBModel.TransItemTaxT_3_FK">
+      <End Role="TaxRateT" EntitySet="TaxRateTs" />
+      <End Role="TransItemTaxT" EntitySet="TransItemTaxTs" />
+    </AssociationSet>
+    <EntitySet Name="LOCATIONTs" EntityType="STO4DBModel.LOCATIONT" />
+    <EntitySet Name="TaxabilityOverrideTs" EntityType="STO4DBModel.TaxabilityOverrideT" />
+    <EntitySet Name="CanRejectDeliveryTypeTs" EntityType="STO4DBModel.CanRejectDeliveryTypeT" />
+    <EntitySet Name="DeliveryByTypeTs" EntityType="STO4DBModel.DeliveryByTypeT" />
+    <EntitySet Name="ShipFromPOBTypeTs" EntityType="STO4DBModel.ShipFromPOBTypeT" />
+    <EntitySet Name="SolicitedOutsideTypeTs" EntityType="STO4DBModel.SolicitedOutsideTypeT" />
+    <EntitySet Name="TransItem5" EntityType="STO4DBModel.TransItem5" />
+    <EntitySet Name="TransItemTax2" EntityType="STO4DBModel.TransItemTax2" />
+    <EntitySet Name="TransTax2" EntityType="STO4DBModel.TransTax2" />
+    <AssociationSet Name="TaxabilityOverrideT_FK" Association="STO4DBModel.TaxabilityOverrideT_FK">
+      <End Role="DIVISIONT" EntitySet="DIVISIONTs" />
+      <End Role="TaxabilityOverrideT" EntitySet="TaxabilityOverrideTs" />
+    </AssociationSet>
+    <EntitySet Name="AddressTs" EntityType="STO4DBModel.AddressT" />
+    <EntitySet Name="CountryTs" EntityType="STO4DBModel.CountryT" />
+    <EntitySet Name="StateTs" EntityType="STO4DBModel.StateT" />
+    <AssociationSet Name="CountryT_2_FK" Association="STO4DBModel.CountryT_2_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="CountryT" EntitySet="CountryTs" />
+    </AssociationSet>
+    <AssociationSet Name="CountryT_FK" Association="STO4DBModel.CountryT_FK">
+      <End Role="Geocode2T" EntitySet="Geocode2T" />
+      <End Role="CountryT" EntitySet="CountryTs" />
+    </AssociationSet>
+    <AssociationSet Name="StateT_FK" Association="STO4DBModel.StateT_FK">
+      <End Role="CountryT" EntitySet="CountryTs" />
+      <End Role="StateT" EntitySet="StateTs" />
+    </AssociationSet>
+    <AssociationSet Name="Geocode1T_FK" Association="STO4DBModel.Geocode1T_FK">
+      <End Role="StateT" EntitySet="StateTs" />
+      <End Role="Geocode1T" EntitySet="Geocode1T" />
+    </AssociationSet>
+    <AssociationSet Name="StateT_2_FK" Association="STO4DBModel.StateT_2_FK">
+      <End Role="Geocode2T" EntitySet="Geocode2T" />
+      <End Role="StateT" EntitySet="StateTs" />
+    </AssociationSet>
+    <AssociationSet Name="StateT_3_FK" Association="STO4DBModel.StateT_3_FK">
+      <End Role="ReleaseT" EntitySet="ReleaseTs" />
+      <End Role="StateT" EntitySet="StateTs" />
+    </AssociationSet>
+    <AssociationSet Name="TaxabilityStateT_FK" Association="STO4DBModel.TaxabilityStateT_FK">
+      <End Role="StateT" EntitySet="StateTs" />
+      <End Role="TaxabilityStateT" EntitySet="TaxabilityStateTs" />
+    </AssociationSet>
+    <EntitySet Name="TransactionInvoiceMappingTs" EntityType="STO4DBModel.TransactionInvoiceMappingT" />
+  </EntityContainer>
+  <EntityType Name="TaxonTaxT">
+    <Key>
+      <PropertyRef Name="BoundaryID" />
+      <PropertyRef Name="BaseTaxType" />
+      <PropertyRef Name="BaseTaxCat" />
+      <PropertyRef Name="TaxType" />
+      <PropertyRef Name="TaxCat" />
+      <PropertyRef Name="LEGALEFFECTIVEDATE" />
+      <PropertyRef Name="ReleaseNo" />
+    </Key>
+    <Property Name="BoundaryID" Type="Int32" Nullable="false" />
+    <Property Name="BaseTaxType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="BaseTaxCat" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCat" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="LEGALEFFECTIVEDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ReleaseNo" Type="Int32" Nullable="false" />
+    <Property Name="LEGALEXPIRATIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="TAXABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxonTaxT_2_FK" FromRole="TaxonTaxT" ToRole="ReleaseT" />
+  </EntityType>
+  <EntityType Name="TransactionTypeT">
+    <Key>
+      <PropertyRef Name="TransactionType" />
+    </Key>
+    <Property Name="TransactionType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TransactionTypeDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SitusIndicator" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TransactionTypeT_2_FK" FromRole="TransactionTypeT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxabilityStateTs" Relationship="STO4DBModel.TaxabilityStateT_4_FK" FromRole="TransactionTypeT" ToRole="TaxabilityStateT" />
+    <NavigationProperty Name="TaxabilityTs" Relationship="STO4DBModel.TaxabilityT_4_FK" FromRole="TransactionTypeT" ToRole="TaxabilityT" />
+  </EntityType>
+  <EntityType Name="TransTaxT">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="TaxID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="TaxableAmount" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="TaxableQuantity" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="NonTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="ExemptTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="NonTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="ExemptTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="TaxApplied" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="FeeApplied" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="TaxableTaxAmount" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="BasicDataID" Type="Int32" />
+    <Property Name="ReportingDataID" Type="Int32" />
+    <NavigationProperty Name="TransLogT" Relationship="STO4DBModel.TransTaxT_FK" FromRole="TransTaxT" ToRole="TransLogT" />
+    <NavigationProperty Name="TaxAuthorityTaxT" Relationship="STO4DBModel.TransTaxT_2_FK" FromRole="TransTaxT" ToRole="TaxAuthorityTaxT" />
+  </EntityType>
+  <EntityType Name="TransactionStatusT">
+    <Key>
+      <PropertyRef Name="TransactionStatus" />
+    </Key>
+    <Property Name="TransactionStatus" Type="Int16" Nullable="false" />
+    <Property Name="TransactionStatusDescription" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="TransTaxT_FK">
+    <End Type="STO4DBModel.TransLogT" Role="TransLogT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="STO4DBModel.TransTaxT" Role="TransTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransLogT">
+        <PropertyRef Name="TransactionID" />
+      </Principal>
+      <Dependent Role="TransTaxT">
+        <PropertyRef Name="TransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CustomerT">
+    <Key>
+      <PropertyRef Name="Customer" />
+    </Key>
+    <Property Name="Customer" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="CustomerDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerXRef" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.CustomerT_FK" FromRole="CustomerT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxabilityStateTs" Relationship="STO4DBModel.TaxabilityStateT_2_FK" FromRole="CustomerT" ToRole="TaxabilityStateT" />
+    <NavigationProperty Name="TaxabilityTs" Relationship="STO4DBModel.TaxabilityT_2_FK" FromRole="CustomerT" ToRole="TaxabilityT" />
+  </EntityType>
+  <EntityType Name="ExemptionClassT">
+    <Key>
+      <PropertyRef Name="DivisionSurrogate" />
+      <PropertyRef Name="CLASSCODE" />
+    </Key>
+    <Property Name="DivisionSurrogate" Type="Int32" Nullable="false" />
+    <Property Name="CLASSCODE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ExemptionClassD" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TaxHoliday" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="DIVISIONT" Relationship="STO4DBModel.ExemptionClassT_FK" FromRole="ExemptionClassT" ToRole="DIVISIONT" />
+  </EntityType>
+  <EntityType Name="Geocode1T">
+    <Key>
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="State" />
+      <PropertyRef Name="County" />
+      <PropertyRef Name="City" />
+      <PropertyRef Name="TaxDistrictDescription" />
+      <PropertyRef Name="ReleaseNo" />
+    </Key>
+    <Property Name="GeoID" Type="Int32" />
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="County" Type="String" Nullable="false" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TaxDistrictDescription" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ActualGeoCodeDefault" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PartOf" Type="Int32" />
+    <Property Name="GNIScode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ExpReleaseNo" Type="Int32" />
+    <Property Name="ReleaseNo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.Geocode1T_2_FK" FromRole="Geocode1T" ToRole="ReleaseT" />
+    <NavigationProperty Name="Geocode2T" Relationship="STO4DBModel.Geocode1T_3_FK" FromRole="Geocode1T" ToRole="Geocode2T" />
+    <NavigationProperty Name="StateT" Relationship="STO4DBModel.Geocode1T_FK" FromRole="Geocode1T" ToRole="StateT" />
+  </EntityType>
+  <EntityType Name="Geocode2T">
+    <Key>
+      <PropertyRef Name="GeoID" />
+    </Key>
+    <Property Name="GeoID" Type="Int32" Nullable="false" />
+    <Property Name="ActualGeoCode" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="Geocode1T" Relationship="STO4DBModel.Geocode1T_3_FK" FromRole="Geocode2T" ToRole="Geocode1T" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.Geocode2T_FK" FromRole="Geocode2T" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxJurisdictionTs" Relationship="STO4DBModel.TaxJurisdictionT_2_FK" FromRole="Geocode2T" ToRole="TaxJurisdictionT" />
+    <NavigationProperty Name="CountryTs" Relationship="STO4DBModel.CountryT_FK" FromRole="Geocode2T" ToRole="CountryT" />
+    <NavigationProperty Name="StateTs" Relationship="STO4DBModel.StateT_2_FK" FromRole="Geocode2T" ToRole="StateT" />
+  </EntityType>
+  <EntityType Name="ProductGroupT">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductGroup" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="GroupDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LEGALEFFECTIVEDATE" Type="DateTime" Precision="3" />
+    <Property Name="LEGALEXPIRATIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <Property Name="EntitySurrogate" Type="Int32" />
+    <NavigationProperty Name="ENTITYT" Relationship="STO4DBModel.ProductGroupT_FK" FromRole="ProductGroupT" ToRole="ENTITYT" />
+    <NavigationProperty Name="ProductItemTs" Relationship="STO4DBModel.ProductItemT_FK" FromRole="ProductGroupT" ToRole="ProductItemT" />
+  </EntityType>
+  <EntityType Name="ProductItemT">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="Item" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ItemDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LEGALEFFECTIVEDATE" Type="DateTime" Precision="3" />
+    <Property Name="LEGALEXPIRATIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="DIVISIONTs" Relationship="STO4DBModel.DIVISIONT_FK" FromRole="ProductItemT" ToRole="DIVISIONT" />
+    <NavigationProperty Name="ENTITYTs" Relationship="STO4DBModel.ENTITYT_FK" FromRole="ProductItemT" ToRole="ENTITYT" />
+    <NavigationProperty Name="ProductGroupT" Relationship="STO4DBModel.ProductItemT_FK" FromRole="ProductItemT" ToRole="ProductGroupT" />
+  </EntityType>
+  <EntityType Name="ProviderT">
+    <Key>
+      <PropertyRef Name="Provider" />
+    </Key>
+    <Property Name="Provider" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ProviderDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.ProviderT_FK" FromRole="ProviderT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxabilityStateTs" Relationship="STO4DBModel.TaxabilityStateT_3_FK" FromRole="ProviderT" ToRole="TaxabilityStateT" />
+    <NavigationProperty Name="TaxabilityTs" Relationship="STO4DBModel.TaxabilityT_3_FK" FromRole="ProviderT" ToRole="TaxabilityT" />
+  </EntityType>
+  <EntityType Name="ReleaseT">
+    <Key>
+      <PropertyRef Name="ReleaseNo" />
+    </Key>
+    <Property Name="ReleaseNo" Type="Int32" Nullable="false" />
+    <Property Name="VersionID" Type="Int32" />
+    <Property Name="ReleaseID" Type="Int32" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerTs" Relationship="STO4DBModel.CustomerT_FK" FromRole="ReleaseT" ToRole="CustomerT" />
+    <NavigationProperty Name="Geocode1T" Relationship="STO4DBModel.Geocode1T_2_FK" FromRole="ReleaseT" ToRole="Geocode1T" />
+    <NavigationProperty Name="Geocode2T" Relationship="STO4DBModel.Geocode2T_FK" FromRole="ReleaseT" ToRole="Geocode2T" />
+    <NavigationProperty Name="ProviderTs" Relationship="STO4DBModel.ProviderT_FK" FromRole="ReleaseT" ToRole="ProviderT" />
+    <NavigationProperty Name="TaxabilityStateTs" Relationship="STO4DBModel.TaxabilityStateT_5_FK" FromRole="ReleaseT" ToRole="TaxabilityStateT" />
+    <NavigationProperty Name="TaxabilityTs" Relationship="STO4DBModel.TaxabilityT_5_FK" FromRole="ReleaseT" ToRole="TaxabilityT" />
+    <NavigationProperty Name="TaxAuthorityTs" Relationship="STO4DBModel.TaxAuthorityT_2_FK" FromRole="ReleaseT" ToRole="TaxAuthorityT" />
+    <NavigationProperty Name="TaxAuthorityTaxTs" Relationship="STO4DBModel.TaxAuthorityTaxT_3_FK" FromRole="ReleaseT" ToRole="TaxAuthorityTaxT" />
+    <NavigationProperty Name="TaxCatTs" Relationship="STO4DBModel.TaxCatT_2_FK" FromRole="ReleaseT" ToRole="TaxCatT" />
+    <NavigationProperty Name="TaxJurisdictionTs" Relationship="STO4DBModel.TaxJurisdictionT_3_FK" FromRole="ReleaseT" ToRole="TaxJurisdictionT" />
+    <NavigationProperty Name="TaxonTaxTs" Relationship="STO4DBModel.TaxonTaxT_2_FK" FromRole="ReleaseT" ToRole="TaxonTaxT" />
+    <NavigationProperty Name="TaxOverrideReasonTs" Relationship="STO4DBModel.TaxOverrideReasonT_2_FK" FromRole="ReleaseT" ToRole="TaxOverrideReasonT" />
+    <NavigationProperty Name="TaxRateTs" Relationship="STO4DBModel.TaxRateT_2_FK" FromRole="ReleaseT" ToRole="TaxRateT" />
+    <NavigationProperty Name="TaxTypeTs" Relationship="STO4DBModel.TaxTypeT_2_FK" FromRole="ReleaseT" ToRole="TaxTypeT" />
+    <NavigationProperty Name="TransactionTypeTs" Relationship="STO4DBModel.TransactionTypeT_2_FK" FromRole="ReleaseT" ToRole="TransactionTypeT" />
+    <NavigationProperty Name="CountryTs" Relationship="STO4DBModel.CountryT_2_FK" FromRole="ReleaseT" ToRole="CountryT" />
+    <NavigationProperty Name="StateTs" Relationship="STO4DBModel.StateT_3_FK" FromRole="ReleaseT" ToRole="StateT" />
+  </EntityType>
+  <EntityType Name="TaxabilityStateT">
+    <Key>
+      <PropertyRef Name="TaxabilityStateID" />
+    </Key>
+    <Property Name="TaxabilityStateID" Type="Int32" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TaxType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCat" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ProductGroup" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Item" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="Customer" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Provider" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TransactionType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="LEGALEFFECTIVEDATE" Type="DateTime" Precision="3" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <Property Name="TAXABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PercentTaxableType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PercentTaxable" Type="Decimal" Precision="7" Scale="6" />
+    <NavigationProperty Name="CustomerT" Relationship="STO4DBModel.TaxabilityStateT_2_FK" FromRole="TaxabilityStateT" ToRole="CustomerT" />
+    <NavigationProperty Name="ProviderT" Relationship="STO4DBModel.TaxabilityStateT_3_FK" FromRole="TaxabilityStateT" ToRole="ProviderT" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxabilityStateT_5_FK" FromRole="TaxabilityStateT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TransactionTypeT" Relationship="STO4DBModel.TaxabilityStateT_4_FK" FromRole="TaxabilityStateT" ToRole="TransactionTypeT" />
+    <NavigationProperty Name="StateT" Relationship="STO4DBModel.TaxabilityStateT_FK" FromRole="TaxabilityStateT" ToRole="StateT" />
+  </EntityType>
+  <EntityType Name="TaxabilityT">
+    <Key>
+      <PropertyRef Name="TaxabilityID" />
+    </Key>
+    <Property Name="TaxabilityID" Type="Int32" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" />
+    <Property Name="ProductGroup" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Item" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="Customer" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Provider" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TransactionType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="OverrideReasonB" Type="Int32" />
+    <Property Name="LEGALEFFECTIVEDATE" Type="DateTime" Precision="3" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <Property Name="TAXABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LEGALEXPIRATIONDATE" Type="DateTime" Precision="3" />
+    <Property Name="PercentTaxableType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PercentTaxable" Type="Decimal" Precision="7" Scale="6" />
+    <NavigationProperty Name="CustomerT" Relationship="STO4DBModel.TaxabilityT_2_FK" FromRole="TaxabilityT" ToRole="CustomerT" />
+    <NavigationProperty Name="ProviderT" Relationship="STO4DBModel.TaxabilityT_3_FK" FromRole="TaxabilityT" ToRole="ProviderT" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxabilityT_5_FK" FromRole="TaxabilityT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TransactionTypeT" Relationship="STO4DBModel.TaxabilityT_4_FK" FromRole="TaxabilityT" ToRole="TransactionTypeT" />
+    <NavigationProperty Name="TaxAuthorityTaxT" Relationship="STO4DBModel.TaxabilityT_FK" FromRole="TaxabilityT" ToRole="TaxAuthorityTaxT" />
+  </EntityType>
+  <EntityType Name="TaxAuthorityT">
+    <Key>
+      <PropertyRef Name="TaxAuthorityID" />
+    </Key>
+    <Property Name="TaxAuthorityID" Type="Int32" Nullable="false" />
+    <Property Name="TaxAuthorityName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TaxAuthType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxAuthorityT_2_FK" FromRole="TaxAuthorityT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxAuthorityTaxTs" Relationship="STO4DBModel.TaxAuthorityTaxT_2_FK" FromRole="TaxAuthorityT" ToRole="TaxAuthorityTaxT" />
+  </EntityType>
+  <EntityType Name="TaxAuthorityTaxT">
+    <Key>
+      <PropertyRef Name="TaxID" />
+    </Key>
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="EntitySurrogate" Type="Int32" />
+    <Property Name="TaxAuthorityID" Type="Int32" />
+    <Property Name="TaxType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCat" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ENTITYT" Relationship="STO4DBModel.TaxAuthorityTaxT_FK" FromRole="TaxAuthorityTaxT" ToRole="ENTITYT" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxAuthorityTaxT_3_FK" FromRole="TaxAuthorityTaxT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxabilityTs" Relationship="STO4DBModel.TaxabilityT_FK" FromRole="TaxAuthorityTaxT" ToRole="TaxabilityT" />
+    <NavigationProperty Name="TaxAuthorityT" Relationship="STO4DBModel.TaxAuthorityTaxT_2_FK" FromRole="TaxAuthorityTaxT" ToRole="TaxAuthorityT" />
+    <NavigationProperty Name="TaxJurisdictionTs" Relationship="STO4DBModel.TaxJurisdictionT_FK" FromRole="TaxAuthorityTaxT" ToRole="TaxJurisdictionT" />
+    <NavigationProperty Name="TaxOverrideReasonTs" Relationship="STO4DBModel.TaxOverrideReasonT_FK" FromRole="TaxAuthorityTaxT" ToRole="TaxOverrideReasonT" />
+    <NavigationProperty Name="TransItemTaxTs" Relationship="STO4DBModel.TransItemTaxT_2_FK" FromRole="TaxAuthorityTaxT" ToRole="TransItemTaxT" />
+    <NavigationProperty Name="TransTaxTs" Relationship="STO4DBModel.TransTaxT_2_FK" FromRole="TaxAuthorityTaxT" ToRole="TransTaxT" />
+  </EntityType>
+  <EntityType Name="TaxCatT">
+    <Key>
+      <PropertyRef Name="TaxCat" />
+    </Key>
+    <Property Name="TaxCat" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCategoryDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxCatT_2_FK" FromRole="TaxCatT" ToRole="ReleaseT" />
+  </EntityType>
+  <EntityType Name="TaxJurisdictionT">
+    <Key>
+      <PropertyRef Name="TaxID" />
+      <PropertyRef Name="GeoID" />
+      <PropertyRef Name="LEGALEFFECTIVEDATE" />
+      <PropertyRef Name="ReleaseNo" />
+    </Key>
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="GeoID" Type="Int32" Nullable="false" />
+    <Property Name="LEGALEFFECTIVEDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ReleaseNo" Type="Int32" Nullable="false" />
+    <Property Name="BasicTaxOverrideID" Type="Int32" />
+    <Property Name="CalcTaxOverrideID" Type="Int32" />
+    <Property Name="ReportingTaxOverrideID" Type="Int32" />
+    <Property Name="LEGALEXPIRATIONDATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Geocode2T" Relationship="STO4DBModel.TaxJurisdictionT_2_FK" FromRole="TaxJurisdictionT" ToRole="Geocode2T" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxJurisdictionT_3_FK" FromRole="TaxJurisdictionT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxAuthorityTaxT" Relationship="STO4DBModel.TaxJurisdictionT_FK" FromRole="TaxJurisdictionT" ToRole="TaxAuthorityTaxT" />
+    <NavigationProperty Name="TaxOverrideReasonT" Relationship="STO4DBModel.TaxJurisdictionT_4_FK" FromRole="TaxJurisdictionT" ToRole="TaxOverrideReasonT" />
+    <NavigationProperty Name="TaxOverrideReasonT1" Relationship="STO4DBModel.TaxJurisdictionT_5_FK" FromRole="TaxJurisdictionT" ToRole="TaxOverrideReasonT" />
+    <NavigationProperty Name="TaxOverrideReasonT2" Relationship="STO4DBModel.TaxJurisdictionT_6_FK" FromRole="TaxJurisdictionT" ToRole="TaxOverrideReasonT" />
+  </EntityType>
+  <EntityType Name="TaxOverrideReasonT">
+    <Key>
+      <PropertyRef Name="TAXOVERRIDEID" />
+    </Key>
+    <Property Name="TAXOVERRIDEID" Type="Int32" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" />
+    <Property Name="OVERRIDEREASON" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxOverrideReasonT_2_FK" FromRole="TaxOverrideReasonT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxAuthorityTaxT" Relationship="STO4DBModel.TaxOverrideReasonT_FK" FromRole="TaxOverrideReasonT" ToRole="TaxAuthorityTaxT" />
+    <NavigationProperty Name="TaxJurisdictionTs" Relationship="STO4DBModel.TaxJurisdictionT_4_FK" FromRole="TaxOverrideReasonT" ToRole="TaxJurisdictionT" />
+    <NavigationProperty Name="TaxJurisdictionTs1" Relationship="STO4DBModel.TaxJurisdictionT_5_FK" FromRole="TaxOverrideReasonT" ToRole="TaxJurisdictionT" />
+    <NavigationProperty Name="TaxJurisdictionTs2" Relationship="STO4DBModel.TaxJurisdictionT_6_FK" FromRole="TaxOverrideReasonT" ToRole="TaxJurisdictionT" />
+  </EntityType>
+  <EntityType Name="TaxRateT">
+    <Key>
+      <PropertyRef Name="TaxRateID" />
+    </Key>
+    <Property Name="TaxRateID" Type="Int32" Nullable="false" />
+    <Property Name="CalcDataID" Type="Int32" />
+    <Property Name="Tier" Type="Int32" />
+    <Property Name="TAXRATE" Type="Decimal" Precision="13" Scale="12" />
+    <Property Name="MinTaxBase" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="MaxTaxBase" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Fee" Type="Decimal" Precision="11" Scale="8" />
+    <Property Name="MinUnitBase" Type="Decimal" Precision="14" Scale="5" />
+    <Property Name="MaxUnitBase" Type="Decimal" Precision="14" Scale="5" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxRateT_2_FK" FromRole="TaxRateT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TransItemTaxTs" Relationship="STO4DBModel.TransItemTaxT_3_FK" FromRole="TaxRateT" ToRole="TransItemTaxT" />
+  </EntityType>
+  <EntityType Name="TaxTypeT">
+    <Key>
+      <PropertyRef Name="TaxType" />
+    </Key>
+    <Property Name="TaxType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxTypeDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.TaxTypeT_2_FK" FromRole="TaxTypeT" ToRole="ReleaseT" />
+  </EntityType>
+  <EntityType Name="ExemptionClassesT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FOBTypeT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LiabilityTypeT">
+    <Key>
+      <PropertyRef Name="LiabilityType" />
+    </Key>
+    <Property Name="LiabilityType" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LiabilityTypeDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MailOrderTypeT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NonTaxReasonT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TransLog1">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="DivisionSurrogate" Type="Int32" />
+    <Property Name="InvoiceID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="TransactionDate" Type="DateTime" Precision="3" />
+    <Property Name="SourceSystem" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionStatus" Type="Int16" />
+    <Property Name="TransactionType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="LiabilityType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TestTransaction" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NXSShipToGeoID" Type="Int32" />
+    <Property Name="CT39oA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="NXSShipFromGeoID" Type="Int32" />
+    <Property Name="CT39pA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="OrderPlacementGeoID" Type="Int32" />
+    <Property Name="CT39qA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="OrderApprovalGeoID" Type="Int32" />
+    <Property Name="CT39rA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="SitusSolicitedOutside" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusCanRejectDelivery" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusFOB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusMailOrder" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusDeliveryBy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SitusShipFromPOB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CustomerID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Customer" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Provider" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="OriginalTransactionID" Type="Int64" />
+    <Property Name="SUID" Type="Int32" />
+    <Property Name="APPLICATION_LOGIN_ID" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="TransactionDescription" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="TSINS" Type="DateTime" Precision="3" />
+    <Property Name="TSCHG" Type="DateTime" Precision="3" />
+    <Property Name="OrderApprovalAddressId" Type="Int32" />
+    <Property Name="OrderPlacementAddressId" Type="Int32" />
+    <Property Name="ShipFromAddressId" Type="Int32" />
+    <Property Name="ShipToAddressId" Type="Int32" />
+    <Property Name="TransactionReturnStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="CustomerT_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.CustomerT" Role="CustomerT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="CustomerT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityStateT_2_FK">
+    <End Type="STO4DBModel.CustomerT" Role="CustomerT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityStateT" Role="TaxabilityStateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerT">
+        <PropertyRef Name="Customer" />
+      </Principal>
+      <Dependent Role="TaxabilityStateT">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityT_2_FK">
+    <End Type="STO4DBModel.CustomerT" Role="CustomerT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityT" Role="TaxabilityT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerT">
+        <PropertyRef Name="Customer" />
+      </Principal>
+      <Dependent Role="TaxabilityT">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIVISIONT_FK">
+    <End Type="STO4DBModel.ProductItemT" Role="ProductItemT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.DIVISIONT" Role="DIVISIONT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductItemT">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="DIVISIONT">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExemptionClassT_FK">
+    <End Type="STO4DBModel.DIVISIONT" Role="DIVISIONT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="STO4DBModel.ExemptionClassT" Role="ExemptionClassT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIVISIONT">
+        <PropertyRef Name="DivisionSurrogate" />
+      </Principal>
+      <Dependent Role="ExemptionClassT">
+        <PropertyRef Name="DivisionSurrogate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ENTITYT_FK">
+    <End Type="STO4DBModel.ProductItemT" Role="ProductItemT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.ENTITYT" Role="ENTITYT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductItemT">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="ENTITYT">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductGroupT_FK">
+    <End Type="STO4DBModel.ENTITYT" Role="ENTITYT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.ProductGroupT" Role="ProductGroupT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENTITYT">
+        <PropertyRef Name="EntitySurrogate" />
+      </Principal>
+      <Dependent Role="ProductGroupT">
+        <PropertyRef Name="EntitySurrogate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxAuthorityTaxT_FK">
+    <End Type="STO4DBModel.ENTITYT" Role="ENTITYT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENTITYT">
+        <PropertyRef Name="EntitySurrogate" />
+      </Principal>
+      <Dependent Role="TaxAuthorityTaxT">
+        <PropertyRef Name="EntitySurrogate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Geocode1T_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="1" />
+    <End Type="STO4DBModel.Geocode1T" Role="Geocode1T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="Geocode1T">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Geocode1T_3_FK">
+    <End Type="STO4DBModel.Geocode2T" Role="Geocode2T" Multiplicity="0..1" />
+    <End Type="STO4DBModel.Geocode1T" Role="Geocode1T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Geocode2T">
+        <PropertyRef Name="GeoID" />
+      </Principal>
+      <Dependent Role="Geocode1T">
+        <PropertyRef Name="GeoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Geocode2T_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.Geocode2T" Role="Geocode2T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="Geocode2T">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxJurisdictionT_2_FK">
+    <End Type="STO4DBModel.Geocode2T" Role="Geocode2T" Multiplicity="1" />
+    <End Type="STO4DBModel.TaxJurisdictionT" Role="TaxJurisdictionT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Geocode2T">
+        <PropertyRef Name="GeoID" />
+      </Principal>
+      <Dependent Role="TaxJurisdictionT">
+        <PropertyRef Name="GeoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductItemT_FK">
+    <End Type="STO4DBModel.ProductGroupT" Role="ProductGroupT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.ProductItemT" Role="ProductItemT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductGroupT">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="ProductItemT">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProviderT_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.ProviderT" Role="ProviderT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="ProviderT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityStateT_3_FK">
+    <End Type="STO4DBModel.ProviderT" Role="ProviderT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityStateT" Role="TaxabilityStateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProviderT">
+        <PropertyRef Name="Provider" />
+      </Principal>
+      <Dependent Role="TaxabilityStateT">
+        <PropertyRef Name="Provider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityT_3_FK">
+    <End Type="STO4DBModel.ProviderT" Role="ProviderT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityT" Role="TaxabilityT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProviderT">
+        <PropertyRef Name="Provider" />
+      </Principal>
+      <Dependent Role="TaxabilityT">
+        <PropertyRef Name="Provider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityStateT_5_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityStateT" Role="TaxabilityStateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxabilityStateT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityT_5_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityT" Role="TaxabilityT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxabilityT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxAuthorityT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxAuthorityT" Role="TaxAuthorityT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxAuthorityT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxAuthorityTaxT_3_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxAuthorityTaxT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxCatT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxCatT" Role="TaxCatT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxCatT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxJurisdictionT_3_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="1" />
+    <End Type="STO4DBModel.TaxJurisdictionT" Role="TaxJurisdictionT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxJurisdictionT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxonTaxT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="1" />
+    <End Type="STO4DBModel.TaxonTaxT" Role="TaxonTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxonTaxT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxOverrideReasonT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxOverrideReasonT" Role="TaxOverrideReasonT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxOverrideReasonT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxRateT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxRateT" Role="TaxRateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxRateT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxTypeT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxTypeT" Role="TaxTypeT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TaxTypeT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransactionTypeT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TransactionTypeT" Role="TransactionTypeT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="TransactionTypeT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityStateT_4_FK">
+    <End Type="STO4DBModel.TransactionTypeT" Role="TransactionTypeT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityStateT" Role="TaxabilityStateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionTypeT">
+        <PropertyRef Name="TransactionType" />
+      </Principal>
+      <Dependent Role="TaxabilityStateT">
+        <PropertyRef Name="TransactionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityT_4_FK">
+    <End Type="STO4DBModel.TransactionTypeT" Role="TransactionTypeT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityT" Role="TaxabilityT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionTypeT">
+        <PropertyRef Name="TransactionType" />
+      </Principal>
+      <Dependent Role="TaxabilityT">
+        <PropertyRef Name="TransactionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityT_FK">
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityT" Role="TaxabilityT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthorityTaxT">
+        <PropertyRef Name="TaxID" />
+      </Principal>
+      <Dependent Role="TaxabilityT">
+        <PropertyRef Name="TaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxAuthorityTaxT_2_FK">
+    <End Type="STO4DBModel.TaxAuthorityT" Role="TaxAuthorityT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthorityT">
+        <PropertyRef Name="TaxAuthorityID" />
+      </Principal>
+      <Dependent Role="TaxAuthorityTaxT">
+        <PropertyRef Name="TaxAuthorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxJurisdictionT_FK">
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="1" />
+    <End Type="STO4DBModel.TaxJurisdictionT" Role="TaxJurisdictionT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthorityTaxT">
+        <PropertyRef Name="TaxID" />
+      </Principal>
+      <Dependent Role="TaxJurisdictionT">
+        <PropertyRef Name="TaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxOverrideReasonT_FK">
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxOverrideReasonT" Role="TaxOverrideReasonT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthorityTaxT">
+        <PropertyRef Name="TaxID" />
+      </Principal>
+      <Dependent Role="TaxOverrideReasonT">
+        <PropertyRef Name="TaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransItemTaxT_2_FK">
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="1" />
+    <End Type="STO4DBModel.TransItemTaxT" Role="TransItemTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthorityTaxT">
+        <PropertyRef Name="TaxID" />
+      </Principal>
+      <Dependent Role="TransItemTaxT">
+        <PropertyRef Name="TaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransTaxT_2_FK">
+    <End Type="STO4DBModel.TaxAuthorityTaxT" Role="TaxAuthorityTaxT" Multiplicity="1" />
+    <End Type="STO4DBModel.TransTaxT" Role="TransTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAuthorityTaxT">
+        <PropertyRef Name="TaxID" />
+      </Principal>
+      <Dependent Role="TransTaxT">
+        <PropertyRef Name="TaxID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxJurisdictionT_4_FK">
+    <End Type="STO4DBModel.TaxOverrideReasonT" Role="TaxOverrideReasonT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxJurisdictionT" Role="TaxJurisdictionT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxOverrideReasonT">
+        <PropertyRef Name="TAXOVERRIDEID" />
+      </Principal>
+      <Dependent Role="TaxJurisdictionT">
+        <PropertyRef Name="BasicTaxOverrideID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxJurisdictionT_5_FK">
+    <End Type="STO4DBModel.TaxOverrideReasonT" Role="TaxOverrideReasonT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxJurisdictionT" Role="TaxJurisdictionT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxOverrideReasonT">
+        <PropertyRef Name="TAXOVERRIDEID" />
+      </Principal>
+      <Dependent Role="TaxJurisdictionT">
+        <PropertyRef Name="CalcTaxOverrideID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxJurisdictionT_6_FK">
+    <End Type="STO4DBModel.TaxOverrideReasonT" Role="TaxOverrideReasonT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxJurisdictionT" Role="TaxJurisdictionT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxOverrideReasonT">
+        <PropertyRef Name="TAXOVERRIDEID" />
+      </Principal>
+      <Dependent Role="TaxJurisdictionT">
+        <PropertyRef Name="ReportingTaxOverrideID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransItemTaxT_3_FK">
+    <End Type="STO4DBModel.TaxRateT" Role="TaxRateT" Multiplicity="1" />
+    <End Type="STO4DBModel.TransItemTaxT" Role="TransItemTaxT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxRateT">
+        <PropertyRef Name="TaxRateID" />
+      </Principal>
+      <Dependent Role="TransItemTaxT">
+        <PropertyRef Name="TaxRateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="LOCATIONT">
+    <Key>
+      <PropertyRef Name="LocationSurrogate" />
+    </Key>
+    <Property Name="LocationSurrogate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionSurrogate" Type="Int32" />
+    <Property Name="GeoID" Type="Int32" />
+    <Property Name="LocationID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="LocationDesc" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="OverrideGeoID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CustomerEffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="DefaultLocation" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TaxabilityOverrideT">
+    <Key>
+      <PropertyRef Name="RuleID" />
+      <PropertyRef Name="DivisionSurrogate" />
+      <PropertyRef Name="CustomerEffectiveDate" />
+    </Key>
+    <Property Name="RuleID" Type="Int32" Nullable="false" />
+    <Property Name="DivisionSurrogate" Type="Int32" Nullable="false" />
+    <Property Name="CustomerEffectiveDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CustomerExpirationDate" Type="DateTime" Precision="3" />
+    <Property Name="TaxRuleType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TaxAuthType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TaxAuthorityID" Type="Int32" />
+    <Property Name="TaxType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCat" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="GeoID" Type="Int32" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="TAXABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PercentTaxable" Type="Decimal" Precision="7" Scale="6" />
+    <Property Name="TransactionType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="DIVISIONT" Relationship="STO4DBModel.TaxabilityOverrideT_FK" FromRole="TaxabilityOverrideT" ToRole="DIVISIONT" />
+  </EntityType>
+  <EntityType Name="CanRejectDeliveryTypeT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DeliveryByTypeT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ShipFromPOBTypeT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SolicitedOutsideTypeT">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TransItem5">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="LineItemID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="LineItemID" Type="Int32" Nullable="false" />
+    <Property Name="UsrLineItemID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SKUID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="AvgUnitPrice" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="LineItemAmount" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="CLASSCODE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NXSShipToGeoID" Type="Int32" />
+    <Property Name="CT39uA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="NXSShipFromGeoID" Type="Int32" />
+    <Property Name="CT39vA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="OrderPlacementGeoID" Type="Int32" />
+    <Property Name="CT39qA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="OrderApprovalGeoID" Type="Int32" />
+    <Property Name="CT39rA" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="LocationSurrogate" Type="Int32" />
+    <Property Name="DataString" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="OrderPlacementAddressId" Type="Int32" />
+    <Property Name="OrderApprovalAddressId" Type="Int32" />
+    <Property Name="ShipFromAddressId" Type="Int32" />
+    <Property Name="ShipToAddressId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TransItemTax2">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="LineItemID" />
+      <PropertyRef Name="TaxID" />
+      <PropertyRef Name="TaxRateID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="LineItemID" Type="Int32" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="TaxAuthorityID" Type="Int32" />
+    <Property Name="TaxAuthorityName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TaxAuthType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TaxType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCat" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxRateID" Type="Int32" Nullable="false" />
+    <Property Name="Tier" Type="Int32" />
+    <Property Name="TAXRATE" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="Fee" Type="Decimal" Precision="11" Scale="8" />
+    <Property Name="CalcDataID" Type="Int32" />
+    <Property Name="CONTRIBUTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TaxableAmount" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="ExemptTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="NonTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="TaxableQuantity" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="ExemptTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="NonTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="TaxApplied3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="FeeApplied3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="TaxableTaxAmount3" Type="Decimal" Precision="17" Scale="6" />
+    <Property Name="CT39zA" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Situs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CustomTransInfo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="NonTaxReason" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CEMCertificateID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TransTax2">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="TaxID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" />
+    <Property Name="TaxID" Type="Int32" Nullable="false" />
+    <Property Name="TaxAuthorityID" Type="Int32" />
+    <Property Name="TaxAuthorityName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AuthorityTypeDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TaxType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TaxCat" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="EntitySurrogate" Type="Int32" />
+    <Property Name="TaxableAmount" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="TaxableQuantity" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="NonTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="ExemptTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="NonTaxableAmt" Type="Decimal" Precision="17" Scale="3" />
+    <Property Name="ExemptTaxableQty" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="TaxApplied" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="FeeApplied" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="TaxableTaxAmount" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="BasicDataID" Type="Int32" />
+    <Property Name="PassFlagDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PassTypeDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BaseTypeDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReportingDataID" Type="Int32" />
+    <Property Name="ReportToAuthority" Type="Int32" />
+  </EntityType>
+  <Association Name="TaxabilityOverrideT_FK">
+    <End Type="STO4DBModel.DIVISIONT" Role="DIVISIONT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="STO4DBModel.TaxabilityOverrideT" Role="TaxabilityOverrideT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIVISIONT">
+        <PropertyRef Name="DivisionSurrogate" />
+      </Principal>
+      <Dependent Role="TaxabilityOverrideT">
+        <PropertyRef Name="DivisionSurrogate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AddressT">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="County" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Plus4" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GeoCode" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CountryT">
+    <Key>
+      <PropertyRef Name="Country" />
+    </Key>
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CountryName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="GeoID" Type="Int32" />
+    <Property Name="Country3" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.CountryT_2_FK" FromRole="CountryT" ToRole="ReleaseT" />
+    <NavigationProperty Name="Geocode2T" Relationship="STO4DBModel.CountryT_FK" FromRole="CountryT" ToRole="Geocode2T" />
+    <NavigationProperty Name="StateTs" Relationship="STO4DBModel.StateT_FK" FromRole="CountryT" ToRole="StateT" />
+  </EntityType>
+  <EntityType Name="StateT">
+    <Key>
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="State" />
+    </Key>
+    <Property Name="Country" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="StateName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="GeoID" Type="Int32" />
+    <Property Name="ReleaseNo" Type="Int32" />
+    <NavigationProperty Name="CountryT" Relationship="STO4DBModel.StateT_FK" FromRole="StateT" ToRole="CountryT" />
+    <NavigationProperty Name="Geocode1T" Relationship="STO4DBModel.Geocode1T_FK" FromRole="StateT" ToRole="Geocode1T" />
+    <NavigationProperty Name="Geocode2T" Relationship="STO4DBModel.StateT_2_FK" FromRole="StateT" ToRole="Geocode2T" />
+    <NavigationProperty Name="ReleaseT" Relationship="STO4DBModel.StateT_3_FK" FromRole="StateT" ToRole="ReleaseT" />
+    <NavigationProperty Name="TaxabilityStateTs" Relationship="STO4DBModel.TaxabilityStateT_FK" FromRole="StateT" ToRole="TaxabilityStateT" />
+  </EntityType>
+  <Association Name="CountryT_2_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.CountryT" Role="CountryT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="CountryT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CountryT_FK">
+    <End Type="STO4DBModel.Geocode2T" Role="Geocode2T" Multiplicity="0..1" />
+    <End Type="STO4DBModel.CountryT" Role="CountryT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Geocode2T">
+        <PropertyRef Name="GeoID" />
+      </Principal>
+      <Dependent Role="CountryT">
+        <PropertyRef Name="GeoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StateT_FK">
+    <End Type="STO4DBModel.CountryT" Role="CountryT" Multiplicity="1" />
+    <End Type="STO4DBModel.StateT" Role="StateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryT">
+        <PropertyRef Name="Country" />
+      </Principal>
+      <Dependent Role="StateT">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Geocode1T_FK">
+    <End Type="STO4DBModel.StateT" Role="StateT" Multiplicity="1" />
+    <End Type="STO4DBModel.Geocode1T" Role="Geocode1T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateT">
+        <PropertyRef Name="Country" />
+        <PropertyRef Name="State" />
+      </Principal>
+      <Dependent Role="Geocode1T">
+        <PropertyRef Name="Country" />
+        <PropertyRef Name="State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StateT_2_FK">
+    <End Type="STO4DBModel.Geocode2T" Role="Geocode2T" Multiplicity="0..1" />
+    <End Type="STO4DBModel.StateT" Role="StateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Geocode2T">
+        <PropertyRef Name="GeoID" />
+      </Principal>
+      <Dependent Role="StateT">
+        <PropertyRef Name="GeoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StateT_3_FK">
+    <End Type="STO4DBModel.ReleaseT" Role="ReleaseT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.StateT" Role="StateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReleaseT">
+        <PropertyRef Name="ReleaseNo" />
+      </Principal>
+      <Dependent Role="StateT">
+        <PropertyRef Name="ReleaseNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaxabilityStateT_FK">
+    <End Type="STO4DBModel.StateT" Role="StateT" Multiplicity="0..1" />
+    <End Type="STO4DBModel.TaxabilityStateT" Role="TaxabilityStateT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateT">
+        <PropertyRef Name="Country" />
+        <PropertyRef Name="State" />
+      </Principal>
+      <Dependent Role="TaxabilityStateT">
+        <PropertyRef Name="Country" />
+        <PropertyRef Name="State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TransactionInvoiceMappingT">
+    <Key>
+      <PropertyRef Name="TransactionInvoiceMappingSurrogate" />
+    </Key>
+    <Property Name="TransactionId" Type="Int64" Nullable="false" />
+    <Property Name="InvoicePath" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionInvoiceMappingSurrogate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

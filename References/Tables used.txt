@@ -1,0 +1,12 @@
+TransItem5
+CanRejectDeliveryTypeTs
+DeliveryByTypeTs
+ShipFromPOBTypeTs
+SolicitedOutsideTypeTs
+LOCATIONTs
+TransTax2
+TransItemTax2
+TaxabilityOverrideTs
+stateT
+countryt
+AddressT

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/DataValues/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/DataValues/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd22" namespace="http://schemas.cch.com/DataDetail/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd7" namespace="http://schemas.cch.com/Message/4.0" />
+  <xs:complexType name="DataValues">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.cch.com/DataDetail/4.0" minOccurs="0" name="DataDetails" nillable="true" type="q1:ArrayOfDataDetail" />
+      <xs:element xmlns:q2="http://schemas.cch.com/Message/4.0" minOccurs="0" name="Messages" nillable="true" type="q2:ArrayOfMessage" />
+      <xs:element minOccurs="0" name="transactionStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataValues" nillable="true" type="tns:DataValues" />
+</xs:schema>

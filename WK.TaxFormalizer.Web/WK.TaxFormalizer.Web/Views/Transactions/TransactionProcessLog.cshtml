@@ -1,0 +1,107 @@
+﻿@using WK.STO.UI.WEB.Models
+
+@{
+    Layout = null;
+}
+
+<p id="maintainTransactionProcessLogCustomError"></p>
+<p id="maintainTransactionLineItemProcessLogCustomError"></p>
+<div class="row">
+    <div class="col-md-3">
+        <label style="font-weight:bold !important">Transaction Error Information</label>
+    </div>
+</div>
+@(Html.Kendo().Grid<TransactionProcessLog>()
+                        .Name("transactionProcessLogGrid")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(e => e.ProcessLongMessage).Hidden(true);
+
+                            columns.Bound(o => o.ProcessClass).Width(90).Title("Error Class")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.ProcessCode).Title("Error Code").Width(90)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)));
+                            columns.Bound(o => o.ProcessShortMessage).Width(250).Title("Error Short Message")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                        })
+                            .Pageable()
+                            .Scrollable()
+                            .Filterable(ftb => ftb.Mode(GridFilterMode.Row))
+                            .Sortable()
+                            .Selectable(t => t.Mode(GridSelectionMode.Single).Type(GridSelectionType.Row))
+                            .Events(events => events.DataBound("TransactionProcessLogGrid_On_DataBound").Change("TransactionProcessLogGrid_On_Change"))
+                            .AutoBind(true)
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .PageSize(10)
+                            .Model(model =>
+                                {
+                                    model.Id(p => p.TransactionID);
+                                })
+                            .Sort(sort => sort.Add(x => x.TransactionID).Descending())
+                            .ServerOperation(true)
+                            .Events(events => events.Error("TransactionProcessLogGrid_error_handler"))
+                            .Read(read => read.Action("TransactionProcessLog_Read", "Transactions").Data("getTransactionProcessLog").Type(HttpVerbs.Post)))
+)
+<div class="row">
+    <div class="col-md-3">
+        <label style="font-weight:bold !important;padding-top:10px">Error Long Message</label>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.TextArea("ProcessLongMessage_Transaction", new { rows = 5, cols = 200, @readonly = "readonly", Style = "background:#E0E0E0;" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <label style="font-weight:bold !important;padding-top:10px">Line Item Error Information</label>
+    </div>
+</div>
+@(Html.Kendo().Grid<TransactionProcessLog>()
+                        .Name("transactionLineItemProcessLogGrid")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(e => e.ProcessLongMessage).Hidden(true);
+
+                            columns.Bound(o => o.LineItemID).Title("Line Item ID ").Width(90)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.ProcessClass).Width(90).Title("Error Class")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            columns.Bound(o => o.ProcessCode).Title("Error Code").Width(90)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)));
+                            columns.Bound(o => o.ProcessShortMessage).Width(250).Title("Error Short Message")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                        })
+                            .Pageable()
+                            .Scrollable()
+                            .Filterable(ftb => ftb.Mode(GridFilterMode.Row))
+                            .Sortable()
+                            .Selectable(t => t.Mode(GridSelectionMode.Single).Type(GridSelectionType.Row))
+                                .Events(events => events.DataBound("TransactionLineItemProcessLogGrid_On_DataBound").Change("TransactionLineItemProcessLogGrid_On_Change"))
+                            .AutoBind(true)
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .PageSize(10)
+                            .Model(model =>
+                                {
+                                    model.Id(p => p.TransactionID);
+                                })
+                            .Sort(sort => sort.Add(x => x.TransactionID).Descending())
+                            .ServerOperation(true)
+                            .Events(events => events.Error("TransactionLineItemProcessLogGrid_error_handler"))
+                            .Read(read => read.Action("TransactionProcessLog_Read", "Transactions").Data("getTransactionLineItemProcessLog").Type(HttpVerbs.Post)))
+)
+<div class="row">
+    <div class="col-md-3">
+        <label style="font-weight:bold !important;padding-top:10px">Error Long Message</label>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.TextArea("ProcessLongMessage_TransactionLineItem", new { rows = 5, cols = 200, @readonly = "readonly", Style = "background:#E0E0E0;" })
+    </div>
+</div>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/ProcurementLineItem/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/ProcurementLineItem/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProcurementLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcurementLineItem" nillable="true" type="tns:ProcurementLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcurementLineItem" nillable="true" type="tns:ArrayOfProcurementLineItem" />
+  <xs:complexType name="ProcurementLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AvgUnitPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DataString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataStringID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExemptionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserData" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcurementLineItem" nillable="true" type="tns:ProcurementLineItem" />
+</xs:schema>

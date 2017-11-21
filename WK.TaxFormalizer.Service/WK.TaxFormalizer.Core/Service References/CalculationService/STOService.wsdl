@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.cch.com/STOService/4.0" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="STOService" targetNamespace="http://schemas.cch.com/STOService/4.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost:8000/Service4.0.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.cch.com/STOService/4.0/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd0" namespace="http://schemas.cch.com/STOService/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd2" namespace="http://schemas.cch.com/ProcurementOrder/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd3" namespace="http://schemas.cch.com/ProcurementLineItem/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd4" namespace="http://schemas.cch.com/TaxResponse/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd5" namespace="http://schemas.cch.com/LineItemTax/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd6" namespace="http://schemas.cch.com/TaxDetail/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd7" namespace="http://schemas.cch.com/Message/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd10" namespace="http://schemas.cch.com/Order/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd11" namespace="http://schemas.cch.com/LineItem/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd12" namespace="http://schemas.cch.com/NexusInfo/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd13" namespace="http://schemas.cch.com/Address/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd14" namespace="http://schemas.cch.com/ProductInfo/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd15" namespace="http://schemas.cch.com/SitusInfo/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd16" namespace="http://schemas.cch.com/TransactionDetail/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd17" namespace="http://schemas.cch.com/GeoblockInfo/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd18" namespace="http://schemas.cch.com/PartialReturnOrder/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd19" namespace="http://schemas.cch.com/PartialLineItem/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd20" namespace="http://schemas.cch.com/TaxAdjustment/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd21" namespace="http://schemas.cch.com/DataValues/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd22" namespace="http://schemas.cch.com/DataDetail/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd23" namespace="http://schemas.cch.com/SKUDetail/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd24" namespace="http://schemas.cch.com/CustomerCertificateRequest/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd25" namespace="http://schemas.cch.com/CustomerCertificate/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd26" namespace="http://schemas.cch.com/Customer/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd27" namespace="http://schemas.cch.com/Certificate/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd28" namespace="http://schemas.cch.com/CustomerCertificateExport/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd29" namespace="http://schemas.cch.com/TransactionTax/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd33" namespace="http://schemas.cch.com/ProcessingFaultException/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd35" namespace="http://schemas.cch.com/ValidationFaultException/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd30" namespace="http://schemas.cch.com/TaxLiabilityRequest/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd31" namespace="http://schemas.cch.com/TaxLiabilityResponse/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd32" namespace="http://schemas.cch.com/TaxItem/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd34" namespace="http://schemas.cch.com/FaultExceptionBase/4.0" />
+      <xsd:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd36" namespace="http://schemas.cch.com/GeographyLookupResult/4.0" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISTOServiceContract_CalculateProcurementRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateProcurementRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CalculateProcurementRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateProcurementRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CalculateProcurementRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q1:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_UnattributedProcurementReturnRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnattributedProcurementReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_UnattributedProcurementReturnRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnattributedProcurementReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_UnattributedProcurementReturnRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q2:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CalculateRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CalculateRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CalculateRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q3:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CancelRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CancelRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CancelRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q4:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_FinalizeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizeRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_FinalizeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_FinalizeRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q5:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GeoblockRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeoblockRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GeoblockRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeoblockRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GeoblockRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q6:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_UnattributedReturnRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnattributedReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_UnattributedReturnRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnattributedReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_UnattributedReturnRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q7:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_AttributedFullReturnRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AttributedFullReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_AttributedFullReturnRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AttributedFullReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_AttributedFullReturnRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q8:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_PartialReturnRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:PartialReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_PartialReturnRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PartialReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_PartialReturnRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q9:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_TaxAdjustmentRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TaxAdjustmentRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_TaxAdjustmentRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TaxAdjustmentRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_TaxAdjustmentRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q10:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_SystemDateTimeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SystemDateTimeRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_SystemDateTimeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SystemDateTimeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_SystemDateTimeRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q11:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetDataValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataValues" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetDataValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetDataValues_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q12:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CreateSKU_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSKU" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CreateSKU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSKUResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CreateSKU_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q13:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GeoblockRequestAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeoblockRequestAll" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GeoblockRequestAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeoblockRequestAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GeoblockRequestAll_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q14:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CreateCustomerCertificateRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerCertificateRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CreateCustomerCertificateRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerCertificateRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_CreateCustomerCertificateRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q15:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_ExportCustomerCertificateRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportCustomerCertificateRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_ExportCustomerCertificateRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportCustomerCertificateRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_ExportCustomerCertificateRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q16:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_ExportCustomerCertificateFilterRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportCustomerCertificateFilterRequest" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_ExportCustomerCertificateFilterRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportCustomerCertificateFilterRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_ExportCustomerCertificateFilterRequest_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q17:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTransactionTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionTax" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTransactionTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTransactionTax_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q18:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTaxRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxRates" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTaxRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTaxRates_ProcessingFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.cch.com/ProcessingFaultException/4.0" name="detail" element="q19:ProcessingFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTaxRates_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q20:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetTaxRates_ValidationFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.cch.com/ValidationFaultException/4.0" name="detail" element="q21:ValidationFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetGeocodeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeocodeList" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetGeocodeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeocodeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetGeocodeList_ValidationFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.cch.com/ValidationFaultException/4.0" name="detail" element="q22:ValidationFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetGeocodeList_ProcessingFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.cch.com/ProcessingFaultException/4.0" name="detail" element="q23:ProcessingFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_GetGeocodeList_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q24:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_RefreshDBConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshDBConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ISTOServiceContract_RefreshDBConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshDBConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISTOServiceContract">
+    <wsdl:operation name="CalculateProcurementRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CalculateProcurementRequest" message="tns:ISTOServiceContract_CalculateProcurementRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CalculateProcurementRequestResponse" message="tns:ISTOServiceContract_CalculateProcurementRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CalculateProcurementRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_CalculateProcurementRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnattributedProcurementReturnRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/UnattributedProcurementReturnRequest" message="tns:ISTOServiceContract_UnattributedProcurementReturnRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/UnattributedProcurementReturnRequestResponse" message="tns:ISTOServiceContract_UnattributedProcurementReturnRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/UnattributedProcurementReturnRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_UnattributedProcurementReturnRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CalculateRequest" message="tns:ISTOServiceContract_CalculateRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CalculateRequestResponse" message="tns:ISTOServiceContract_CalculateRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CalculateRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_CalculateRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CancelRequest" message="tns:ISTOServiceContract_CancelRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CancelRequestResponse" message="tns:ISTOServiceContract_CancelRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CancelRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_CancelRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizeRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/FinalizeRequest" message="tns:ISTOServiceContract_FinalizeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/FinalizeRequestResponse" message="tns:ISTOServiceContract_FinalizeRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/FinalizeRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_FinalizeRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeoblockRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GeoblockRequest" message="tns:ISTOServiceContract_GeoblockRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GeoblockRequestResponse" message="tns:ISTOServiceContract_GeoblockRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GeoblockRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_GeoblockRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnattributedReturnRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/UnattributedReturnRequest" message="tns:ISTOServiceContract_UnattributedReturnRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/UnattributedReturnRequestResponse" message="tns:ISTOServiceContract_UnattributedReturnRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/UnattributedReturnRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_UnattributedReturnRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AttributedFullReturnRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/AttributedFullReturnRequest" message="tns:ISTOServiceContract_AttributedFullReturnRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/AttributedFullReturnRequestResponse" message="tns:ISTOServiceContract_AttributedFullReturnRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/AttributedFullReturnRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_AttributedFullReturnRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PartialReturnRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/PartialReturnRequest" message="tns:ISTOServiceContract_PartialReturnRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/PartialReturnRequestResponse" message="tns:ISTOServiceContract_PartialReturnRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/PartialReturnRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_PartialReturnRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TaxAdjustmentRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/TaxAdjustmentRequest" message="tns:ISTOServiceContract_TaxAdjustmentRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/TaxAdjustmentRequestResponse" message="tns:ISTOServiceContract_TaxAdjustmentRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/TaxAdjustmentRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_TaxAdjustmentRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SystemDateTimeRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/SystemDateTimeRequest" message="tns:ISTOServiceContract_SystemDateTimeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/SystemDateTimeRequestResponse" message="tns:ISTOServiceContract_SystemDateTimeRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/SystemDateTimeRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_SystemDateTimeRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataValues">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetDataValues" message="tns:ISTOServiceContract_GetDataValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetDataValuesResponse" message="tns:ISTOServiceContract_GetDataValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetDataValuesFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_GetDataValues_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSKU">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CreateSKU" message="tns:ISTOServiceContract_CreateSKU_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CreateSKUResponse" message="tns:ISTOServiceContract_CreateSKU_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CreateSKUFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_CreateSKU_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeoblockRequestAll">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GeoblockRequestAll" message="tns:ISTOServiceContract_GeoblockRequestAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GeoblockRequestAllResponse" message="tns:ISTOServiceContract_GeoblockRequestAll_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GeoblockRequestAllFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_GeoblockRequestAll_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerCertificateRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CreateCustomerCertificateRequest" message="tns:ISTOServiceContract_CreateCustomerCertificateRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CreateCustomerCertificateRequestResponse" message="tns:ISTOServiceContract_CreateCustomerCertificateRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/CreateCustomerCertificateRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_CreateCustomerCertificateRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportCustomerCertificateRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/ExportCustomerCertificateRequest" message="tns:ISTOServiceContract_ExportCustomerCertificateRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/ExportCustomerCertificateRequestResponse" message="tns:ISTOServiceContract_ExportCustomerCertificateRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/ExportCustomerCertificateRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_ExportCustomerCertificateRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportCustomerCertificateFilterRequest">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/ExportCustomerCertificateFilterRequest" message="tns:ISTOServiceContract_ExportCustomerCertificateFilterRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/ExportCustomerCertificateFilterRequestResponse" message="tns:ISTOServiceContract_ExportCustomerCertificateFilterRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/ExportCustomerCertificateFilterRequestFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_ExportCustomerCertificateFilterRequest_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionTax">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTransactionTax" message="tns:ISTOServiceContract_GetTransactionTax_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTransactionTaxResponse" message="tns:ISTOServiceContract_GetTransactionTax_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTransactionTaxFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_GetTransactionTax_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxRates">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTaxRates" message="tns:ISTOServiceContract_GetTaxRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTaxRatesResponse" message="tns:ISTOServiceContract_GetTaxRates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTaxRatesProcessingFaultExceptionFault" name="ProcessingFaultExceptionFault" message="tns:ISTOServiceContract_GetTaxRates_ProcessingFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTaxRatesFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_GetTaxRates_FaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetTaxRatesValidationFaultExceptionFault" name="ValidationFaultExceptionFault" message="tns:ISTOServiceContract_GetTaxRates_ValidationFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeocodeList">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetGeocodeList" message="tns:ISTOServiceContract_GetGeocodeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetGeocodeListResponse" message="tns:ISTOServiceContract_GetGeocodeList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetGeocodeListValidationFaultExceptionFault" name="ValidationFaultExceptionFault" message="tns:ISTOServiceContract_GetGeocodeList_ValidationFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetGeocodeListProcessingFaultExceptionFault" name="ProcessingFaultExceptionFault" message="tns:ISTOServiceContract_GetGeocodeList_ProcessingFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/GetGeocodeListFaultExceptionFault" name="FaultExceptionFault" message="tns:ISTOServiceContract_GetGeocodeList_FaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshDBConfiguration">
+      <wsdl:input wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/RefreshDBConfiguration" message="tns:ISTOServiceContract_RefreshDBConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.cch.com/STOService/4.0/ISTOServiceContract/RefreshDBConfigurationResponse" message="tns:ISTOServiceContract_RefreshDBConfiguration_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="STOService">
+    <wsdl:port name="STOService" binding="i0:STOService">
+      <soap:address location="http://localhost:8000/Service4.0.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

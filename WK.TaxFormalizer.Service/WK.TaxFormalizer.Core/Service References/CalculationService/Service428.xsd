@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/ProcurementOrder/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/ProcurementOrder/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd3" namespace="http://schemas.cch.com/ProcurementLineItem/4.0" />
+  <xs:complexType name="ProcurementOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InvoiceID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.cch.com/ProcurementLineItem/4.0" minOccurs="0" name="ProcurementLineItems" nillable="true" type="q1:ArrayOfProcurementLineItem" />
+      <xs:element minOccurs="0" name="ProviderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestTransaction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TransactionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionID" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="VendorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="finalize" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcurementOrder" nillable="true" type="tns:ProcurementOrder" />
+</xs:schema>

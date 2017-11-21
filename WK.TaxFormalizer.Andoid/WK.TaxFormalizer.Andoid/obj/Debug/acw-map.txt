@@ -1,0 +1,4 @@
+WK.TaxFormalizer.Andoid.MainActivity, WK.TaxFormalizer.Andoid;md5c57ff765298c84a704baf49773231a2b.MainActivity
+WK.TaxFormalizer.Andoid.MainActivity, WK.TaxFormalizer.Andoid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5c57ff765298c84a704baf49773231a2b.MainActivity
+WK.TaxFormalizer.Andoid.MainActivity;md5c57ff765298c84a704baf49773231a2b.MainActivity
+wk.taxformalizer.andoid.MainActivity;md5c57ff765298c84a704baf49773231a2b.MainActivity

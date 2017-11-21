@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/Order/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/Order/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd11" namespace="http://schemas.cch.com/LineItem/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd12" namespace="http://schemas.cch.com/NexusInfo/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd15" namespace="http://schemas.cch.com/SitusInfo/4.0" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element name="CustomerType" nillable="true" type="xs:string" />
+      <xs:element name="InvoiceDate" type="xs:dateTime" />
+      <xs:element name="InvoiceID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.cch.com/LineItem/4.0" name="LineItems" nillable="true" type="q1:ArrayOfLineItem" />
+      <xs:element xmlns:q2="http://schemas.cch.com/NexusInfo/4.0" name="NexusInfo" nillable="true" type="q2:NexusInfo" />
+      <xs:element name="ProviderType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.cch.com/SitusInfo/4.0" name="SitusInfo" nillable="true" type="q3:SitusInfo" />
+      <xs:element name="SourceSystem" nillable="true" type="xs:string" />
+      <xs:element name="TestTransaction" type="xs:boolean" />
+      <xs:element name="TransactionDescription" nillable="true" type="xs:string" />
+      <xs:element name="TransactionID" type="xs:unsignedLong" />
+      <xs:element name="TransactionType" nillable="true" type="xs:string" />
+      <xs:element name="finalize" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+</xs:schema>

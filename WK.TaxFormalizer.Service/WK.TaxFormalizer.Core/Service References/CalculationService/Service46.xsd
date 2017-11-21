@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/GeoblockInfo/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/GeoblockInfo/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd13" namespace="http://schemas.cch.com/Address/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd7" namespace="http://schemas.cch.com/Message/4.0" />
+  <xs:complexType name="GeoblockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressVerificationResult" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.cch.com/Address/4.0" minOccurs="0" name="CorrectedAddress" nillable="true" type="q1:Address" />
+      <xs:element minOccurs="0" name="GeoID" type="xs:int" />
+      <xs:element minOccurs="0" name="Geoblock" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.cch.com/Message/4.0" minOccurs="0" name="Messages" nillable="true" type="q2:ArrayOfMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoblockInfo" nillable="true" type="tns:GeoblockInfo" />
+  <xs:complexType name="ArrayOfGeoblockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GeoblockInfo" nillable="true" type="tns:GeoblockInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeoblockInfo" nillable="true" type="tns:ArrayOfGeoblockInfo" />
+</xs:schema>

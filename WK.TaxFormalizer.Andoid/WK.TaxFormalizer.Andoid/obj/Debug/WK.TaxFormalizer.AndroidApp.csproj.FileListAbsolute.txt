@@ -1,0 +1,2 @@
+D:\CodeGames\2016\Tax Formalizer\Code\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\WK.TaxFormalizer.Andoid.dll
+D:\CodeGames\2016\Tax Formalizer\Code\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\WK.TaxFormalizer.Andoid.pdb

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA7E4868-C1F3-49B7-B4BB-FFF2AEAD0B14}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WK.TaxFormalizer.Data</RootNamespace>
+    <AssemblyName>WK.TaxFormalizer.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CanRejectDeliveryTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryByTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIVISIONT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITYT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExemptionClassesT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExemptionClassT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FOBTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Geocode1T.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Geocode2T.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LiabilityTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOCATIONT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MailOrderTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NonTaxReasonT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductGroupT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductItemT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReleaseT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShipFromPOBTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitedOutsideTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StateT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxabilityOverrideT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxabilityStateT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxabilityT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxAuthorityT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxAuthorityTaxT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxCatT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxFormalizerContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaxFormalizerContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxFormalizerContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxFormalizerContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaxFormalizerContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TaxJurisdictionT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxonTaxT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxOverrideReasonT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxRateT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionInvoiceMappingT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionStatusT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionTypeT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransErrorLogT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransItem5.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransItemAT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransItemT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransItemTax2.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransItemTaxT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransLog1.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransLogT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransTax2.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransTaxOnTaxT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransTaxT.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERPROFILET.cs">
+      <DependentUpon>TaxFormalizerContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="TaxFormalizerContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TaxFormalizerContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="TaxFormalizerContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TaxFormalizerContext.edmx</DependentUpon>
+      <LastGenOutput>TaxFormalizerContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="TaxFormalizerContext.edmx.diagram">
+      <DependentUpon>TaxFormalizerContext.edmx</DependentUpon>
+    </None>
+    <None Include="TaxFormalizerContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TaxFormalizerContext.edmx</DependentUpon>
+      <LastGenOutput>TaxFormalizerContext.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

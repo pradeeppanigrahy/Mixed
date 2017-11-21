@@ -1,0 +1,215 @@
+﻿@model WK.TaxFormalizer.Core.Models.TransactionInformationModel
+@{
+    Layout = null;
+}
+@if (Model != null)
+{
+
+   <style>
+
+       .container {
+           margin-left:-10px !important;
+       }
+
+     
+
+      
+   </style>
+
+        
+        <div class="col-md-4">
+            <div class="row">
+
+                <div class="form-group">
+                    <div class="row">
+                        <label for="user_title" class="control-label col-xs-4" name="lblDate">Reporting date:</label>
+                        @Html.Label("lblDateVal", Model.TransactionDate.HasValue ? Model.TransactionDate.Value.ToString("MM/dd/yyyy") : string.Empty, new { @class = "col-xs-5 trans_details" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label for="user_title" class="control-label col-xs-4" name="lblId">Transaction #:</label>
+                        @Html.Label("lblIdVal", Convert.ToString(Model.TransactionId), new { @class = "col-xs-5 trans_details", @id = "TransactionId" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label for="user_title" class="control-label col-xs-4" name="lblAmount">Transaction amt:</label>
+                        @Html.FormatAmountLabel("lblAmountVal", Model.Amount, 3, "col-xs-5 trans_details")
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label for="user_title" class="control-label col-xs-4" name="lblTax">Total tax amt:</label>
+                        @Html.FormatAmountLabel("lblTaxVal", Model.TotalTaxAmount, 3, "col-xs-5 trans_details")
+                    </div>
+                    </div>
+                </div>
+            </div>
+    <div class="col-md-4 transinfo ">
+        <div class="row">
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblType">Transaction type:</label>
+                    @Html.Label("lblTypeVal", Model.TransactionTypeDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+
+                    <label for="user_title" class="control-label col-xs-4" name="lblInvoiceDate">Invoice date:</label>
+                    @Html.Label("lblInvoiceDateVal", Model.InvoiceDate.HasValue ? Model.InvoiceDate.Value.ToString("MM/dd/yyyy") : string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblInvoiceId">Invoice ID:</label>
+                    @Html.Label("lblInvoiceIdVal", Model.InvoiceId ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblOriginalId">Original trans #:</label>
+                    @Html.Label("lblOriginalIdVal", Convert.ToString(Model.OriginalTransactionId), new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 transinfo ">
+        <div class="row">
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblProviderType">Provider type:</label>
+                    @Html.Label("lblProviderTypeVal", Model.ProviderTypeDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblUsageType">Customer/Usage type:</label>
+                    @Html.Label("lblUsageTypeVal", Model.CustomerOrUsageTypeDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblSourceSystem">Source system:</label>
+                    @Html.Label("lblSourceSystemVal", Model.SourceSystem ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-4" name="lblCustomerId">Customer/Vendor ID:</label>
+                    @Html.Label("lblCustomerIdVal", Model.VendorID ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="col-md-4">
+         <div class="row">
+
+             <div class="form-group">
+                 <div class="row">
+                     <label for="user_title" class="control-label col-xs-4" name="lblFOB">FOB:</label>
+                     @Html.Label("lblFOBVal", Model.SitusInformationModel.FOBDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="row">
+                     <label for="user_title" class="control-label col-xs-4" name="lblMailOrder">Mail order:</label>
+                     @Html.Label("lblMailOrderVal", Model.SitusInformationModel.MailOrderDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="row">
+                     <label for="user_title" class="control-label col-xs-4" name="lblDeliveryBy">Delivery by:</label>
+                     @Html.Label("lblDeliveryByVal", Model.SitusInformationModel.DeliveryByDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="row">
+                     <label for="user_title" class="control-label col-xs-4" name="lblSolicitedOutside">Solicited outside:</label>
+                     @Html.Label("lblSolicitedOutsideVal", Model.SitusInformationModel.SolicitedOutsideDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="row">
+                     <label for="user_title" class="control-label col-xs-4" name="lblCanRejectDelivery">Can reject delivery:</label>
+                     @Html.Label("lblCanRejectDeliveryVal", Model.SitusInformationModel.CanRejectDeliveryDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                 </div>
+             </div>
+             <div class="form-group">
+                 <div class="row">
+                     <label for="user_title" class="control-label col-xs-4"  name="lblShipFromPOB">Ship from POB:</label>
+                     @Html.Label("lblShipFromPOBVal", Model.SitusInformationModel.ShipFromPOBDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                 </div>
+                 </div>
+             </div>
+         </div>
+            <div class="col-md-4 transinfo">
+                <div class="row">
+
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblStatus">Status:</label>
+                            @Html.Label("lblStatusVal", Model.TransactionStatusDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblShipFromGeocode">Ship from geocode:</label>
+                            @Html.Label("lblShipFromGeocodeVal", Model.SitusInformationModel.ShipFromGeocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblOrderPlacement">Order Pl geocode:</label>
+                            @Html.Label("lblOrderPlacementVal", Model.SitusInformationModel.OrderPlacementGeocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblOrderApproval">Order app geocode:</label>
+                            @Html.Label("lblOrderApprovalVal", Model.SitusInformationModel.OrderApprovalGeocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblShipToGeocode">Ship to geocode:</label>
+                            @Html.Label("lblShipToGeocodeVal", Model.SitusInformationModel.ShipToGeocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblTestTransaction">Test transaction:</label>
+                            @Html.Label("lblTestTransactionVal", Model.TestTransaction ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-4 transinfo" >
+                <div class="row">
+
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblCreatedBy">Trans created by:</label>
+                            @Html.Label("lblCreatedByVal", Model.CreatedBy ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblLiabilityType">Liability type:</label>
+                            @Html.Label("lblLiabilityTypeVal", Model.LiabilityTypeDescription ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-4" name="lblDescription">Description:</label>
+                            @Html.Label("lblDescriptionVal", Model.TransactionDescription ?? string.Empty, new { @class = "col-xs-5 trans_details description_txt" })
+                        </div>
+                        </div>
+                    </div>
+                </div>
+     
+        
+   
+}

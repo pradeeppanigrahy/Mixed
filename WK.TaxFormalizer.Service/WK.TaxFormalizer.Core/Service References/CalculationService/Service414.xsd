@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/PartialLineItem/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/PartialLineItem/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPartialLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PartialLineItem" nillable="true" type="tns:PartialLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPartialLineItem" nillable="true" type="tns:ArrayOfPartialLineItem" />
+  <xs:complexType name="PartialLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AvgUnitPrice" type="xs:decimal" />
+      <xs:element name="ID" nillable="true" type="xs:string" />
+      <xs:element name="Quantity" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PartialLineItem" nillable="true" type="tns:PartialLineItem" />
+</xs:schema>

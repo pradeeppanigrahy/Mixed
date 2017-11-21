@@ -1,0 +1,142 @@
+﻿
+@using Kendo.Mvc
+
+@{
+    ViewBag.Title = "Manage Transactions";
+}
+@*@{
+    var attribute = new WK.STO.UI.WEB.Attributes.STOAuthorize();
+    var isUserWithFullAccess = attribute.isUserWithFullAccessLevel(STOConstant.TransactionManagement);
+}*@
+
+
+<link href="~/Content/Controls.css" rel="stylesheet" />
+
+@*<div class="col-md-1">
+    <div class="row">
+        @Html.Partial("~/views/VerticalMenu/_Transactions.cshtml")
+    </div>
+</div>*@
+
+<style>
+    .k-grid-header {
+        padding-right: 0 !important;
+    }
+
+    .k-grid-content {
+        overflow-y: visible;
+        height: auto !important;
+
+    }
+
+    .k-grid-content-locked {
+        height: auto !important;
+    }
+
+    #transactionGrid .k-grid-header-wrap table,
+    #transactionGrid .k-grid-content table {
+        width: 100% !important;
+    }
+
+    .k-grid tr td {
+        padding: .4em .6em !important;
+    }
+
+    .k-grid tbody tr {
+        height: 30px;
+    }
+</style>
+
+<div class="col-md-11 grid_adjust">
+
+    <div class="span30">
+    </div>
+    <p id="maintainTransactionCustomError"></p>
+
+    @(Html.Kendo().Grid<WK.TaxFormalizer.Core.Models.MaintainTransactionModel>()
+                            .Name("transactionGrid")
+                             .Columns(col =>
+                             {
+                                 @*if (isUserWithFullAccess)
+                                 {
+                                 col.Template(@<text>''</text>)
+                                     .ClientTemplate(@"#if (TransactionStatusDescription == 'InProgress') { # <a title='Finalize Transaction' onclick='finalizeTransaction(#= TransactionID #);' class='k-button k-button-icontext k-grid-finalize finalize1'>Finalize</a><a title='Cancel Transaction' onclick='cancelTransaction(#= TransactionID #);' class='k-button k-button-icontext k-grid-cancel cancel1'>Cancel</a> # } 
+                                        if (TestTransaction=='Y' || TransactionStatusDescription == 'Cancelled' || TransactionStatusDescription == 'Failed' || TransactionStatusDescription == 'Abandoned') { # <a title='Delete Transaction' onclick='deleteTransaction(#= TransactionID #);' class='k-button k-button-icontext k-grid-remove delete1' >Delete</a> # } 
+                                        if (TransactionStatusDescription == 'Final' && LiabilityTypeDescription == 'Sale Or Purchase') { if(TransactionReturnStatus == 'Full'){#<a title='Transaction is Fully Returned' class='k-grid-fullreturn' style='padding-right:3px;padding-left:3px;cursor:default;position:absolute;left:100px;margin-top:-10px;'>Fully Returned</a>#}else{ # <a title='Return Transaction' id='btnReturnTransaction_#= TransactionID #' class='k-grid-return return1' onclick='LoadReturnTransaction(#= TransactionID #);'>Return</a> #} } #")
+                                     .Width(140).IncludeInMenu(false).Locked(true).Lockable(false).HtmlAttributes(new { @class = "commandGridCell" });
+                                 }
+                                 else
+                                 {
+                                     col.Template(@<text>''</text>)
+                                     .ClientTemplate(@"#if (TransactionStatusDescription == 'InProgress') { # <a title='Finalize Transaction' class='k-button k-button-icontext k-grid-finalize finalize1 button-disable'>Finalize</a><a title='Cancel Transaction' class='k-button k-button-icontext k-grid-cancel cancel1 button-disable'>Cancel</a> # } 
+                                        if (TestTransaction=='Y' || TransactionStatusDescription == 'Cancelled' || TransactionStatusDescription == 'Failed' || TransactionStatusDescription == 'Abandoned') { # <a title='Delete Transaction' class='k-button k-button-icontext k-grid-remove delete1 button-disable' >Delete</a> # } 
+                                        if (TransactionStatusDescription == 'Final' && LiabilityTypeDescription == 'Sale Or Purchase') { if(TransactionReturnStatus == 'Full'){#<a title='Transaction is Fully Returned' class='k-grid-fullreturn button-disable' style='padding-right:3px;padding-left:3px;cursor:default;position:absolute;left:100px;margin-top:-10px;'>Fully Returned</a>#}else{ # <a title='Return Transaction' id='btnReturnTransaction_#= TransactionID #' class='k-grid-return return1 button-disable'>Return</a> #} } #")
+                                     .Width(140).IncludeInMenu(false).Locked(true).Lockable(false).HtmlAttributes(new { @class = "commandGridCell" });
+                                 }*@
+                                 //col.Bound(transactions => transactions.CustomerID).Title("Customer ID")
+                                 //    .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                 //    .HtmlAttributes(new { title = "#= CustomerID #" }).Width(140).Lockable(false);
+                                 col.Bound(transactions => transactions.TransactionID).Title("Transaction #").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= TransactionID #" }).Width(160).Lockable(false);
+                                 col.Bound(transactions => transactions.InvoiceID).Title("Invoice ID").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= InvoiceID #" }).Width(110).Lockable(false);
+                                 col.Bound(transactions => transactions.InvoiceDate).Locked(true).Lockable(false).Title("Invoice Date").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= InvoiceDate #" }).Width(160);
+                                 col.Bound(transactions => transactions.LiabilityTypeDescription).Title("Type Of Transaction").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= LiabilityTypeDescription #" }).Width(180).Lockable(false);
+                                 col.Bound(transactions => transactions.TransactionStatusDescription).Title("Status").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= TransactionStatusDescription #" }).Width(120).Lockable(false);
+                                 col.Bound(transactions => transactions.TestTransaction).Title("Test Transaction").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= TestTransaction #" }).Width(150).Lockable(false);
+                                 col.Bound(transactions => transactions.TransactionDate).Title("Transaction Date").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= TransactionDate #" }).Width(160).Hidden(true).IncludeInMenu(true).Lockable(false);
+                                 
+                                 col.Bound(transactions => transactions.SourceSystem).Title("Source System").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= SourceSystem #" }).Width(150).Hidden(true).IncludeInMenu(true).Lockable(false);
+                                 col.Bound(transactions => transactions.ShipToGeocode).Title("Ship To Geocode").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= ShipToGeocode #" }).Width(150).Hidden(true).IncludeInMenu(true).Lockable(false);
+                                 col.Bound(transactions => transactions.CreationTime).Title("Creation Time").Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= CreationTime #" }).Width(150).Hidden(true).IncludeInMenu(true).Lockable(false);
+                                 col.Template(@<text>''</text>)
+                                            .ClientTemplate("<a class='' title='Transaction Details' style='cursor:pointer;' onclick='loadTransactionDetails(#= TransactionID #);'>Transaction Details</a>").Title("Transaction Details").Width(150).IncludeInMenu(false).Lockable(false);
+                                            col.Template(@<text>''</text>)
+                                            .ClientTemplate("<a class='' title='Download Invoice' style='cursor:pointer;' onclick='downloadInvoice(#= TransactionID #);'>Download Invoice</a>").Title("Download Invoice").Width(150).IncludeInMenu(false).Lockable(false);
+
+                             })
+
+                                                                 .Pageable()
+                                                                 .Scrollable()
+                                                                 .Reorderable(reorder => reorder.Columns(true))
+                                                                 .ColumnMenu()
+                                                                 .Filterable(ftb => ftb.Mode(GridFilterMode.Row))
+                                                                 .Sortable()
+                                                                 .Events(events => events.DataBound("transactionGrid_On_DataBound"))
+                                                                 .AutoBind(true)
+                                                                 .DataSource(dataSource => dataSource
+                                                                     .Ajax()
+                                                                     .PageSize(10)
+                                                                     .Model(model =>
+                                                                         {
+                                                                             model.Id(p => p.TransactionID);
+                                                                         })
+                                                                     .Sort(sort => sort.Add(x => x.TransactionID).Descending())
+                                                                     .ServerOperation(true)
+                                                                     .Events(events => events.Error("transactionGrid_error_handler"))
+                                                                     .Read(read => read.Action("Transactions_Read", "Transactions").Data("getCompanyAndLFEId").Type(HttpVerbs.Post)))
+    )
+
+</div>
+
+<script src='@Url.Content("~/Scripts/transaction.js")' type="text/javascript"></script>
+<script src='@Url.Content("~/Scripts/transactionDetail.js")' type="text/javascript"></script>
+<script type="text/javascript">
+
+    var transactionUrl = stoSaas.urls.transaction;
+
+    //transactionUrl.loadTransaction = '@Url.Action("TransactionDetails", "Transactions")';
+    transactionUrl.getGridSettings = '@Url.Action("GetTransactionGridSettings", "Transactions")';
+    transactionUrl.returnTransaction = '@Url.Action("LoadTransaction", "TransactionReturn")';
+
+    //getTransactionGridSettings();
+
+</script>

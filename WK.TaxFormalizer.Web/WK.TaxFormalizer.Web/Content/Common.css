@@ -1,0 +1,7445 @@
+﻿/*Created on 08-05-2014. Author: Kunal Deshmukh*/
+
+
+/*HTML elements Section*/
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Tahoma;
+    font-size: 12px;
+    color: black;
+   
+}
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+}
+
+hr {
+    border-color: #50A5FF;
+    height: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Tahoma;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+/*Spanners between divs KD - 20-06-2014*/
+.span10 {
+    clear: both;
+    padding-bottom: 10px;
+}
+
+.span20 {
+    clear: both;
+    padding-bottom: 20px;
+}
+
+.span30 {
+    clear: both;
+    padding-bottom: 15px;
+}
+
+.span40 {
+    clear: both;
+    padding-bottom: 40px;
+}
+
+.span50 {
+    clear: both;
+    padding-bottom: 50px;
+}
+
+.span60 {
+    clear: both;
+    padding-bottom: 60px;
+}
+
+.span70 {
+    clear: both;
+    padding-bottom: 70px;
+}
+
+.form-control {
+
+    color:black !important;
+    font-size: 12px !important;
+}
+
+.hand_cursor {
+    cursor: pointer !important;
+
+}
+
+
+
+.k-textbox {
+    
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .k-textbox:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+
+    .k-textbox::-moz-placeholder {
+        color: #999;
+        opacity: 1;
+    }
+
+    .k-textbox:-ms-input-placeholder {
+        color: #999;
+    }
+
+    .k-textbox::-webkit-input-placeholder {
+        color: #999;
+    }
+
+    .form-control[disabled],
+    .form-control[readonly],
+    fieldset[disabled] .k-textbox {
+        cursor: not-allowed;
+        background-color: #eee;
+        opacity: 1;
+    }
+
+    .searchgeo_btn{
+
+        margin-top:30px !important;
+    }
+
+   
+
+textarea.k-textbox {
+    height: auto;
+}
+
+
+.k-grid-Copy {
+    background-image: url("images/copyIcon.png");
+    width: 16px;
+    height: 16px;
+    padding-bottom: 16px;
+    vertical-align: bottom;
+    margin-left: 5px;
+    padding-right: 15px;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+/*Header Section*/
+.cch_logo {
+     width: 165px;
+    float: right;
+    margin-top: 5px;
+}
+.header-bg {
+    background-position: right;
+    background-image: url('images/bannerBG1.jpg');
+    background-repeat: no-repeat;
+    background-color: #0081c8;
+    width: 100%;
+    height: 94px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+
+
+/*Company Configuration Dashboard - KD -20-06-2014 */
+.config-tile-layout {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.config-tiles {
+    background-color: #006699;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 10px;
+    border: #006699 1px solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 125px;
+    width: 175px;
+    padding-top: 1px !important;
+}
+
+    .config-tiles a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+
+
+
+.tileTitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    font-weight: 900;
+}
+
+.tile-borders {
+    border-right: 1px solid black;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-top-right-radius: 10px;
+    padding-top: 20px;
+}
+
+
+.config-tiles-title {
+    text-decoration: none;
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.config-tiles-disabled {
+    background-color: #537CA9;
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: #537CA9 1px solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 125px;
+    width: 175px;
+    padding-top: 1px !important;
+}
+
+    .config-tiles-disabled a {
+        text-decoration: none;
+        color: white;
+    }
+
+.sto-info-icon {
+    background-image: url('images/iconInfo.PNG');
+    width: 20px;
+    height: 20px;
+    cursor: help;
+}
+
+.sto-info-icon-disabled {
+    background-image: url('images/iconInfoDisabled.PNG');
+    width: 20px;
+    height: 20px;
+    cursor: help;
+}
+
+/*Tiles InfoPanel Rendering via jQuery - KD - 23 June 2014*/
+
+.sto-company-info {
+    color: white;
+    text-align: left;
+    z-index: 10;
+    vertical-align: top;
+    left: 5px;
+}
+
+
+/* Vertical Menu Styling  - KD - 30 - June -2014*/
+
+
+    .sto-vmenu ul > li {
+        padding-left: 0;
+        padding-bottom: 5px;
+        /**/
+        list-style: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABdSURBVChTYyAKOBz4Pd3x4C8rKBcTgBQ4Hfj932H/z6/2+/9zQIURAKYAjvf/PgiVggAMBWBFvxZCpVEVOOz/9bT+/38mqBQEwBTY7/+uABVCBfb7f+pAmWiAgQEASplGV34T688AAAAASUVORK5CYII=') /*images/list-menu-right.png*/;
+        *list-style: url('images/list-menu-right.png'); /* For IE 6 and 7 */
+    }
+
+        .sto-vmenu ul > li .active {
+            color: black;
+            font-weight: 600;
+        }
+
+
+        .sto-vmenu ul > li#back {
+            padding-left: 0;
+            list-style: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAAJFBMVEUAAABAwPs/v/c/v/l///8/v/pCv/pCv/s/v/8/v/hBwfpCwPsoaw5dAAAAC3RSTlMAlyAsAuWhwQj1Om0z+XoAAAAsSURBVHheDcQxDQAgEMXQToQwnQ8WTKDqpCDlm6NN+rDju+CmGBFamE9YYh9s7wUbeIMjfgAAAABJRU5ErkJggg==') /*images/list-menu-left.png*/;
+            *list-style: url('images/list-menu-left.png'); /* For IE 6 and 7 */
+        }
+
+    .sto-vmenu a {
+        margin: 0;
+    }
+
+.sto-vmenu-list {
+    margin-top: 30px;
+    padding-left: 5px;
+}
+
+.sto-vmenu-list-back {
+    margin-bottom: 20px;
+}
+
+.sto-vmenu-list a {
+    color: #bd2964;
+}
+
+.sto-vmenu-corner {
+    margin-left: -30px;
+}
+
+/*Vertical Menu Styling End*/
+
+
+/*Footer Section*/
+
+.footer-bg {
+    background-color: #02477E;
+    height: 20px;
+}
+
+.footer-text {
+    color: white;
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+.footer-text-customer {
+    color: white;
+    font-family: Tahoma;
+    font-size: 12px;
+    text-align: right;
+}
+
+    .footer-text-customer a {
+        color: white;
+    }
+
+
+.securityoptions {
+}
+
+    .securityoptions input[type="text"] {
+        background: #FFFFFF;
+        padding: 1px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border: 1px solid #50A5FF;
+        margin: 0 auto;
+    }
+
+
+
+/* Bootstrp Overrides*/
+
+.navbar {
+    min-height: 20px !important;
+}
+
+.navbar-nav > li > a {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.btn {
+    font-weight: 600;
+    background-color: #0B4D83;
+    border: 1px solid #50A5FF;
+    color: white;
+}
+
+    .btn:hover {
+        color: white;
+    }
+
+    .btn:visited {
+        color: white;
+    }
+
+    .btn:active {
+        color: white;
+    }
+
+.modal-dialog {
+    width: 350px;
+}
+
+.modal-footer {
+    color: black;
+    padding: 10px !important;
+    text-align: center;
+}
+
+.modal-header {
+    color: black;
+    padding: 10px !important;
+    text-align: left;
+}
+
+    .modal-header h5 {
+        color: black;
+    }
+
+
+a.k-grid-remove {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-remove:hover,
+a.k-grid-remove:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-remove:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\e020';
+  padding: 0px !important;
+}
+a.k-grid-remove:after:hover,
+a.k-grid-remove:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-remove:after:active,
+a.k-grid-remove:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-remove:after.disabled,
+a.k-grid-remove:after[disabled],
+fieldset[disabled] a.k-grid-remove:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-remove span.k-remove {
+  display: none;
+}
+
+
+
+
+/*icon for add  return transaction delete icon*/
+
+
+
+a.k-grid-customremove {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-customremove:hover,
+a.k-grid-customremove:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-customremove:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\e020';
+  padding: 0px !important;
+}
+a.k-grid-customremove:after:hover,
+a.k-grid-customremove:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-customremove:after:active,
+a.k-grid-customremove:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-customremove:after.disabled,
+a.k-grid-customremove:after[disabled],
+fieldset[disabled] a.k-grid-customremove:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-customremove span.k-remove {
+  display: none;
+}
+/*End Region : icon for add  return transaction delete icon*/
+
+    /* icon for finalize */
+
+    a.k-grid-finalize {
+    font-size: 0;
+    border-style: none;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: none;
+    color: #428bca;
+    min-width: 15px !important;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+    a.k-grid-finalize:hover,
+    a.k-grid-finalize:focus {
+        color: #2a6496;
+        background-image: none;
+        background-color: transparent;
+        text-decoration: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+    a.k-grid-finalize:after {
+        margin-bottom: 0 !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        cursor: pointer !important;
+        background-image: none !important;
+        border: 1px solid transparent !important;
+        white-space: nowrap !important;
+        padding: 6px 12px !important;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        border-radius: 4px !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        position: relative !important;
+        top: 1px !important;
+        display: inline-block !important;
+        font-family: 'Glyphicons Halflings' !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        content: '\e067';
+        padding: 5px !important;
+    }
+
+        a.k-grid-finalize:after:hover,
+        a.k-grid-finalize:after:focus {
+            color: #333333 !important;
+            text-decoration: none !important;
+        }
+
+        a.k-grid-finalize:after:active,
+        a.k-grid-finalize:after.active {
+            outline: 0 !important;
+            background-image: none !important;
+            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        }
+
+        a.k-grid-finalize:after.disabled,
+        a.k-grid-finalize:after[disabled],
+        fieldset[disabled] a.k-grid-remove:after {
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            opacity: 0.65 !important;
+            filter: alpha(opacity=65) !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+    a.k-grid-finalize span.k-remove {
+        display: none;
+    }
+
+    /* icon for return*/
+    a.k-grid-return {
+    font-size: 1px;
+    border-style: none;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: url('images/return_icon.png');
+    color: #428bca;
+    min-width: 15px !important;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+    a.k-grid-return:hover,
+    a.k-grid-return:focus {
+        color: #2a6496;
+        background-image: url('images/return_icon.png');
+        background-color: transparent;
+        text-decoration: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+    a.k-grid-return:after {
+        margin-bottom: 0 !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        cursor: pointer !important;
+       background-image: url('images/return_icon.png');
+        border: 1px solid transparent !important;
+        white-space: nowrap !important;
+        padding: 6px 12px !important;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        border-radius: 4px !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        position: relative !important;
+        top: 1px !important;
+        display: inline-block !important;
+        font-family: 'Glyphicons Halflings' !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+       
+        padding: 5px !important;
+    }
+
+        a.k-grid-return:after:hover,
+        a.k-grid-return:after:focus {
+            color: #333333 !important;
+            text-decoration: none !important;
+        }
+
+        a.k-grid-return:after:active,
+        a.k-grid-return:after.active {
+            outline: 0 !important;
+           background-image: url('images/return_icon.png');
+            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        }
+
+        a.k-grid-return:after.disabled,
+        a.k-grid-return:after[disabled],
+        fieldset[disabled] a.k-grid-remove:after {
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            opacity: 0.65 !important;
+            filter: alpha(opacity=65) !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+    a.k-grid-return span.k-remove {
+        display: none;
+    }
+
+
+    /* icon for full return*/
+    a.k-grid-fullreturn {
+    font-size: 1px;
+    border-style: none;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: url('images/full_return_icon.png');
+    color: #428bca;
+    width: 15px !important;
+    height:20px;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+    a.k-grid-fullreturn:hover,
+    a.k-grid-fullreturn:focus {
+        color: #2a6496;
+        background-image: url('images/full_return_icon.png');
+        background-color: transparent;
+        text-decoration: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+    a.k-grid-fullreturn:after {
+        margin-bottom: 0 !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        cursor: pointer !important;
+       background-image: url('images/return_icon.png');
+        border: 1px solid transparent !important;
+        white-space: nowrap !important;
+        padding: 6px 12px !important;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        border-radius: 4px !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        position: relative !important;
+        top: 1px !important;
+        display: inline-block !important;
+        font-family: 'Glyphicons Halflings' !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+       
+        padding: 5px !important;
+    }
+
+        a.k-grid-fullreturn:after:hover,
+        a.k-grid-fullreturn:after:focus {
+            color: #333333 !important;
+            text-decoration: none !important;
+        }
+
+        a.k-grid-fullreturn:after:active,
+        a.k-grid-fullreturn:after.active {
+            outline: 0 !important;
+           background-image: url('images/return_icon.png');
+            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        }
+
+        a.k-grid-fullreturn:after.disabled,
+        a.k-grid-fullreturn:after[disabled],
+        fieldset[disabled] a.k-grid-remove:after {
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            opacity: 0.65 !important;
+            filter: alpha(opacity=65) !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+    a.k-grid-fullreturn span.k-remove {
+        display: none;
+    }
+
+    /* icon for geocode __riyaz  */
+        
+        a.k-grid-geolook {
+    font-size: 0;
+    border-style: none;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: none;
+    color: #428bca;
+    min-width: 15px !important;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+    a.k-grid-geolook:hover,
+    a.k-grid-geolook:focus {
+        color: #2a6496;
+        background-image: none;
+        background-color: transparent;
+        text-decoration: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+    a.k-grid-geolook:after {
+        margin-bottom: 0 !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        cursor: pointer !important;
+        background-image: none !important;
+        border: 1px solid transparent !important;
+        white-space: nowrap !important;
+        padding: 6px 12px !important;
+        font-size: 15px !important;
+        line-height: 1.42857143 !important;
+        border-radius: 4px !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        position: relative !important;
+        top: 1px !important;
+        display: inline-block !important;
+        font-family: 'Glyphicons Halflings' !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        content: '\e066';
+        padding: 0px !important;
+    }
+
+        a.k-grid-geolook:after:hover,
+        a.k-grid-geolook:after:focus {
+            color: #333333 !important;
+            text-decoration: none !important;
+        }
+
+        a.k-grid-geolook:after:active,
+        a.k-grid-geolook:after.active {
+            outline: 0 !important;
+            background-image: none !important;
+            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+        }
+
+        a.k-grid-geolook:after.disabled,
+        a.k-grid-geolook:after[disabled],
+        fieldset[disabled] a.k-grid-remove:after {
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            opacity: 0.65 !important;
+            filter: alpha(opacity=65) !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+    a.k-grid-geolook span.k-remove {
+        display: none;
+    }
+        
+
+    /* maintain transaction icons css*/
+
+
+.delete1 {
+    padding-right:6px !important;cursor:pointer !important;position:absolute !important;left:70px !important;margin-top:-8px !important;
+}
+
+.edit1 {
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    /*cursor: pointer !important;*/
+    position: absolute !important;
+    left: 24px !important;
+    margin-top: -13px !important;
+}
+
+.remove1 {
+    padding-right: 6px !important;
+    /*cursor: pointer !important;*/
+    position: absolute !important;
+    left: 7px !important;
+    margin-top: -8px !important;
+}
+
+.finalize1{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    left: 10px !important;
+    margin-top: -13px !important;
+}
+.cancel1{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    left: 36px !important;
+    margin-top: -13px !important;
+}
+
+.return1{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    left: 100px !important;
+    margin-top: -10px !important;
+}
+
+/*Responsiv UI - Kunal Deshmukh 13 August 2014*/
+/*1280 x 1024*/
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+    .taxratecolumn{
+        border-right: 1px dotted #02477E;
+    }
+
+    .config-tiles {
+        background-color: #006699;
+        color: white;
+        padding: 5px;
+        font-size: 9px;
+        border-radius: 10px;
+        border: #006699 1px solid;
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 125px;
+        width: 165px;
+        padding-top: 1px !important;
+    }
+
+    .config-tiles-title {
+        text-decoration: none;
+        margin-top: 3px;
+        font-size: 11px;
+        font-weight: 800;
+    }
+
+    .config-tiles-disabled {
+        background-color: #537CA9;
+        color: white;
+        padding: 5px;
+        font-size: 9px;
+        border-radius: 10px;
+        border: #537CA9 1px solid;
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 125px;
+        width: 165px;
+        padding-top: 1px !important;
+    }
+}
+
+
+/*disable IE Clear button - KD - 2014-12-29*/
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+
+
+
+.Read-Only, .No-Access, .Full-Access {
+    background: url("images/sprites.png") no-repeat !important;
+}
+
+.Generated, .Processing, .Requested, .Failed {
+    background: url("images/sprites_DMS.png") no-repeat !important;
+}
+
+.Generated {
+    background-position: -88px 0 !important;
+    width: 30px !important;
+    height: 22px !important;
+    text-align: center;
+    margin-left: 25px;
+        padding-right: 26px;
+    PADDING-BOTTOM: 10px
+}
+
+.Processing {
+    background-position: -45px 0 !important;
+    width: 30px !important;
+    height: 22px !important;
+    text-align: center;
+    margin-left: 25px;
+        padding-right: 26px;
+    PADDING-BOTTOM: 10px
+}
+
+.Requested {
+    background-position:-3px 0 !important;
+    width: 30px !important;
+    height: 22px !important;
+    text-align: center;
+    margin-left: 25px;
+       padding-right: 26px;
+    PADDING-BOTTOM: 10px
+}
+.Failed {
+    background-position:-129px 0 !important;
+    width: 30px !important;
+    height: 22px !important;
+    text-align: center;
+    margin-left: 25px;
+       padding-right: 26px;
+    PADDING-BOTTOM: 10px
+}
+
+
+.Read-Only {
+    background-position: -98px 0 !important;
+    width: 18px !important;
+    height: 19px !important;
+    text-align: center;
+    margin-left: 25px;
+    padding-right: 20px;
+}
+
+.No-Access {
+    background-position: -48px -1px!important;
+    width: 18px !important;
+    height: 19px !important;
+    text-align: center;
+    margin-left: 25px;
+    padding-right: 20px;
+}
+
+.Full-Access {
+    background-position:0 0 !important;
+    width: 18px !important;
+    height: 19px !important;
+    text-align: center;
+    margin-left: 25px;
+    padding-right: 20px;
+}
+
+
+/*Auto adjust kendo dropdown to the width of the content- Pradeep- 6 Jan 2015*/
+.k-list-container ul li {
+    padding-left: 10px !important;
+    padding-right: 30px !important;
+}
+
+.toaster-top {
+    width: 300px;
+    position: fixed;
+    left: 40%;
+    top: 0;
+    padding-bottom: 20px;
+    text-align: left;
+    z-index: 100000;
+}
+
+    .toaster-top > p {
+        display: inline;
+        line-height: 1.6em;
+        padding-left: 10px;
+    }
+
+    .toaster-top > a {
+        margin-left: 5px;
+        float: right;
+        top: -1px;
+    }
+
+        .toaster-top > a > span {
+            border-radius: 1px;
+            border: 1px solid blue;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+.displayNone {
+    display: none;
+}
+
+
+
+#customModal.modal {
+    z-index:444444 !important;
+}
+
+#customModal .close {
+    opacity:1 !important;
+}
+
+#customModal input[type=button]{
+    margin:4px;
+}
+
+#ModalDialog .modal-content{
+    background-color:#FFFFFF;
+}
+
+#ModalDialog.modal .modal-dialog
+{
+    min-width:90%;
+    min-height:80%;  
+}
+
+        #ModalDialog .modal-body
+        {
+            position:relative;
+            top:12px;
+        }
+
+#ModalDialog .close {
+    position:relative;
+    top:0;
+    opacity:1 !important;
+    margin-bottom:6px; 
+    padding:2px;   
+}
+
+#ModalDialog .close:hover {
+    background-color:Highlight;   
+}
+
+#ModalDialog .63-header{
+    position:relative;
+    top:2px;
+    border-bottom:none;
+    min-height:10px;
+}
+
+.disableControl{
+    opacity: 0.3;
+    cursor: default;
+}
+
+/*css written by- Riyaz- 29 Feb 2015*/
+
+.top_space {
+margin-top:15px;
+
+}
+
+.geo_icon {
+
+    float: left;
+    margin: 8px 10px 0px 10px ;
+    
+
+}
+
+#divLocationsSearch{
+
+
+    
+}
+
+#divAddressSearch{
+
+
+    
+}
+.locsearcbtn {
+
+    margin-left: 0px;
+  
+}
+
+.hrform{
+    border-color: #02477E;
+    height: 1px;
+    width: 100%;
+     clear:both;
+     margin-left: 0px;
+}
+
+.geoform {
+
+    margin-bottom:10px !important;
+}
+
+.geoform1 {
+
+    margin-bottom:0px !important;
+}
+.fieldset{
+
+    min-height:365px;
+    height:335px;
+    border: 1px solid #02477E;
+    clear:both;
+   /* width: 100% !important;*/
+   border-radius: 0 15px 0 15px!important;
+-webkit-border-radius:0 15px 0 15px!important;
+-moz-border-radius:0 15px 0 15px!important;
+
+}
+.txtfld {
+    width: 150px !important;
+}
+
+.modal {
+   position: absolute!important;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+    left: 0!important;
+    z-index: 99999!important;
+    overflow: inherit!important;
+    overflow-y: inherit!important;
+}
+
+
+
+.rulecolumn_left 
+{
+ margin-left:0px;
+
+}
+.nexusdrag_colm{
+
+    margin-left: 15px;
+  margin-right: -15px;
+
+}
+.roles_sidemenu{
+
+    margin-left: -15px;
+  margin-right: 10px;
+
+}
+.modal-header {
+   border-bottom: none !important; 
+}
+ .treeview {
+
+      background-color: white;
+      height: 433px;
+      overflow-y: auto;
+      -moz-border-radius: 5px;
+      padding-top: 10px;
+      border: 1px solid #C0BEBE;
+      overflow-x:auto;
+
+    }
+#divTransactionLineItemTaxes {
+    margin-top:20px;
+}
+
+ 
+.label_left {
+    margin-left:-38px;
+    color: #02477E;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold !important;
+    
+    }
+ .btn_newnex {
+
+           margin-left:20px;
+          
+        }
+
+       .btn_delnex {
+
+           margin-left:20px;
+          
+        }
+      
+    
+       #addLineItemAdressDetailsInfo .hrform {border-color: #0184c3 !important; }
+        #addLineItemAdressDetailsInfo .hrwidth2 {border-color: #0184c3 !important; width: 100% !important;text-align: left !important; margin-left: -3px; height: 1px; }
+         #addLineItemAdressDetailsInfo .hrwidth {border-color: #0184c3 !important;  width: 90% !important;text-align: left !important; margin-left: -3px; height: 1px; }
+
+.require {
+ color:red;font-weight: bolder;
+}
+.cust_lookup {
+    
+    margin-top: 20px;
+    display:block !important;
+    clear:both !important;
+    
+}
+
+/*This Style sheet is used to apply classes only for IE Browser-----Riyaz-30/03/2016*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  
+
+   /* IE10+ specific styles go here */  
+
+  
+    .form-control {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        color: black !important;
+    }
+     
+     #businessRulesHeaderGrid .k-grid-content {height:398px !important;}
+
+      #Addadressdetailsinfo .addaddress_details {height:25px !important; }
+
+       #Addadressdetailsinfo .addaddress_details2 { height:25px !important; }
+        #addLineItemAdressDetailsInfo .addaddress_details {height:25px !important; }
+
+       #addLineItemAdressDetailsInfo .addaddress_details2 { height:25px !important; }
+        .zipie { height:1.8em !important;}
+
+   /* class for overlay behind of modal popup for IE Browser-----Riyaz-30/03/2016*/
+.k-overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+      
+    
+}
+
+
+/*This Style sheet is used to apply classes only for Firefox Browser-----Riyaz-30/03/2016*/
+
+@-moz-document url-prefix() {
+    .fieldset {
+        display: block !important;
+    }
+
+    .treeview {
+        height: 415px;
+    }
+
+    #businessRulesHeaderGrid .k-grid-content {
+        height: 398px !important;
+    }
+
+    .treeview {
+        background-color: white;
+        height: 433px;
+    }
+
+     /* class for overlay behind of modal popup for firefox Browser-----Riyaz-30/03/2016*/
+    .k-overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+   
+
+
+   
+}
+
+/*This Style sheet is used to apply classes resolution up to 1024px-----Riyaz-30/03/2016*/
+@media (max-width: 1024px) {
+
+
+     .taxratecolumn{
+        border-right: none;
+    }
+      /* classes for login status top right in header-----Riyaz-30/03/2016*/
+
+     .login-status {
+    color: white;
+    text-align: right;
+    margin-top: 5px;
+    width: 40%;
+    margin-right:7px;
+}
+
+    .login-status a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /*Boot Strap Overrides for navigation -----Riyaz-30/03/2016**/
+.nav {
+    padding-top: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: Tahoma;
+    color: white;
+}
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+      padding: 5px 3px 3px 5px !important;
+    }
+
+.nav-tabs {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav > li > a {
+        background-color: #02477E;
+    border-bottom-color: #BBBBBB;
+    font-family: Tahoma;
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+    border-color: #BBBBBB #BBBBBB #BBBBBB;
+}
+
+.nav-tabs > li > a:hover {
+   border-color: #BBBBBB #BBBBBB #BBBBBB;
+     border-bottom-color: #BBBBBB;
+    background-color:#0D5B90;
+    font-family: Tahoma;
+    color: #f0f0f0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    font-family: Tahoma;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+    border: 1px solid #f0f0f0;
+    border-bottom-color: transparent;
+    background-color: #fff !important;
+}
+
+/*Boot Strap Overrides for skucheckbox -----Riyaz-30/03/2016**/
+    .skuradio_1024 {
+    
+    margin-left: -12px !important;
+    }
+
+    .container-fluid {
+        margin-bottom: 30px !important;
+    }
+
+    /*css for grid adjustment left-right on every index page -----Riyaz-30/03/2016**/
+    .grid_adjust {
+
+    margin-left:25px !important;
+    margin-right:-30px !important;
+    margin-bottom: 30px;
+}
+
+      .returntransc_textbox {
+        margin-left: -37px;
+     /* padding-right: 6px; */
+        height: 70px !important;
+         width: 57%;
+}
+
+     .same_as_head {
+
+        margin-left:-10px;
+        margin-top:10px;
+    }
+
+
+
+    .type_transc_chkbox {
+      margin-left: -16% !important;
+    }
+
+    .type_transc_chkboxcolumn {
+      width: 48% !important;
+    }
+    .productfield_left {
+    
+    margin-left:-20px;
+    }
+    
+    /*css for bold blue label on transaction address detail page -----Riyaz-30/03/2016**/
+   #divTransactionAddressDetail .trans_details {
+    color: #02477E;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold !important;
+    margin-left: -20px ;
+    display:block !Important;
+}
+    /*css for bold blue label on transactionline item  page -----Riyaz-30/03/2016**/
+     #divLineItems .trans_details
+      {
+        
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+          margin-left: -22px !important;
+          display:block !Important;
+        }
+
+      /*css for bold blue label on tax authority tab page -----Riyaz-30/03/2016**/
+
+       #taxauth_tabdetails .trans_details
+      {
+        
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+          margin-left: -22px !important;
+         white-space: normal !important;
+         display:block !important;
+        }
+
+       #taxauth_tabdetails .reportingdata_tab
+      {
+           width:100%;
+           display:block;
+           overflow:auto;
+
+       }
+
+        #taxauth_tabdetails .reportingdata_tab_details
+      {
+           width:150%;
+           display:block;
+           
+
+       }
+
+
+
+     /*.situs-chkbox { margin-left:-50px;}*/
+
+    #divLineItems .label_left {
+    margin-left:-38px !important;
+     }
+
+     /*bootstrap override css for grid footer -----Riyaz-30/03/2016**/
+    .k-pager-info {
+  float: right;
+  padding: 0 1.333em;
+  font-size: 10px;
+  margin-right: -10px;
+}
+
+
+
+     #divTransactionAddressDetail  .label_left {
+    margin-left:-28px !important;
+     }
+       .btn_newnex {
+
+           margin-left:181px;
+           margin-top:10px;
+        }
+
+       .btn_delnex {
+
+           margin-left:154px;
+           margin-top:10px;
+        }
+
+        /*css for label on transaction info page -----Riyaz-30/03/2016**/
+
+    #AddTransactioninfo.control-label,.col-xs-4 {
+    width:83px !important;
+    clear:both;
+    
+    }
+    /*css for label on add product info page -----Riyaz-30/03/2016**/
+    #Addproductninfo .control-label,.col-xs-4 {
+    width:83px !important;
+    clear:both;
+    }
+    /*css for label on add situs info info page -----Riyaz-30/03/2016**/
+    #Addsitusnexusinfo .control-label,.col-xs-4 {
+    width:76px !important;
+    clear:both;
+    }
+
+    /*css for label on add taxability info page -----Riyaz-30/03/2016**/
+     #Addtaxabilityinfo .control-label,.col-xs-4 {
+    width:83px;
+     clear:both !important;
+    
+    }
+
+     /*css for label on tax authority tab details page -----Riyaz-30/03/2016**/
+     #taxauth_tabdetails.control-label.col-xs-4 {
+    width:135px !important;
+     clear:both !important;
+    
+    }
+
+    .taxability_column {
+        margin-right:20px;
+    }
+
+    .export_icon {
+        margin-left:0;
+    }
+
+
+     .lfenexus_cont {
+    
+    display: inline-block;
+   margin-left:0px;
+    }
+
+    .nexus_tempright {
+      float: left;
+     margin-left: -50px;
+    
+    }
+
+    .bottom_dist {
+      margin-bottom: 30px !important;
+
+    }
+
+     .transinfo_textbox {
+      height: 70px !important;
+      width: 67.2%;
+
+      margin-left:-4%;
+    }
+      .adjustments_textbox {
+      height: 70px !important;
+  width: 62.2%;
+  margin-left: -15px;
+    }
+      /*css for label on transaction address details  page -----Riyaz-30/03/2016**/
+
+        #Addadressdetailsinfo .column_left {
+       margin-left: -60px;
+    }
+
+         #Addadressdetailsinfo .primary_adr {
+        width: 150px !important;
+    }
+         #Addadressdetailsinfo .location_id {
+  width: 96px !important;
+}
+
+          #addLineItemAdressDetailsInfo .location_id {
+  width: 96px !important;
+}
+       #addLineItemAdressDetailsInfo .geoafld_adr {
+  width: 85px !important;
+  display: block;
+}
+
+    #Addadressdetailsinfo .secondary_adr {
+        width: 150px !important;
+    }
+
+      #Addadressdetailsinfo .addaddress_details {
+        
+        margin-left: 14px;
+        width: 67% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+
+    #Addadressdetailsinfo .addaddress_details2 {
+        
+        margin-left: 14px;
+        width: 75% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+    #Addadressdetailsinfo .aligndropdown {
+   
+        margin-left:14px;
+        float: left;
+        
+         }
+    #Addadressdetailsinfo .hrwidth{
+         width:80%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+    #Addadressdetailsinfo .hrwidth2{
+         width:87%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+     #Addadressdetailsinfo .k-textbox.k-space-right {
+         margin-left: 13px;
+         width: 72.5%;
+         margin-bottom: 0px;
+         
+
+    }
+ #Addadressdetailsinfo .addaddress2 {
+         width: 81% !important;
+        }
+  #Addadressdetailsinfo .geocode_box-left {
+
+       width: 53% !important
+       
+    }
+
+     #Addadressdetailsinfo .geocode_box_right {
+
+         width: 64.5% !important;
+         
+    }
+
+     /*css for line item address section*/
+
+       #addLineItemAdressDetailsInfo .column_left {
+       margin-left: -60px;
+    }
+
+         #addLineItemAdressDetailsInfo .primary_adr {
+        width: 150px !important;
+    }
+
+    #addLineItemAdressDetailsInfo .secondary_adr {
+        width: 150px !important;
+    }
+
+      #addLineItemAdressDetailsInfo .addaddress_details {
+        
+        margin-left: 14px;
+        width: 68.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+
+       #addLineItemAdressDetailsInfo .addaddress_details2 {
+        
+        margin-left: 14px;
+        width: 74.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+    #addLineItemAdressDetailsInfo .aligndropdown {
+   
+        margin-left:14px;
+        float: left;
+        
+         }
+    #addLineItemAdressDetailsInfo .hrwidth{
+         width:80%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+    #addLineItemAdressDetailsInfo .hrwidth2{
+         width:87%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+     #addLineItemAdressDetailsInfo .k-textbox.k-space-right {
+         margin-left: 13px;
+         width: 74%;
+         margin-bottom: 0px;
+         
+
+    }
+ #addLineItemAdressDetailsInfo .addaddress2 {
+         width: 80% !important;
+        }
+  #addLineItemAdressDetailsInfo .geocode_box-left {
+
+       width: 55.5% !important
+       
+    }
+
+     #addLineItemAdressDetailsInfo .geocode_box_right {
+
+         width: 60.5% !important;
+         
+    }
+
+     /*end line item address section*/
+
+
+     /*css for validation tooltip on add transaction  page -----Riyaz-30/03/2016**/
+
+     #divAddTransaction .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:-3px;
+ 
+}
+ #divAddTransaction .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divAddTransaction .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+   /*css for validation tooltip on add add product info page -----Riyaz-30/03/2016**/
+
+  #Addproductninfo .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:112px;
+ 
+}
+ #Addproductninfo .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Addproductninfo .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+     /*css for validation tooltip on add transaction info page -----Riyaz-30/03/2016**/
+
+  #AddTransactioninfo .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:91px;
+ 
+}
+ #AddTransactioninfo .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #AddTransactioninfo .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+     /*css for validation tooltip on adjustment page -----Riyaz-30/03/2016**/
+
+   #Adjusment .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:118px;
+ 
+}
+ #Adjusment .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Adjusment .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+    /*css for validation tooltip on tax liability lookup page -----Riyaz-30/03/2016**/
+  #TaxLiability_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:118px;
+ 
+}
+ #TaxLiability_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TaxLiability_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+    /*css for validation tooltip on transaction export page -----Riyaz-30/03/2016**/
+
+   #TransactionExport .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:109px;
+ 
+}
+ #TransactionExport .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TransactionExport .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+    /*css for validation tooltip on strolonline file page -----Riyaz-30/03/2016**/
+
+  #divSTROnlineFile .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:109px;
+ 
+}
+ #divSTROnlineFile .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divSTROnlineFile .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+    /*css for validation tooltip on Transactions ExportBy Product page -----Riyaz-30/03/2016**/
+   #divTransactionsExportByProduct .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:107px;
+ 
+}
+ #divTransactionsExportByProduct .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divTransactionsExportByProduct .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+ 
+   /*css for validation tooltip on sectionSy stemValues page -----Riyaz-30/03/2016**/
+  #sectionSystemValues .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:14px;
+ 
+}
+ #sectionSystemValues .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #sectionSystemValues .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on Taxability override page -----Riyaz-30/03/2016**/
+   #Taxabilityoverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:114px;
+ 
+}
+ #Taxabilityoverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Taxabilityoverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+    /*css for validation tooltip on Add Taxrate override page -----Riyaz-30/03/2016**/
+   #AddTaxrateoverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:0px;
+ 
+}
+ #AddTaxrateoverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #AddTaxrateoverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+   /*css for validation tooltip on Edit Tax RateOverride page -----Riyaz-30/03/2016**/
+  #EditTaxRateOverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:0px;
+ 
+}
+ #EditTaxRateOverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #EditTaxRateOverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+     /*css for label on Transaction Export page  -----Riyaz-30/03/2016**/
+   #TransactionExport .control-label.col-xs-3
+   {width: auto !important; }
+
+   /*css for label on STR Online File page  -----Riyaz-30/03/2016**/
+   #divSTROnlineFile .control-label.col-xs-3
+   {width: auto !important; }
+
+      /*css for label on Transactions Export By Product page  -----Riyaz-30/03/2016**/
+   #divTransactionsExportByProduct .control-label.col-xs-3 {
+    width: auto !important;
+}
+         /*css for label on tax overrides rulrtype page  -----Riyaz-30/03/2016**/
+   #taxoverridesrulrtype .control-label.col-xs-3{
+          width: 20.5% !important;
+
+
+   }
+
+   #Taxabilityoverride .impactbtn{
+         margin-left:26.5% !important;
+
+  }
+
+    .skuchkbox_transexpo {
+    
+    
+    margin-left:-12px !important;}
+
+    /*css for validation tooltip on Add Custom Group page -----Riyaz-30/03/2016**/
+
+  #divAddCustomGroup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:110px;
+ 
+}
+ #divAddCustomGroup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divAddCustomGroup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+      /*css for validation tooltip on Tax Holiday Rule Detail page -----Riyaz-30/03/2016**/
+
+  #divTaxHolidayRuleDetail .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:112px;
+ 
+}
+ #divTaxHolidayRuleDetail .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divTaxHolidayRuleDetail .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+    /*css for validation tooltip on Custom Exemption Rule Detail page -----Riyaz-30/03/2016**/
+   #divCustomExemptionRuleDetail .field-validation-error:not(:empty) {
+        border: 2px solid #ffe79e !important;
+        color: #635145;
+        position: static;
+        display: inline-block;
+        border-width: 1px;
+        padding: 2px 5px 1px 6px;
+        background-color: white !important;
+        position: absolute !important;
+        width: auto !important;
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        padding: 4px 5px 4px 6px;
+        background-repeat: repeat-x;
+        min-width: 0;
+        text-align: left;
+        z-index: 9999;
+        margin-top: 2px !important;
+        border-radius: 5px;
+        left: 111px;
+    }
+
+    #divCustomExemptionRuleDetail .field-validation-error:not(:empty)::before {
+        content: " ";
+        background-image: url('../Content/Default/sprite.png');
+        border-color: transparent;
+        opacity: .8;
+        background-position: -160px -240px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+        vertical-align: text-top;
+        margin-right: 3px;
+    }
+
+    #divCustomExemptionRuleDetail .field-validation-error:not(:empty)::after {
+        content: " ";
+        border-bottom-color: #ffe79e !important;
+        top: -13px !important;
+        left: 20% !important;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px !important;
+        border-color: transparent;
+    }
+
+    .classcode_cont{
+
+        margin-left:-75px !important;
+    }
+
+     .nodata_tooltip{
+
+        margin-left:-25px !important;
+    }
+
+     /*css for validation tooltip on TaxLiability_summary Detail page -----Riyaz-30/03/2016**/
+   #TaxLiability_summary .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:117px;
+ 
+}
+ #TaxLiability_summary .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TaxLiability_summary .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on Exemption_summary page -----Riyaz-30/03/2016**/
+  #Exemption_summary .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:117px;
+ 
+}
+ #Exemption_summary .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Exemption_summary .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+    /*css for validation tooltip on RateChanges page -----Riyaz-30/03/2016**/
+   #RateChanges .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #RateChanges .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #RateChanges .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+   /*css for validation tooltip on TaxabilityChanges page -----Riyaz-30/03/2016**/
+  #TaxabilityChanges .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #TaxabilityChanges .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #TaxabilityChanges .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+    
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+   /*css for validation tooltip on Procurememnt => Data Elements section*/
+  #formAddUpdateDataElements .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #formAddUpdateDataElements .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #formAddUpdateDataElements .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+    
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  
+  
+
+   .radio-inline, .checkbox-inline {
+   display: inline-block !important;
+  padding-left: 20px !IMPORTANT;
+  margin-bottom: 0 !important;
+  font-weight: normal;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  margin-top: 0px !important;
+  float: left;
+  width: auto;
+  
+}
+    /*css for overlay behind modal popup  -----Riyaz-30/03/2016**/
+   .k-overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+
+   .product_info_column1 {
+        margin-left: -35px;
+    }
+    .product_info_column2 {
+        margin-left: -35px;
+    }
+
+     .adjust_amt {
+      margin-left: -6%;
+}
+      /*css for left side bar -----Riyaz-30/03/2016**/
+
+     .sto-vmenu {
+    /*background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAIOCAYAAAA/RgaaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+1JREFUeNrs2AENwCAMRcGVIKD+VdZBUbGVZHcSyMsfbD0waFdVOwYmZGYsx8AkASJABAgzj5CIcApYQAQIAkSAIEAECK/zGwYLiABBgAgQPEKwgCBABAgCxCMELCACBAHiDggWEAGCABEgeIRgAUGACBDcAbGAIEAECO6AWEAQIAIEd0AsIAIEAeIOCBYQAYIAcQcEC4gAQYAIEDxCsIAgQAQIAsQjBCwgAgQBIkDwCMECggARIAgQAYIAuYzfMFhABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAJ0BAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAECAJEgCBABAjf2d3tFLCACBAEiADBIwQLCAJEgOAOiAUEAeITDBYQAYIAcQcEC4gAwScYCwgCxCcYLCAWECwgAgQB4g4IFhALCBYQASJAcAfEAoIA8QkGC4gAwScYCwgCRIDgDogFBAEiQBAgHiFgAREgCBABggARIAgQAYIAESAIEAGCABEgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgNxrZ2Y4Biwgv3QEGAA0ZzWOByf7bAAAAABJRU5ErkJggg==')*/ /*images/bg-vertical-menu.png*/ /*no-repeat*/;
+    /**background: url('images/bg-vertical-menu.png') no-repeat;*/ /* For IE 6 and 7 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+1,ffffff+51,ffffff+51,f0f0f0+100 */
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(top, #f0f0f0 1%, #ffffff 51%, #ffffff 51%, #f0f0f0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f0f0f0), color-stop(51%,#ffffff), color-stop(51%,#ffffff), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+    height: 490px;
+  width: 145%;
+  outline: 1px solid #ccc;
+}
+ .unauthorised_section{
+
+        border-right: none !important;
+    }
+
+  .applytoall {
+   font-weight: normal !important; 
+       font-size: 10px !important;
+    }
+
+    /*css for validation tooltip on geocode_lookup page -----Riyaz-30/03/2016**/
+
+     #geocode_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+ 
+  font-weight: 700;
+ 
+}
+ #geocode_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight: 700;
+ 
+}
+
+  #geocode_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight: 700;
+ 
+}
+
+   /*css for validation tooltip on tax_authority_lookup page -----Riyaz-30/03/2016**/
+
+    #tax_authority_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:112px;
+  font-weight:700;
+ 
+}
+ #tax_authority_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight:700;
+ 
+}
+
+  #tax_authority_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight:700;
+ 
+}
+
+
+}
+
+
+
+/*This Style sheet is used to apply classes resolution from 1280px to 1366px-----Riyaz-30/03/2016*/
+@media (min-width: 1280px) and (max-width: 1366px){
+     .taxratecolumn{
+        border-right: 1px dotted #02477E;
+    }
+
+       /* classes for login status top right in header-----Riyaz-30/03/2016*/
+
+     .login-status {
+    color: white;
+    text-align: right;
+    margin-top: 5px;
+    width: 35%;
+    margin-right:7px;
+}
+
+    .login-status a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /*Boot Strap Overrides for navigation*/
+.nav {
+    padding-top: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: Tahoma;
+    color: white;
+}
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 3px 5px 3px 10px !important;
+    }
+
+.nav-tabs {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav > li > a {
+        background-color: #02477E;
+    border-bottom-color: #BBBBBB;
+    font-family: Tahoma;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    border-color: #BBBBBB #BBBBBB #BBBBBB;
+}
+
+.nav-tabs > li > a:hover {
+   border-color: #BBBBBB #BBBBBB #BBBBBB;
+     border-bottom-color: #BBBBBB;
+    background-color:#0D5B90;
+    font-family: Tahoma;
+    color: #f0f0f0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    font-family: Tahoma;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+    border: 1px solid #f0f0f0;
+    border-bottom-color: transparent;
+    background-color: #fff !important;
+}
+
+    
+ /*css for grid adjustment left-right on every index page -----Riyaz-30/03/2016**/
+    .grid_adjust {
+
+    margin-left:25px !important;
+    margin-right:-30px !important;
+    
+}
+ #divLineItems .trans_details {
+        
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+          margin-left: -22px !important;
+          display:block !important;
+         
+       
+
+
+    }
+  /*css for bold blue label on transaction address detail page -----Riyaz-30/03/2016**/
+  #taxauth_tabdetails .trans_details {
+        
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+          margin-left: -22px !important;
+          white-space: normal !important;
+          display:block !important;
+
+       
+
+
+    }
+   /*css for bold blue label on tax authority tab detail  page -----Riyaz-30/03/2016**/
+   #taxauth_tabdetails.control-label.col-xs-4 {
+    width:135px !important;
+     clear:both !important;
+    
+    }
+
+    #taxauth_tabdetails .reportingdata_tab
+      {
+           width:100%;
+           display:block;
+           overflow:auto;
+
+       }
+
+        #taxauth_tabdetails .reportingdata_tab_details
+      {
+           width:150%;
+           display:block;
+           
+
+       }
+ /*.situs-chkbox { margin-left:10px !important;}*/
+
+
+ /*css for validation tooltip on adjustment  page -----Riyaz-30/03/2016**/
+
+ #Adjusment .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:150px;
+ 
+}
+ #Adjusment .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Adjusment .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on TaxLiability_lookup  page -----Riyaz-30/03/2016**/
+
+  #TaxLiability_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:150px;
+ 
+}
+ #TaxLiability_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+
+  #TaxLiability_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+   /*css for validation tooltip on Transaction Export  page -----Riyaz-30/03/2016**/
+
+   #TransactionExport .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:143px;
+ 
+}
+ #TransactionExport .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TransactionExport .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on STR Online File  page -----Riyaz-30/03/2016**/
+  #divSTROnlineFile .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:143px;
+ 
+}
+ #divSTROnlineFile .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divSTROnlineFile .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Transactions Export By Product  page -----Riyaz-30/03/2016**/
+   #divTransactionsExportByProduct .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:142px;
+ 
+}
+ #divTransactionsExportByProduct .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divTransactionsExportByProduct .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on section System Values  page -----Riyaz-30/03/2016**/
+   #sectionSystemValues .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:15px;
+ 
+}
+ #sectionSystemValues .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #sectionSystemValues .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on Taxability override  page -----Riyaz-30/03/2016**/
+   #Taxabilityoverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:145px;
+ 
+}
+ #Taxabilityoverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Taxabilityoverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Add Tax rate override  page -----Riyaz-30/03/2016**/
+
+   #AddTaxrateoverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:0px;
+ 
+}
+ #AddTaxrateoverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #AddTaxrateoverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on Edit Tax Rate Override  page -----Riyaz-30/03/2016**/
+  #EditTaxRateOverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:0px;
+ 
+}
+ #EditTaxRateOverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #EditTaxRateOverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+   /*css for label on Transaction Export page -----Riyaz-30/03/2016**/
+   #TransactionExport .control-label.col-xs-3{
+          width: auto !important;
+
+
+   }
+
+    /*css for label on STR Online File page -----Riyaz-30/03/2016**/
+
+    #divSTROnlineFile .control-label.col-xs-3{
+          width: auto !important;
+
+
+   }
+
+     /*css for label on Transactions Export By Product page -----Riyaz-30/03/2016**/
+   #divTransactionsExportByProduct .control-label.col-xs-3 {
+    width: auto !important;
+}
+   /*css for label on taxoverrides rulrtype page -----Riyaz-30/03/2016**/
+    #taxoverridesrulrtype .control-label.col-xs-3{
+          width: 20.5% !important; 
+
+    }
+
+
+     #Taxabilityoverride .impactbtn{
+         margin-left:20.5% !important;
+
+  }
+
+      /*css for validation tooltip on Add Custom Group  page -----Riyaz-30/03/2016**/
+  #divAddCustomGroup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:143px;
+ 
+}
+ #divAddCustomGroup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divAddCustomGroup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Tax Holiday Rule Detail  page -----Riyaz-30/03/2016**/
+
+   #divTaxHolidayRuleDetail .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:143px;
+ 
+}
+ #divTaxHolidayRuleDetail .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divTaxHolidayRuleDetail .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  .classcode_cont{
+
+        margin-left:-100px !important;
+    }
+
+
+  /*css for validation tooltip on Custom Exemption Rule Detail  page -----Riyaz-30/03/2016**/
+   #divCustomExemptionRuleDetail .field-validation-error:not(:empty) {
+        border: 2px solid #ffe79e !important;
+        color: #635145;
+        position: static;
+        display: inline-block;
+        border-width: 1px;
+        padding: 2px 5px 1px 6px;
+        background-color: white !important;
+        position: absolute !important;
+        width: auto !important;
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        padding: 4px 5px 4px 6px;
+        background-repeat: repeat-x;
+        min-width: 0;
+        text-align: left;
+        z-index: 9999;
+        margin-top: 2px !important;
+        border-radius: 5px;
+        left: 143px;
+    }
+
+    #divCustomExemptionRuleDetail .field-validation-error:not(:empty)::before {
+        content: " ";
+        background-image: url('../Content/Default/sprite.png');
+        border-color: transparent;
+        opacity: .8;
+        background-position: -160px -240px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+        vertical-align: text-top;
+        margin-right: 3px;
+    }
+
+    #divCustomExemptionRuleDetail .field-validation-error:not(:empty)::after {
+        content: " ";
+        border-bottom-color: #ffe79e !important;
+        top: -13px !important;
+        left: 20% !important;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px !important;
+        border-color: transparent;
+    }
+
+    /*css for validation tooltip on TaxLiability_summary  page -----Riyaz-30/03/2016**/
+
+   #TaxLiability_summary .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:149px;
+ 
+}
+ #TaxLiability_summary .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TaxLiability_summary .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Exemption_summary  page -----Riyaz-30/03/2016**/
+
+  #Exemption_summary .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:149px;
+ 
+}
+ #Exemption_summary .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Exemption_summary .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on RateChanges  page -----Riyaz-30/03/2016**/
+
+  #RateChanges .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #RateChanges .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #RateChanges .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Taxability Changes  page -----Riyaz-30/03/2016**/
+
+  #TaxabilityChanges .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #TaxabilityChanges .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #TaxabilityChanges .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for bold blue label on Transaction Address Detail page -----Riyaz-30/03/2016**/
+
+ #divTransactionAddressDetail .trans_details {
+        
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+          margin-left: -25px !important;
+          display:block !important;
+        }
+
+ .product_info_column1 {
+        margin-left: -45px;
+    }
+    .product_info_column2 {
+        margin-left: -45px;
+    }
+     .taxability_column {
+        margin-right:20px;
+    }
+   .lfenexus_cont {
+    
+    display: inline-block;
+   margin-left:10px;
+    }
+
+    .nexus_tempright {
+    float: left;
+  margin-left: 75px;
+    
+    }
+
+
+      .transinfo_textbox {
+         margin-left: 10px;
+  /* padding-right: 6px; */
+      height: 70px !important;
+      width: 63.5%;
+    }
+
+      .adjustments_textbox {
+        margin-left: -4px;
+  /* padding-right: 6px; */
+  height: 70px !important;
+  width: 60.5%;
+    }
+
+        /*css for label on transaction address details  page -----Riyaz-30/03/2016**/
+
+        #Addadressdetailsinfo .column_left {
+       margin-left: -60px;
+    }
+
+         #Addadressdetailsinfo .primary_adr {
+        width: 80px !important;
+    }
+
+          #Addadressdetailsinfo .location_id {
+        width: 96px !important;
+    }
+
+    #Addadressdetailsinfo .secondary_adr {
+        width: 80px !important;
+    }
+
+      #Addadressdetailsinfo .addaddress_details {
+        
+        margin-left: 0px;
+        width: 63.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+
+      
+
+       #Addadressdetailsinfo .addaddress_details2 {
+        
+        margin-left: 0px;
+        width: 72% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+        #Addadressdetailsinfo .hrwidth{
+         width:87%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+    #Addadressdetailsinfo .hrwidth2{
+         width:98%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+     #Addadressdetailsinfo .k-textbox.k-space-right {
+        margin-left: 0px;
+        width: 68% ;
+          margin-bottom: 0px;
+         
+
+    }
+
+     
+
+    
+
+
+       #Addadressdetailsinfo .addaddress2 {
+        
+        margin-left: 0px;
+        width: 76.5% !important;
+          margin-bottom: 0px;
+          
+    }
+        #Addadressdetailsinfo .geocode_box-left {
+
+          width: 44% !important;
+    }
+
+     #Addadressdetailsinfo .geocode_box_right {
+
+        width:53% !important;
+    }
+
+     /*css for line item address section*/
+
+      #addLineItemAdressDetailsInfo .column_left {
+       margin-left: -60px;
+    }
+
+         #addLineItemAdressDetailsInfo .primary_adr {
+        width: 80px !important;
+    }
+
+           #addLineItemAdressDetailsInfo .location_id {
+        width: 96px !important;
+    }
+
+    #addLineItemAdressDetailsInfo .secondary_adr {
+        width: 80px !important;
+    }
+    #addLineItemAdressDetailsInfo .geoafld_adr {
+  width: 68px !important;
+}
+
+      #addLineItemAdressDetailsInfo .addaddress_details {
+        
+        margin-left: 0px;
+        width: 64% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+
+       #addLineItemAdressDetailsInfo .addaddress_details2 {
+        
+        margin-left: 0px;
+        width: 72.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+        #addLineItemAdressDetailsInfo .hrwidth{
+         width:87%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+    #addLineItemAdressDetailsInfo .hrwidth2{
+         width:95%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+     #addLineItemAdressDetailsInfo .k-textbox.k-space-right {
+        margin-left: 0px;
+        width: 68.5% ;
+          margin-bottom: 0px;
+         
+
+    }
+
+     
+    #Addsitusnexusinfo .control-label.col-xs-4 {
+    width:76px !important;
+    clear:both;
+    }
+     #Addtaxabilityinfo .control-label.col-xs-4 {
+    width:83px !important;
+    clear:both !important;
+    
+    }
+
+    
+
+
+
+       #addLineItemAdressDetailsInfo .addaddress2 {
+        
+        margin-left: 0px;
+        width: 77.3% !important;
+          margin-bottom: 0px;
+          
+    }
+        #addLineItemAdressDetailsInfo .geocode_box-left {
+
+          width: 49% !important;
+    }
+
+     #addLineItemAdressDetailsInfo .geocode_box_right {
+
+        width:53.5% !important;
+    }
+
+     /*end line item address section*/
+
+
+     /*css for validation tooltip on Add Transaction  page -----Riyaz-30/03/2016**/   
+#divAddTransaction .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:80px;
+ 
+}
+ #divAddTransaction .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divAddTransaction .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Add productn info  page -----Riyaz-30/03/2016**/   
+  #Addproductninfo .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:187px;
+ 
+}
+ #Addproductninfo .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Addproductninfo .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Add Transaction info page -----Riyaz-30/03/2016**/   
+  #AddTransactioninfo .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:153px;
+ 
+}
+ #AddTransactioninfo .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #AddTransactioninfo .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+   .radio-inline, .checkbox-inline {
+   display: inline-block !important;
+  padding-left: 20px !IMPORTANT;
+  margin-bottom: 0 !important;
+  font-weight: normal;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  margin-top: 0px !important;
+  float: left;
+  width: auto;
+  
+}
+
+    /*css for overlay behind modal popup  -----Riyaz-30/03/2016**/
+   .k-overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+
+    .adjust_amt {
+      margin-left: -3%;
+}
+     /*css for left side bar -----Riyaz-30/03/2016**/
+
+
+     .sto-vmenu {
+    /*background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAIOCAYAAAA/RgaaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+1JREFUeNrs2AENwCAMRcGVIKD+VdZBUbGVZHcSyMsfbD0waFdVOwYmZGYsx8AkASJABAgzj5CIcApYQAQIAkSAIEAECK/zGwYLiABBgAgQPEKwgCBABAgCxCMELCACBAHiDggWEAGCABEgeIRgAUGACBDcAbGAIEAECO6AWEAQIAIEd0AsIAIEAeIOCBYQAYIAcQcEC4gAQYAIEDxCsIAgQAQIAsQjBCwgAgQBIkDwCMECggARIAgQAYIAuYzfMFhABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAJ0BAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAECAJEgCBABAjf2d3tFLCACBAEiADBIwQLCAJEgOAOiAUEAeITDBYQAYIAcQcEC4gAwScYCwgCxCcYLCAWECwgAgQB4g4IFhALCBYQASJAcAfEAoIA8QkGC4gAwScYCwgCRIDgDogFBAEiQBAgHiFgAREgCBABggARIAgQAYIAESAIEAGCABEgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgNxrZ2Y4Biwgv3QEGAA0ZzWOByf7bAAAAABJRU5ErkJggg==') /*images/bg-vertical-menu.png*/ no-repeat;
+    /**background: url('images/bg-vertical-menu.png') no-repeat;*/ /* For IE 6 and 7 */
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+1,ffffff+46,f0f0f0+79,f0f0f0+85 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+1,ffffff+51,ffffff+51,f0f0f0+100 */
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(top, #f0f0f0 1%, #ffffff 51%, #ffffff 51%, #f0f0f0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f0f0f0), color-stop(51%,#ffffff), color-stop(51%,#ffffff), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+    height: 462px;
+  width: 135%;
+  outline: 1px solid #ccc;
+
+}
+
+    .rerurn-column {
+
+        margin-left:-8px;
+    }
+
+    .returntransc_textbox {
+  margin-left: 49px;
+  /* padding-right: 6px; */
+  height: 70px !important;
+  width: 57%;
+}
+
+    .same_as_head {
+
+        margin-left:5px;
+        margin-top:10px;
+    }
+     .unauthorised_section{
+
+        border-right: 1px solid #02477E !important;
+    }
+
+     .applytoall {
+   font-weight: 600; 
+       font-size: 12px !important;
+    }
+
+
+      /*css for validation tooltip on geocode_lookup page -----Riyaz-30/03/2016**/
+
+     #geocode_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+ 
+  font-weight: 700;
+ 
+}
+ #geocode_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight: 700;
+ 
+}
+
+  #geocode_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight: 700;
+ 
+}
+   /*css for validation tooltip on tax_authority_lookup page -----Riyaz-30/03/2016**/
+
+    #tax_authority_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:146px;
+  font-weight:700;
+ 
+}
+ #tax_authority_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight:700;
+ 
+}
+
+  #tax_authority_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight:700;
+ 
+}
+
+    /*css for validation tooltip on Procurememnt => Data Elements section*/
+
+    #formAddUpdateDataElements .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:146px;
+  font-weight:700;
+ 
+}
+ #formAddUpdateDataElements .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight:700;
+ 
+}
+
+  #formAddUpdateDataElements .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight:700;
+ 
+}
+
+
+}
+
+
+/*This Style sheet is used to apply classes resolution from 1367px to 2400px-----Riyaz-30/03/2016*/
+@media (min-width: 1367px) and (max-width: 2400px) {
+     .taxratecolumn{
+        border-right: 1px dotted #02477E;
+    }
+      /* classes for login status top right in header-----Riyaz-30/03/2016*/
+    .login-status {
+    color: white;
+    text-align: right;
+    margin-top: 5px;
+    width: 35%;
+    margin-right:7px;
+}
+
+    .login-status a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /*Boot Strap Overrides for navigation*/
+.nav {
+    padding-top: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: Tahoma;
+    color: white;
+}
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 3px 5px 3px 10px !important;
+    }
+
+.nav-tabs {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav > li > a {
+        background-color: #02477E;
+    border-bottom-color: #BBBBBB;
+    font-family: Tahoma;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    border-color: #BBBBBB #BBBBBB #BBBBBB;
+}
+
+.nav-tabs > li > a:hover {
+   border-color: #BBBBBB #BBBBBB #BBBBBB;
+     border-bottom-color: #BBBBBB;
+    background-color:#0D5B90;
+    font-family: Tahoma;
+    color: #f0f0f0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    font-family: Tahoma;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: default;
+    border: 1px solid #f0f0f0;
+    border-bottom-color: transparent;
+    background-color: #fff !important;
+}
+ /*css for grid adjustment left-right on every index page -----Riyaz-30/03/2016**/
+
+    .grid_adjust {
+
+    margin-left:25px !important;
+    margin-right:-30px !important;
+    
+}
+
+    .returntransc_textbox {
+    margin-left: 60px;
+  /* padding-right: 6px; */
+  height: 70px !important;
+  width: 57%;
+}
+
+    .same_as_head {
+
+        margin-left:5px;
+         margin-top:10px;
+    }
+ /*css for left side bar -----Riyaz-30/03/2016**/
+
+    .sto-vmenu {
+    /*background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAIOCAYAAAA/RgaaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+1JREFUeNrs2AENwCAMRcGVIKD+VdZBUbGVZHcSyMsfbD0waFdVOwYmZGYsx8AkASJABAgzj5CIcApYQAQIAkSAIEAECK/zGwYLiABBgAgQPEKwgCBABAgCxCMELCACBAHiDggWEAGCABEgeIRgAUGACBDcAbGAIEAECO6AWEAQIAIEd0AsIAIEAeIOCBYQAYIAcQcEC4gAQYAIEDxCsIAgQAQIAsQjBCwgAgQBIkDwCMECggARIAgQAYIAuYzfMFhABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAJ0BAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESAIEAGCABEgCBABggARIAgQAYIAESACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAECAJEgCBABAjf2d3tFLCACBAEiADBIwQLCAJEgOAOiAUEAeITDBYQAYIAcQcEC4gAwScYCwgCxCcYLCAWECwgAgQB4g4IFhALCBYQASJAcAfEAoIA8QkGC4gAwScYCwgCRIDgDogFBAEiQBAgHiFgAREgCBABggARIAgQAYIAESAIEAGCABEgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACBAEiQBAgAgQBIkAQIAIEASJAECACRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgCBABAgCRIAgQAQIAkSAIEAECAJEgAgQBIgAQYAIEASIAEGACBAEiABBgAgQBIgAQYAIEASIAEGACBAEiABBgNxrZ2Y4Biwgv3QEGAA0ZzWOByf7bAAAAABJRU5ErkJggg==')*/ /*images/bg-vertical-menu.png*/ /*no-repeat;*/
+    /**background: url('images/bg-vertical-menu.png') no-repeat;*/ /* For IE 6 and 7 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+1,ffffff+46,f0f0f0+79,f0f0f0+85 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+1,ffffff+51,ffffff+51,f0f0f0+100 */
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(top, #f0f0f0 1%, #ffffff 51%, #ffffff 51%, #f0f0f0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f0f0f0), color-stop(51%,#ffffff), color-stop(51%,#ffffff), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f0f0f0 1%,#ffffff 51%,#ffffff 51%,#f0f0f0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+      height: 464px;
+    width: 120%;
+  outline: 1px solid #ccc;
+}
+     /*css for text field width on address detail page -----Riyaz-30/03/2016**/
+    #divTransactionAddressDetail .primary_adr {
+        width: 120px !important;
+    }
+
+    #divTransactionAddressDetail .secondary_adr {
+        width: 97px !important;
+    }
+      #Addadressdetailsinfo .primary_adr {
+        width: 120px !important;
+    }
+
+    #Addadressdetailsinfo .secondary_adr {
+        width: 120px !important;
+    }
+
+     #Addadressdetailsinfo .column_left {
+       margin-left: -60px;
+    }
+
+      #Addadressdetailsinfo .addaddress_details {
+        
+        margin-left: 0px;
+       width: 60.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+
+     
+
+       .product_info_column1 {
+        margin-left: -45px;
+    }
+    .product_info_column2 {
+        margin-left: -45px;
+    }
+
+    #Addadressdetailsinfo .k-textbox.k-space-right {
+        margin-left: 0px;
+        width: 64% ;
+          margin-bottom: 0px;
+         
+
+    }
+
+    /*css for text field width on Add situs nexus info page -----Riyaz-30/03/2016**/
+      #Addsitusnexusinfo .control-label.col-xs-4 {
+    width:76px !important;
+    clear:both;
+    }
+
+      /*css for text field width on Add tax ability info page -----Riyaz-30/03/2016**/
+     #Addtaxabilityinfo .control-label.col-xs-4 {
+    /*width:73px !important;*/
+    clear:both !important;
+    
+    }
+
+    /*.situs-chkbox { margin-left:10px !important;}*/
+
+
+
+    /*css for label on transaction address details  page -----Riyaz-30/03/2016**/
+
+
+       #Addadressdetailsinfo .addaddress_details2 {
+        
+        margin-left: 0px;
+        width: 69% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+       #Addadressdetailsinfo .addaddress2 {
+        
+        margin-left: 0px;
+        width: 73% !important;
+          margin-bottom: 0px;
+          
+    }
+
+     #Addadressdetailsinfo .geocode_box-left {
+
+        width:36% !important;
+    }
+
+     #Addadressdetailsinfo .geocode_box_right {
+
+        width:43.3% !important;
+    }
+     /*css for line item address section*/
+     #addLineItemAdressDetailsInfo .primary_adr {
+        width: 120px !important;
+    }
+
+    #addLineItemAdressDetailsInfo .secondary_adr {
+        width: 120px !important;
+    }
+
+     #addLineItemAdressDetailsInfo .column_left {
+       margin-left: -60px;
+    }
+
+      #addLineItemAdressDetailsInfo .addaddress_details {
+        
+        margin-left: 0px;
+       width: 60.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+       #addLineItemAdressDetailsInfo .geoafld_adr {
+  width: 103px !important;
+}
+
+    #addLineItemAdressDetailsInfo .k-textbox.k-space-right {
+        margin-left: 0px;
+        width: 64% ;
+          margin-bottom: 0px;
+         
+
+    }
+
+    
+
+       #addLineItemAdressDetailsInfo .addaddress_details2 {
+        
+        margin-left: 0px;
+        width: 69.5% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+       #addLineItemAdressDetailsInfo .addaddress2 {
+        
+        margin-left: 0px;
+        width: 73.2% !important;
+          margin-bottom: 0px;
+          
+    }
+
+     #addLineItemAdressDetailsInfo .geocode_box-left {
+
+        width:39% !important;
+    }
+
+     #addLineItemAdressDetailsInfo .geocode_box_right {
+
+        width:44% !important;
+    }
+
+     /*line item address section end*/
+
+     /* css for start line item address details*/
+     #lineitemaddress .addaddress_details {
+        
+        margin-left: 0px;
+       width: 61% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+         
+    }
+
+    #lineitemaddress .k-textbox.k-space-right {
+        margin-left: 0px;
+        width: 64.5% ;
+          margin-bottom: 0px;
+         
+
+    }
+
+    
+
+       #lineitemaddress .addaddress_details2 {
+        
+        margin-left: 0px;
+       width: 68.9% !important;
+          margin-bottom: 0px;
+          height:0.9em;
+    }
+
+       #lineitemaddress .addaddress2 {
+        
+        margin-left: 0px;
+         width: 72.5% !important;
+          margin-bottom: 0px;
+          
+    }
+
+     #lineitemaddress .geocode_box-left {
+
+        width:37% !important;
+    }
+
+     #lineitemaddress .geocode_box_right {
+
+        width: 43% !important;
+    }
+     /* css for end line item address details*/
+
+       #Addadressdetailsinfo .hrwidth{
+         width:87%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+
+    #Addadressdetailsinfo .hrwidth2{
+         width:95%;
+         text-align:left !important;
+         margin-left:-3px;
+         border-color: #02477E;
+         height: 1px;
+
+    }
+       #Addadressdetailsinfo .hrform {
+     
+       margin-left: 0px;
+    }
+    #divLineItems .primary_adr {
+        width: 120px !important;
+    }
+
+    #divLineItems .secondary_adr {
+        width: 97px !important;
+    }
+
+
+      /*css for bold blue label on Line Items page -----Riyaz-30/03/2016**/
+
+    #divLineItems .trans_details {
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+        margin-left: -17px;
+        display:block !important;
+    }
+
+    /*css for bold blue label on tax auth_tab details page -----Riyaz-30/03/2016**/
+     #taxauth_tabdetails .trans_details {
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+        margin-left: -17px;
+       white-space: normal !important;
+       display:block !important;
+    }
+     
+    /*css for label on tax auth_tab details page -----Riyaz-30/03/2016**/
+     #taxauth_tabdetails .control-label.col-xs-4 {
+    width:135px !important;
+     clear:both !important;
+    
+    }
+
+      #taxauth_tabdetails .reportingdata_tab
+      {
+           width:100%;
+           display:block;
+           overflow:auto;
+
+       }
+
+        #taxauth_tabdetails .reportingdata_tab_details
+      {
+           width:150%;
+           display:block;
+           
+
+       }
+
+    .transinfo_textbox {
+       margin-left: 10px;
+  /* padding-right: 6px; */
+      height: 70px !important;
+      width: 61%;
+    }
+
+     .adjustments_textbox {
+    margin-left: -3px;
+  /* padding-right: 6px; */
+  height: 70px !important;
+  width: 58.7%;
+    }
+
+
+
+     .lfenexus_cont {
+    
+    display: inline-block;
+   margin-left:10px;
+    }
+
+    .nexus_tempright {
+    float: right !important;
+  margin-right: 100px;
+    
+    }
+
+
+
+
+
+
+
+    /*css for bold blue label on transaction details page -----Riyaz-30/03/2016**/
+
+    .trans_details {
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+        margin-left: -15px;
+        display:block !important;
+
+        word-wrap: break-word;
+    }
+
+    /*css for modal pop up height -----Riyaz-30/03/2016**/
+    #ModalDialog .tab_height {
+        /*height:520px !important;*/
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    .rainy {
+        position: relative;
+        top: 5px;
+    }
+
+
+    
+    /*css for validation tooltip on geocode_lookup  page -----Riyaz-30/03/2016**/
+
+    #geocode_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+ 
+  font-weight: 700;
+ 
+}
+ #geocode_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight: 700;
+ 
+}
+
+  #geocode_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight: 700;
+ 
+}
+
+    .validation-summary-errors {
+        margin: 3px 0 0 0 !important;
+        font-weight: bold;
+        color: red;
+    }
+
+    /*css for overlay behind modal popup  -----Riyaz-30/03/2016**/
+    .k-overlay1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+
+    
+    /*css for validation tooltip on Add Transaction  page -----Riyaz-30/03/2016**/
+#divAddTransaction .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:135px;
+ 
+}
+ #divAddTransaction .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divAddTransaction .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Add productn info  page -----Riyaz-30/03/2016**/
+
+  #Addproductninfo .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:226px;
+ 
+}
+ #Addproductninfo .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Addproductninfo .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on Add Transaction info  page -----Riyaz-30/03/2016**/
+
+  #AddTransactioninfo .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:185px;
+ 
+}
+ #AddTransactioninfo .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+   
+
+  #AddTransactioninfo .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Adjusment  page -----Riyaz-30/03/2016**/
+
+  #Adjusment .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:191px;
+ 
+}
+ #Adjusment .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Adjusment .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on TaxLiability_lookup  page -----Riyaz-30/03/2016**/
+
+
+  #TaxLiability_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:191px;
+ 
+}
+ #TaxLiability_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TaxLiability_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+  /*css for validation tooltip on Transaction Export  page -----Riyaz-30/03/2016**/
+
+
+   #TransactionExport .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:183px;
+ 
+}
+ #TransactionExport .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TransactionExport .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on STRO nline File  page -----Riyaz-30/03/2016**/
+
+  #divSTROnlineFile .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:183px;
+ 
+}
+ #divSTROnlineFile .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divSTROnlineFile .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Transactions Export By Product  page -----Riyaz-30/03/2016**/
+
+   #divTransactionsExportByProduct .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:183px;
+ 
+}
+ #divTransactionsExportByProduct .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divTransactionsExportByProduct .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+
+
+  /*css for validation tooltip on section System Values  page -----Riyaz-30/03/2016**/
+
+
+
+   #sectionSystemValues .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:16px;
+ 
+}
+ #sectionSystemValues .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #sectionSystemValues .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Taxability override  page -----Riyaz-30/03/2016**/
+
+   #Taxabilityoverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:187px;
+ 
+}
+ #Taxabilityoverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Taxabilityoverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Add Tax rate override  page -----Riyaz-30/03/2016**/
+  #AddTaxrateoverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:0px;
+ 
+}
+ #AddTaxrateoverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #AddTaxrateoverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Edit Tax Rate Override   page -----Riyaz-30/03/2016**/
+   #EditTaxRateOverride .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:0px;
+ 
+}
+ #EditTaxRateOverride .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #EditTaxRateOverride .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for label on tax overridesrulrtype   page -----Riyaz-30/03/2016**/
+
+  #taxoverridesrulrtype .control-label.col-xs-3{
+          width: 20.5% !important;
+
+
+   }
+
+  #Taxabilityoverride .impactbtn{
+         margin-left: 16.5% !important;
+
+  }
+
+  /*css for validation tooltip on Add Custom Group   page -----Riyaz-30/03/2016**/
+  #divAddCustomGroup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:183px;
+ 
+}
+ #divAddCustomGroup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divAddCustomGroup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Tax Holiday Rule Detail   page -----Riyaz-30/03/2016**/
+
+  #divTaxHolidayRuleDetail .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:185px;
+ 
+}
+ #divTaxHolidayRuleDetail .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #divTaxHolidayRuleDetail .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Custom Exemption Rule Detail   page -----Riyaz-30/03/2016**/
+
+   #divCustomExemptionRuleDetail .field-validation-error:not(:empty) {
+        border: 2px solid #ffe79e !important;
+        color: #635145;
+        position: static;
+        display: inline-block;
+        border-width: 1px;
+        padding: 2px 5px 1px 6px;
+        background-color: white !important;
+        position: absolute !important;
+        width: auto !important;
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        padding: 4px 5px 4px 6px;
+        background-repeat: repeat-x;
+        min-width: 0;
+        text-align: left;
+        z-index: 9999;
+        margin-top: 2px !important;
+        border-radius: 5px;
+        left: 185px;
+    }
+
+    #divCustomExemptionRuleDetail .field-validation-error:not(:empty)::before {
+        content: " ";
+        background-image: url('../Content/Default/sprite.png');
+        border-color: transparent;
+        opacity: .8;
+        background-position: -160px -240px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+        vertical-align: text-top;
+        margin-right: 3px;
+    }
+
+    #divCustomExemptionRuleDetail .field-validation-error:not(:empty)::after {
+        content: " ";
+        border-bottom-color: #ffe79e !important;
+        top: -13px !important;
+        left: 20% !important;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px !important;
+        border-color: transparent;
+    }
+
+     .classcode_cont{
+
+        margin-left:-125px !important;
+    }
+
+
+
+     /*css for validation tooltip on TaxLiability_summary   page -----Riyaz-30/03/2016**/
+  #TaxLiability_summary .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:190px;
+ 
+}
+ #TaxLiability_summary .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #TaxLiability_summary .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on Exemption_summary  page -----Riyaz-30/03/2016**/
+  #Exemption_summary .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:190px;
+ 
+}
+ #Exemption_summary .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+
+  #Exemption_summary .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on RateChanges  page -----Riyaz-30/03/2016**/
+
+  #RateChanges .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #RateChanges .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #RateChanges .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+  /*css for validation tooltip on TaxabilityChanges  page -----Riyaz-30/03/2016**/
+
+  #TaxabilityChanges .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left: 0px;
+ 
+}
+  #TaxabilityChanges .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+ 
+}
+  #TaxabilityChanges .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+ 
+}
+
+
+  /*css for bootstrap overrides checkbox -----Riyaz-30/03/2016**/
+   .radio-inline, .checkbox-inline {
+   display: inline-block !important;
+  padding-left: 20px !IMPORTANT;
+  margin-bottom: 0 !important;
+  font-weight: normal;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  margin-top: 0px !important;
+  float: left;
+  width: auto;
+  
+}
+   .adjust_amt {
+      margin-left: -6%;
+}
+
+    .unauthorised_section{
+
+        border-right: 1px solid #02477E !important;
+    }
+
+   
+    /*css for validation tooltip on tax_authority_lookup page -----Riyaz-30/03/2016**/
+    #tax_authority_lookup .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:187px;
+  font-weight:700;
+ 
+}
+ #tax_authority_lookup .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight:700;
+ 
+}
+
+  #tax_authority_lookup .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight:700;
+ 
+}
+
+  /*css for validation tooltip on Procurememnt => Data Elements section*/
+    #formAddUpdateDataElements .field-validation-error:not(:empty){
+     
+   
+  border: 2px solid #ffe79e !important;
+  color: #635145;
+  position: static;
+  display: inline-block;
+  border-width: 1px;
+  padding: 2px 5px 1px 6px;
+ 
+  background-color: white !important;
+  position: absolute !important;
+  width: auto !important;
+ 
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  padding: 4px 5px 4px 6px;
+  background-repeat: repeat-x;
+  min-width: 0;
+  text-align: left;
+  z-index: 9999;
+  margin-top: 2px !important;
+  border-radius: 5px;
+  left:187px;
+  font-weight:700;
+ 
+}
+ #formAddUpdateDataElements .field-validation-error:not(:empty)::before { 
+    content: " ";
+   
+   
+    background-image: url('../Content/Default/sprite.png');
+     border-color: transparent;
+  opacity: .8;
+  background-position: -160px -240px;
+    display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: text-top;
+  margin-right: 3px;
+  font-weight:700;
+ 
+}
+
+  #formAddUpdateDataElements .field-validation-error:not(:empty)::after { 
+    content: " ";
+   
+   
+     border-bottom-color: #ffe79e !important;
+     top: -13px !important;
+  left: 20% !important;
+    position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px !important;
+  border-color: transparent;
+  font-weight:700;
+ 
+}
+
+}
+
+
+
+ #spanDescriptionRequired.field-validation-error:not(:empty) {
+        margin-top: 70px !important;
+    }
+
+   /*.transinfo {
+        margin-left: -45px;
+    }*/
+
+    /*css for bold blue label on tax authority tab page -----Riyaz-30/03/2016**/
+    .trans_details {
+        color: #02477E;
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold !important;
+        margin-left: -15px;
+        display:block !important;
+        
+        word-wrap: break-word;
+    }
+
+    .transinfo{
+
+        margin-left:-50px !important;
+    }
+
+
+    /*css for shadow box on tax adjustments page -----Riyaz-30/03/2016**/
+.taxadjustments_column1 {
+
+      border: none !important;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=10, Color='#19000000'), progid:DXImageTransform.Microsoft.dropshadow(OffX=10, OffY=20, Color='#19000000'), progid:DXImageTransform.Microsoft.dropshadow(OffX=20, OffY=30, Color='#19000000'), progid:DXImageTransform.Microsoft.dropshadow(OffX=30, OffY=40, Color='#19000000');
+  display: block;
+  float: left;
+  width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+ /*css for shadow box on tax adjustments page -----Riyaz-30/03/2016**/
+.GrayBorder {
+    border: none !important;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=10, Color='#19000000'), progid:DXImageTransform.Microsoft.dropshadow(OffX=10, OffY=20, Color='#19000000'), progid:DXImageTransform.Microsoft.dropshadow(OffX=20, OffY=30, Color='#19000000'), progid:DXImageTransform.Microsoft.dropshadow(OffX=30, OffY=40, Color='#19000000');
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 15px 0 0px 0;
+   
+}
+
+.description_txt {
+
+    word-wrap:break-word;
+    width:55%;
+        
+}
+
+ /*css for label on geocode_lookup page -----Riyaz-30/03/2016**/
+
+
+#geocode_lookup label {
+        display: block !important;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: normal!important;
+    }
+
+/*css for label on tax_authority_lookup page -----Riyaz-30/03/2016**/
+#tax_authority_lookup label {
+        display: inline-block !important;
+        margin-bottom: 10px;
+        /*margin-top: 10px;*/
+        font-weight: normal!important;
+    }
+
+#tax_authority_lookup .fieldset {
+
+        min-height: 215px;
+    height: auto;
+    border: 1px solid #02477E;
+    clear: both;
+    padding:10px !important;
+    /* width: 100% !important; */
+}
+/*css for label on taxauth_tabdetails page -----Riyaz-30/03/2016**/
+
+ #taxauth_tabdetails .control-label.col-xs-4 {
+    width:135px !important;
+     clear:both !important;
+    
+    }
+
+ /*bootstrap override css for font -----Riyaz-30/03/2016**/
+
+.form-control {
+
+  
+   font-size: 12px !important; 
+}
+
+/*css for disable button -----Riyaz-30/03/2016**/
+
+
+.button-disable
+{
+   opacity : 0.4 !important;
+   pointer-events: none !important;
+   cursor: default !important; 
+}
+/*css for read only access -----Riyaz-30/03/2016**/
+.readonly
+{
+   opacity : 0.4 !important;
+   pointer-events: none !important;
+   cursor: default !important; 
+}
+
+/*css for RO access -----Riyaz-30/03/2016**/
+.RO
+{
+   opacity : 0.4 !important;
+   pointer-events: none !important;
+   cursor: default !important; 
+}
+
+/*css for no_ access -----Riyaz-30/03/2016**/
+
+.no_access {
+    width: 80%;
+    margin: 0 auto;
+   border:none;
+   box-shadow:none;
+    background-color:white !important;
+        MARGIN-TOP: 5%;
+}
+ /* css for new ui leftbar*/
+
+.leftpanel {
+    width: 240px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.mainpanel {
+    margin-left: 240px;
+    background: #e4e7ea;
+    min-height: 1000px;
+}
+
+
+.rolearrow::before {
+     content: "";
+    display: inline-block;
+    background: url("../content/images/rolearrow.png") no-repeat;
+    width: 20px;
+    height: 12px;
+    margin: 0 0px 0 10px;
+    cursor:default;
+    }
+
+.holiday_txtheader {
+
+    display: block;
+    border: 1px solid #02477E;
+    background-color:#fff;
+    padding-top: 10px;
+        margin-top: 15px;
+}
+
+/*css fordisable button-----Riyaz-30/03/2016**/
+
+ button[disabled], html input[disabled] {
+        cursor: not-allowed;
+        background-color: #DBDBDB !important;
+        opacity: 1;
+    }
+     
+
+
+
+
+
+
+
+

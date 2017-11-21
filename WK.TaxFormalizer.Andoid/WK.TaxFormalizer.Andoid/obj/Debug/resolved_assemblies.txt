@@ -1,0 +1,17 @@
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\WK.TaxFormalizer.Andoid.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\Mono.Android.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\mscorlib.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\Newtonsoft.Json.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Core.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Net.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Net.Http.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Xml.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Xml.Linq.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Runtime.Serialization.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.ServiceModel.Internals.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Numerics.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Data.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\System.Transactions.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\Mono.Data.Tds.dll
+D:\CodeGames TFS\MyFirstProject\WK.TaxFormalizer.Andoid\WK.TaxFormalizer.Andoid\obj\Debug\assemblies\Mono.Security.dll

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/TaxAdjustment/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/TaxAdjustment/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd13" namespace="http://schemas.cch.com/Address/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd14" namespace="http://schemas.cch.com/ProductInfo/4.0" />
+  <xs:complexType name="TaxAdjustmentOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LineItem" nillable="true" type="tns:TaxAdjustmentLineItem" />
+      <xs:element minOccurs="0" name="ProviderType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.cch.com/Address/4.0" minOccurs="0" name="ShipToAddress" nillable="true" type="q1:Address" />
+      <xs:element minOccurs="0" name="ShipToGeoBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxOnlyCredit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TestTransaction" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TransactionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionID" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="finalize" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InvoiceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FilingLocationId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxAdjustmentOrder" nillable="true" type="tns:TaxAdjustmentOrder" />
+  <xs:complexType name="TaxAdjustmentLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.cch.com/ProductInfo/4.0" minOccurs="0" name="ProductInfo" nillable="true" type="q2:ProductInfo" />
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UserData" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxAdjustmentLineItem" nillable="true" type="tns:TaxAdjustmentLineItem" />
+</xs:schema>

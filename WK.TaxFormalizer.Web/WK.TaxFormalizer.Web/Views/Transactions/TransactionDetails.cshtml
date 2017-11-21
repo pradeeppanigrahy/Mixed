@@ -1,0 +1,318 @@
+﻿@*@model WK.STO.UI.WEB.Models.Transaction*@
+
+@{
+    Layout = null;
+}
+
+<script>
+    $(document).ready(function () {
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            }
+        });
+    });
+
+    $(document).ready(function () {
+
+        var heightwindow = $(window).height();
+
+        $('#ModalDialog .tab_height').css('height', heightwindow - 250);
+       });
+
+    $(window).resize(function () {
+        var heightwindow = $(window).height();
+        $('#ModalDialog .tab_height').css('height', heightwindow - 250);
+    });
+
+
+
+  
+</script>
+
+<style>
+    #divAddressSearch .col-md-12, #divLocationsSearch .col-md-12 {
+        padding-left: 0px !important;
+    }
+
+    label {
+        /*display: inline;
+        float: left;
+        width: 50% !important;*/
+        font-weight: normal !important;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+
+     .example{
+    	margin-left: -60px;
+    }
+
+    .form-group {
+        margin-bottom: 0px !important;
+    }
+    .label-primary {
+        padding: 10px !important;
+    }
+
+
+    div.trans_info {
+        margin: 15px;
+    }
+    div.trans_addr_info {
+        margin: 5px;
+    }
+
+
+    .fieldset {
+        height: auto;
+        min-height: 0 !important;
+        border: none;
+        clear: both;
+      
+        padding: 9px;
+        border-radius: 0px;
+        overflow-y:auto;
+        
+
+    }
+    .hrform {
+  
+  margin-left: -3px !important;
+}
+    .form-control {
+
+        margin-bottom:15px !important;
+    }
+
+   .k-grid-header-wrap, .k-grid-footer-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 0 1px 0 0 !important;
+  zoom: 1;
+  border-color:#c5c5c5;
+}
+
+   
+
+    .k-tabstrip-items .k-state-default .k-link {
+       
+        border-radius:  0;
+        padding: 0.75em 2em !important;
+        background-color: #0184c3;
+        font-family: Tahoma;
+        font-weight: 600;
+        font-size: 12px;
+        color: white;
+        border-top: 1px solid #02477E;
+        border-top: 1px solid #02477E;
+        border-right: 1px solid #02477E;
+        border-left: 1px solid #02477E;
+        border-bottom: none;
+        margin-right: 2px;
+    }
+
+    .k-tabstrip-items:hover .k-state-default:hover .k-link:hover {
+        background-color: #01608f;
+
+    }
+    .k-tabstrip-items .k-state-active .k-link {
+        
+        background-color: #FFFFFF !important;
+        color: #02477E !important;
+        border-bottom: none;
+    }
+
+
+
+
+
+    .k-tabstrip-items .k-state-active, .k-panelbar .k-tabstrip-items .k-state-active, .k-ie7 .k-tabstrip-items .k-state-active .k-loading {
+        border: none !important;
+        padding: 1px;
+    }
+    .k-loading, .k-state-hover .k-loading {
+        background-image: none !important;
+
+    }
+
+    .configuration .k-textbox {
+        width: 40px;
+    }
+
+    .k-panelbar > .k-item > .k-link {
+        border: 1px solid #02477E;
+        background-color: transparent;
+        line-height: 2.2;
+        border-radius: 5px;
+        margin-bottom: -4px;
+        color: #02477E !important;
+        font-weight: bold;
+        margin-bottom: 5px;
+        height: 27px;
+    }
+
+    .k-panelbar:hover > .k-item:hover > .k-link:hover {
+        background-color: rgb(194, 232, 255) !important;
+    }
+
+ 
+
+
+
+
+
+    .k-block, .k-header, .k-grid-header, .k-toolbar, .k-grouping-header, .k-pager-wrap, .k-button, .k-draghandle, .k-treemap-tile, html .km-pane-wrapper .k-header {
+        background-color: #F0F0F0;
+    }
+
+   
+
+
+    .k-grid-content {
+        position: relative;
+        width: 100%;
+        overflow: auto;
+        overflow-x: auto;
+        overflow-y: scroll;
+        zoom: 1;
+    }
+
+    .k-grid-header th.k-header {
+        vertical-align: bottom;
+        font-weight: bold;
+    }
+    .k-pager-numbers .k-state-selected {
+        border-style: solid;
+        border-width: 1px;
+        text-align: center;
+        border-radius: 1.0833em;
+        background-color: #02477E !important;
+    }
+    .k-tabstrip > .k-content, .k-panelbar .k-tabstrip > .k-content {
+        /* position: static; */
+        /* border: 0; */
+        /* margin: 0 .29em .3em; */
+        padding: 0;
+        /* zoom: 1; */
+        margin-left: 1px;
+        border: 1px solid #02477E;
+        padding: 5px;
+        border-radius: 0 15px 0 15px;
+        -webkit-border-radius: 0 15px 0 15px;
+        -moz-border-radius: 0 15px 0 15px;
+    }
+    .k-tabstrip .k-tabstrip-items {
+        padding: 0;
+    }
+    .k-widget.k-tabstrip {
+        background-color: transparent;
+        /* background-image: none; */
+        /* border-style: none; */
+        /* -webkit-box-shadow: none; */
+        /* box-shadow: none; */
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .errolog {
+        background-color: red !important;
+       
+}
+
+</style>
+
+@*@Html.HiddenFor(m => m.TransactionID)*@
+<input type="hidden" id="hdnTransactionId" value='@ViewBag.TransactionId' />
+
+<div style="border-radius:5px;padding:0px;background-color:#02477E;color:white;" class="col-md-12" id="transactionDetailsgrdpopuptitle">
+    <div class="col-md-11" style="margin-right: -15px;">
+        <div class="row">
+            <h5 style="padding:2px;padding-left:10px;">
+                Transaction Details
+            </h5>
+        </div>
+    </div>
+            <div class="col-md-1 pull-right" style="margin-right: -15px;">
+                <h5><a style="color:white;" target="_blank" href='@Url.Content("~/docs/help/STO.htm#STO Help/Processing Transactions/Viewing Transaction Detail.htm")'>Help</a></h5>
+            </div>
+
+        </div>
+        <p id="transactionDetailCustomError" style="margin-top:5px;"></p>
+
+
+
+        <div class="toptab" style="margin-top:50px;">
+
+            @(Html.Kendo().TabStrip()
+          .Name("tabstrip")
+          .Navigatable(false)   //Property Added for - DE5425:- Back panel of modal pop-up gets hidden when user clicks on 'Enter' key twice
+          .Items(tabstrip =>
+          {
+              tabstrip.Add().Text("Transaction Information")
+                  .Selected(true)
+                  .Content(@<text>
+
+            <div class="fieldset tab_height">
+
+                <div id="transactionInfoLoadingMask" class="k-loading-image" style="position:absolute;top:5%;display:none;"></div>
+                <p id="transactionInformationCustomError"></p>
+                <div id="divTransactionInformation"></div>
+            </div>
+
+                </text>);
+
+              tabstrip.Add().Text("Address Details")
+                  .Content(@<text>
+            <div class="fieldset tab_height">
+
+                <p id="transactionAddressDetailCustomError"></p>
+                <div id="divTransactionAddressDetail"></div>
+            </div>
+                </text>);
+
+              tabstrip.Add().Text("Transaction Tax Details")
+                  .Content(@<text>
+            <div class="fieldset tab_height">
+                @Html.Partial("TransactionTaxDetails")
+            </div>
+
+                </text>);
+
+              tabstrip.Add().Text("Transactions Line Items")
+                  .Content(@<text>
+                    <div class="fieldset tab_height">
+                        @Html.Partial("TransactionLineItems")
+                    </div>
+                </text>);
+
+
+              tabstrip.Add().Text("Error Log").Enabled(false)
+                      .Content(@<text>
+            <div class="fieldset tab_height">
+                @Html.Partial("TransactionProcessLog")
+
+                <span class="rainy">&nbsp;</span>
+            </div>
+
+                    </text>);
+          })
+            )
+        </div>
+
+        <script type="text/javascript">
+            //declare transaction information load url
+            transactionUrl.getTransactionInformation = '@Url.Action("TransactionInformation", "Transactions")';
+            transactionUrl.getTransactionAddressDetail = '@Url.Action("TransactionAddressDetail", "Transactions")';
+            //Load transaction information section
+            loadTransactionInformationSection(getTransactionId());
+            loadTransactionAddressDetails(getTransactionId());
+        </script>
+
+
+

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/STOService/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/STOService/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd2" namespace="http://schemas.cch.com/ProcurementOrder/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd4" namespace="http://schemas.cch.com/TaxResponse/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd10" namespace="http://schemas.cch.com/Order/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd16" namespace="http://schemas.cch.com/TransactionDetail/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd13" namespace="http://schemas.cch.com/Address/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd17" namespace="http://schemas.cch.com/GeoblockInfo/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd18" namespace="http://schemas.cch.com/PartialReturnOrder/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd20" namespace="http://schemas.cch.com/TaxAdjustment/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd21" namespace="http://schemas.cch.com/DataValues/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd23" namespace="http://schemas.cch.com/SKUDetail/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd7" namespace="http://schemas.cch.com/Message/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd24" namespace="http://schemas.cch.com/CustomerCertificateRequest/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd28" namespace="http://schemas.cch.com/CustomerCertificateExport/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd27" namespace="http://schemas.cch.com/Certificate/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd29" namespace="http://schemas.cch.com/TransactionTax/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd30" namespace="http://schemas.cch.com/TaxLiabilityRequest/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd31" namespace="http://schemas.cch.com/TaxLiabilityResponse/4.0" />
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd36" namespace="http://schemas.cch.com/GeographyLookupResult/4.0" />
+  <xs:element name="CalculateProcurementRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.cch.com/ProcurementOrder/4.0" minOccurs="0" name="ProcurementOrder" nillable="true" type="q1:ProcurementOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateProcurementRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="CalculateProcurementRequestResult" nillable="true" type="q2:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnattributedProcurementReturnRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.cch.com/ProcurementOrder/4.0" minOccurs="0" name="ProcurementOrder" nillable="true" type="q3:ProcurementOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnattributedProcurementReturnRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="UnattributedProcurementReturnRequestResult" nillable="true" type="q4:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.cch.com/Order/4.0" minOccurs="0" name="order" nillable="true" type="q5:Order" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="CalculateRequestResult" nillable="true" type="q6:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OriginalTransactionID" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.cch.com/TransactionDetail/4.0" minOccurs="0" name="CancelRequestResult" nillable="true" type="q7:TransactionDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizeRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OriginalTransactionID" type="xs:unsignedLong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizeRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.cch.com/TransactionDetail/4.0" minOccurs="0" name="FinalizeRequestResult" nillable="true" type="q8:TransactionDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeoblockRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+        <xs:element xmlns:q9="http://schemas.cch.com/Address/4.0" minOccurs="0" name="address" nillable="true" type="q9:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeoblockRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.cch.com/GeoblockInfo/4.0" minOccurs="0" name="GeoblockRequestResult" nillable="true" type="q10:GeoblockInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnattributedReturnRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.cch.com/Order/4.0" minOccurs="0" name="order" nillable="true" type="q11:Order" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnattributedReturnRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="UnattributedReturnRequestResult" nillable="true" type="q12:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AttributedFullReturnRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OriginalTransactionID" type="xs:unsignedLong" />
+        <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TransactionDescription" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AttributedFullReturnRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="AttributedFullReturnRequestResult" nillable="true" type="q13:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartialReturnRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.cch.com/PartialReturnOrder/4.0" minOccurs="0" name="order" nillable="true" type="q14:PartialReturnOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PartialReturnRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="PartialReturnRequestResult" nillable="true" type="q15:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxAdjustmentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.cch.com/TaxAdjustment/4.0" minOccurs="0" name="TaxAdjustmentOrder" nillable="true" type="q16:TaxAdjustmentOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaxAdjustmentRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="TaxAdjustmentRequestResult" nillable="true" type="q17:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SystemDateTimeRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SystemDateTimeRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SystemDateTimeRequestResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Parameter1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Parameter2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.cch.com/DataValues/4.0" minOccurs="0" name="GetDataValuesResult" nillable="true" type="q18:DataValues" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSKU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.cch.com/SKUDetail/4.0" minOccurs="0" name="SKUData" nillable="true" type="q19:ArrayOfSKUDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSKUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.cch.com/Message/4.0" minOccurs="0" name="CreateSKUResult" nillable="true" type="q20:Message" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeoblockRequestAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceDate" type="xs:dateTime" />
+        <xs:element xmlns:q21="http://schemas.cch.com/Address/4.0" minOccurs="0" name="address" nillable="true" type="q21:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeoblockRequestAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.cch.com/GeoblockInfo/4.0" minOccurs="0" name="GeoblockRequestAllResult" nillable="true" type="q22:ArrayOfGeoblockInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCustomerCertificateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.cch.com/CustomerCertificateRequest/4.0" minOccurs="0" name="CustomerCertificateRequest" nillable="true" type="q23:CustomerCertificateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCustomerCertificateRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.cch.com/Message/4.0" minOccurs="0" name="CreateCustomerCertificateRequestResult" nillable="true" type="q24:Message" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportCustomerCertificateRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportCustomerCertificateRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.cch.com/CustomerCertificateExport/4.0" minOccurs="0" name="ExportCustomerCertificateRequestResult" nillable="true" type="q25:CustomerCertificatesExport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportCustomerCertificateFilterRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DivisionID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q26="http://schemas.cch.com/Certificate/4.0" minOccurs="0" name="certfilter" nillable="true" type="q26:CertificateFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportCustomerCertificateFilterRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.cch.com/CustomerCertificateExport/4.0" minOccurs="0" name="ExportCustomerCertificateFilterRequestResult" nillable="true" type="q27:CustomerCertificatesExport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionTax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.cch.com/TransactionTax/4.0" minOccurs="0" name="request" nillable="true" type="q28:TransactionTax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionTaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.cch.com/TaxResponse/4.0" minOccurs="0" name="GetTransactionTaxResult" nillable="true" type="q29:TaxResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.cch.com/TaxLiabilityRequest/4.0" minOccurs="0" name="request" nillable="true" type="q30:TaxLiabilityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.cch.com/TaxLiabilityResponse/4.0" minOccurs="0" name="GetTaxRatesResult" nillable="true" type="q31:TaxLiabilityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeocodeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plus4" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeocodeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.cch.com/GeographyLookupResult/4.0" minOccurs="0" name="GetGeocodeListResult" nillable="true" type="q32:ArrayOfGeographyLookupResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshDBConfiguration">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshDBConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RefreshDBConfigurationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

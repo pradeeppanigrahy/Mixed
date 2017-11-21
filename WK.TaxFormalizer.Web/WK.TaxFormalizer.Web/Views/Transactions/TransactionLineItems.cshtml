@@ -1,0 +1,439 @@
+﻿@using WK.TaxFormalizer.Core.Models
+
+@{
+    Layout = null;
+}
+
+<style>
+    .k-grid-content-expander {
+     position: relative !important; 
+     visibility: hidden;
+     height: 1px;
+        }
+
+ 
+
+</style>
+
+
+<div id="divLineItems">
+    <p id="maintainTransactionLineItemsCustomError"></p>
+    <div class="k-loading-image" id="divLineItemAddressLoader" style="position:absolute;top:12%;display:none;"></div>
+
+    @(Html.Kendo().Grid<TransactionLineItemModel>()
+        .Name("TransactionLineItemGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.AutoGenerateID).Hidden(true);
+        columns.Bound(e => e.TransactionTaxabilityModel.TransactionTypeDescription).Hidden(true);
+        columns.Bound(e => e.TransactionTaxabilityModel.ProviderTypeDescription).Hidden(true);
+        columns.Bound(e => e.TransactionTaxabilityModel.CustomerOrUsageTypeDescription).Hidden(true);
+
+
+        columns.Bound(e => e.TransactionTaxabilityModel.ExemptionClass).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.FOBDescription).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.MailOrderDescription).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.DeliveryByDescription).Hidden(true);
+
+
+        columns.Bound(e => e.TransactionSitusInformationModel.SolicitedOutsideDescription).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.CanRejectDeliveryDescription).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.ShipFromPOBDescription).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.ShipFromGeocode).Hidden(true);
+
+        columns.Bound(e => e.TransactionSitusInformationModel.OrderPlacementGeocode).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.OrderApprovalGeocode).Hidden(true);
+        columns.Bound(e => e.TransactionSitusInformationModel.ShipToGeocode).Hidden(true);
+
+
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.UsrLineItemID).Width(120).Title("Line Item ID")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.UsrLineItemID #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.LineItemID).Hidden(true).Width(120)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.LineItemID #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.Quantity).Width(120).Title("Quantity")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false))).Format("{0:n5}")
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.Quantity #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.SkuCategory).Width(120).Title("SKU / Category")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.SkuCategory #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.GroupDescription).Title("Group").Width(150)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.GroupDescription #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.ItemDescription).Width(120).Title("Item")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.ItemDescription #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.DataString).Width(120).Title("Data String")
+                                    .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                    .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.DataString #" });
+        columns.Bound(e => e.TransactionLineItemAddressModel.LineItemLocationId).Width(120).Title("Location ID")
+                                    .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                    .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.LocationSurrogate #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.Note).Width(120).Title("Note")
+                                    .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")))
+                                    .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.Note #" });
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.UnitCharge).Width(120).Title("Unit Charge")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.UnitCharge #" }).Format("{0:c3}");
+        columns.Bound(e => e.TransactionLineItemProductInformationModel.LineItemAmount).Width(150).Title("Line Item Amount")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)))
+                                     .HtmlAttributes(new { title = "#= TransactionLineItemProductInformationModel.LineItemAmount #" }).Format("{0:c3}");
+    })
+                                                                 .Pageable()
+                                                                 .Scrollable()
+                                                                 .ClientDetailTemplateId("lineItemDetailsTemplate")
+                                                                 .Filterable(ftb => ftb.Mode(GridFilterMode.Row))
+                                                                 .Sortable()
+                                                                 .Events(events => events.DataBound("TransactionLineItemGrid_On_DataBound"))
+                                                                 .AutoBind(true)
+                                                                 .DataSource(dataSource => dataSource
+                                                                     .Ajax()
+                                                                     .PageSize(10)
+                                                                     .Model(model =>
+                                                                         {
+                                                                             model.Id(p => p.TransactionLineItemProductInformationModel.LineItemID);
+                                                                             model.Field("TransactionLineItemProductInformationModel.Quantity", typeof(decimal));
+                                                                             model.Field("TransactionLineItemProductInformationModel.LineItemAmount", typeof(decimal));
+                                                                             model.Field("TransactionLineItemProductInformationModel.UnitCharge", typeof(decimal));
+                                                                         })
+                                                                     .Sort(sort => sort.Add(x => x.TransactionLineItemProductInformationModel.LineItemID).Descending())
+                                                                     .ServerOperation(true)
+                                                                     .Events(events => events.Error("TransactionLineItemGrid_error_handler"))
+                                                                     .Read(read => read.Action("TransactionLineItems_Read", "Transactions").Data("getRequiredDataForLineItem").Type(HttpVerbs.Post)))
+    )
+
+</div>
+
+    <script id="lineItemDetailsTemplate" type="text/kendo-tmpl">
+    @(Html.Kendo().TabStrip()
+                    .Name("transactionLineItemTabstrip_#=AutoGenerateID#")
+            .SelectedIndex(0)
+            .Items(items =>
+            {
+                items.Add().Text("Taxes").Content(@<text>
+
+        <div class="fieldset">
+
+            @(Html.Kendo().Grid<TransactionLineItemTaxDetailsModel>()
+                                .Name("transactionLineItemTaxGrid_#=AutoGenerateID#")
+                        .Columns(columns =>
+                        {
+                            //tds[0]
+                            columns.Bound(e => e.TaxableAmount).Hidden(true).Format("{0:c3}");
+                            //tds[1]
+                            columns.Bound(e => e.TaxableQuantity).Hidden(true);
+                            //tds[2]
+                            columns.Bound(e => e.Fee).Hidden(true);
+                            //tds[3]
+                            columns.Bound(e => e.TaxExemptAmount).Hidden(true).Format("{0:c3}");
+                            //tds[4]
+                            columns.Bound(e => e.TaxExemptQuantity).Hidden(true);
+                            //tds[5]
+                            columns.Bound(e => e.FeeApplied).Title("Fee amt applied").Hidden(true).Format("{0:c3}");
+                            //tds[6]
+
+                            columns.Bound(e => e.TaxableTaxAmount).Hidden(true).Format("{0:c3}");
+                            //tds[7]
+                            columns.Bound(e => e.NonTaxableAmount).Hidden(true).Format("{0:c3}");
+                            //tds[8]
+                            columns.Bound(e => e.NonTaxableQuantity).Hidden(true);
+                            //tds[9]
+                            columns.Bound(e => e.Contribution).Hidden(true);
+                            //tds[10]
+                            columns.Bound(e => e.TaxationOR).Hidden(true);
+                            //tds[11]
+                            columns.Bound(e => e.TaxabilityOR).Hidden(true);
+                            //tds[12]
+                            columns.Bound(e => e.PercentageTaxable).Hidden(true);
+                            //tds[13]
+                            columns.Bound(o => o.SystemOrCustom).Title("S/C*").Width(90)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            //tds[14]
+                            columns.Bound(o => o.TaxAuthorityDescription).Width(150).Title("Tax Authority")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            //tds[15]
+                            columns.Bound(o => o.TaxTypeDescription).Title("Tax Type").Width(130)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            //tds[16]
+                            columns.Bound(o => o.TaxCategoryDescription).Width(190).Title("Tax Category")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            //tds[17]
+                            columns.Bound(o => o.Tier).Title("Tier").Width(100)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)));
+                            //tds[18]
+                            columns.Bound(o => o.TaxOnTaxTaxableTaxAmount).Width(150).Title("Taxable Tax Amount")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false))).ClientTemplate("\\#=FormatAmountInGridColumn(kendo.toString(TaxOnTaxTaxableTaxAmount,'c3'))\\#");
+                            //tds[19]
+                            columns.Bound(o => o.TaxOnTaxApplied).Title("Tax On Tax Applied").Width(150)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false))).ClientTemplate("\\#=FormatAmountInGridColumn(kendo.toString(TaxOnTaxApplied,'c3'))\\#");
+                            //tds[20]
+                            columns.Bound(o => o.TaxOrFeeApplied).Width(190).Title("Tax/Fee Applied")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false))).ClientTemplate("\\#=FormatAmountInGridColumn(kendo.toString(TaxOrFeeApplied,'c3'))\\#");
+                            //tds[21]
+                            columns.Bound(o => o.RateOrFee).Title("Rate/Fee").Width(120)
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false)));
+                            //tds[22]
+                            columns.Bound(o => o.NonTaxReason).Width(190).Title("Non Tax Reason")
+                                     .Filterable(ftb => ftb.Cell(cell => cell.ShowOperators(false).Operator("startswith")));
+                            //tds[23]
+                            columns.Bound(e => e.TaxRate).Title("Tax rate applied").Hidden(true);
+                            //tds[24]
+                            columns.Bound(e => e.TaxApplied).Title("TaxApplied").Hidden(true).ClientTemplate("\\#=FormatAmountInGridColumn(kendo.toString(TaxApplied,'c3'))\\#");
+                        })
+                                                                         .Pageable()
+                                                                         .Scrollable()
+                                                                         .Filterable(ftb => ftb.Mode(GridFilterMode.Row))
+                                                                         .Sortable()
+                                                                         .Selectable(t => t.Mode(GridSelectionMode.Single).Type(GridSelectionType.Row))
+                                                                         .Events(events => events.DataBound("TransactionLineItemTaxGrid_On_DataBound").Change("TransactionLineItemTaxGrid_On_Change"))
+                                                                         .AutoBind(true)
+                                                                         .DataSource(dataSource => dataSource
+                                                                             .Ajax()
+                                                                             .PageSize(10)
+                                                                             .Model(model =>
+                                                                                 {
+                                                                                     model.Id(p => p.LineItemID);
+                                                                                 })
+                                                                             .Sort(sort => sort.Add(x => x.LineItemID).Descending())
+                                                                             .ServerOperation(true)
+                                                                          .Events(events => events.Error("TransactionLineItemTaxGrid_error_handler"))
+                                                                                  .Read(read => read.Action("TransactionLineItemTax_Read", "Transactions", new { lineItemId = "#=TransactionLineItemProductInformationModel.LineItemID#" }).Data("getTransactionId").Type(HttpVerbs.Post)))
+                        .ToClientTemplate())
+            <label style="margin-top:12px;">*S/C- system or custom</label>
+            <div id="divTransactionLineItemTaxes">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxAppliedOnTaxes" class="control-label col-xs-5">Tax applied:</label>
+                                <label id="lblTransactionTaxAppliedOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxableAmountOnTaxes" class="control-label col-xs-5">Taxable amt:</label>
+                                <label id="lblTransactionTaxableAmountOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxableQuantityOnTaxes" class="control-label col-xs-5">Taxable qty:</label>
+                                <label id="lblTransactionTaxableQuantityOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionFeeAppliedOnTaxes" class="control-label col-xs-5">Fee applied:</label>
+                                <label id="lblTransactionFeeAppliedOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxRateAppliedOnTaxes" class="control-label col-xs-5">Tax rate applied:</label>
+                                <label id="lblTransactionTaxRateAppliedOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 transinfo ">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxExemptAmountOnTaxes" class="control-label col-xs-5">Tax exempt amt:</label>
+                                <label id="lblTransactionTaxExemptAmountOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxExemptQuantityOnTaxes" class="control-label col-xs-5">Tax exempt qty:</label>
+                                <label id="lblTransactionTaxExemptQuantityOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionFeeAmountAppliedOnTaxes" class="control-label col-xs-5">Fee amt applied:</label>
+                                <label id="lblTransactionFeeAmountAppliedOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxableTaxAmountOnTaxes" class="control-label col-xs-5">Taxable tax amt:</label>
+                                <label id="lblTransactionTaxableTaxAmountOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionNonTaxableAmountOnTaxes" class="control-label col-xs-5">Non taxable amt:</label>
+                                <label id="lblTransactionNonTaxableAmountOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 transinfo">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionNonTaxableQuantityOnTaxes" class="control-label col-xs-5">Non taxable qty:</label>
+                                <label id="lblTransactionNonTaxableQuantityOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionContributionOnTaxes" class="control-label col-xs-5">Contribution:</label>
+                                <label id="lblTransactionContributionOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <label id="lblTransactionTaxationOROnTaxes" class="control-label col-xs-5">Taxation O/R:</label>
+                                <label id="lblTransactionTaxationOROnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionTaxabilityOROnTaxes" class="control-label col-xs-5">Taxability O/R:</label>
+                                <label id="lblTransactionTaxabilityOROnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label id="lblTransactionPercentageTaxableOnTaxes" class="control-label col-xs-5">% Taxable:</label>
+                                <label id="lblTransactionPercentageTaxableOnTaxesVal" class="col-xs-5 trans_details"></label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+                </text>
+                );
+                items.Add().Text("Taxability").Content(
+                    @<text>
+        <div class="fieldset">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblTransactionTypeOnTaxability" class="control-label col-xs-5">Transaction type:</label>
+                            @Html.Label("lblTransactionTypeOnTaxabilityVal", "#=TransactionTaxabilityModel.TransactionTypeDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblProviderTypeOnTaxabiltiy" class="control-label col-xs-5">Provider type:</label>
+                            @Html.Label("lblProviderTypeOnTaxabiltiyVal", "#=TransactionTaxabilityModel.ProviderTypeDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblUsageTypeOnTaxabiltiy" class="control-label col-xs-5">Customer / Usage type:</label>
+                            @Html.Label("lblUsageTypeVal", "#=TransactionTaxabilityModel.CustomerOrUsageTypeDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblExemptionClassOnTaxability" class="control-label col-xs-5">Exemption class:</label>
+                            @Html.Label("lblUsageTypeOnTaxabiltiyVal", "#=TransactionTaxabilityModel.ExemptionClass#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    </text>
+                );
+                items.Add().Text("Situs/Nexus").Content(
+                    @<text>
+        <div class="fieldset">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblFOBOnSitusORNexus" class="control-label col-xs-5">FOB:</label>
+                            @Html.Label("lblFOBValOnSitusORNexus", "#=TransactionSitusInformationModel.FOBDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblMailOrderOnSitusORNexus" class="control-label col-xs-5">Mail Order:</label>
+                            @Html.Label("lblMailOrderValOnSitusORNexus", "#=TransactionSitusInformationModel.MailOrderDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblDeliveryByOnSitusORNexus" class="control-label col-xs-5">Delivery By:</label>
+                            @Html.Label("lblDeliveredByValOnSitusORNexus", "#=TransactionSitusInformationModel.DeliveryByDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblSolicitedOutsideOnSitusORNexus" class="control-label col-xs-5">Solicited outside:</label>
+                            @Html.Label("lblSolicitedOutsideValOnSitusORNexus", "#=TransactionSitusInformationModel.SolicitedOutsideDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblCanRejectDeliveryOnSitusORNexus" class="control-label col-xs-5">Can reject delivery:</label>
+                            @Html.Label("lblCanRejectDeliveryValOnSitusORNexus", "#=TransactionSitusInformationModel.CanRejectDeliveryDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 transinfo">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblShipFromPOBOnSitusORNexus" class="control-label col-xs-5">Ship from POB:</label>
+                            @Html.Label("lblShipFromPOBValOnSitusORNexus", "#=TransactionSitusInformationModel.ShipFromPOBDescription#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblShipFromGeocodeOnSitusORNexus" class="control-label col-xs-5">Ship from geocode:</label>
+                            @Html.Label("lblShipFromGeocodeValOnSitusORNexus", "#=TransactionSitusInformationModel.ShipFromGeocode#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblOrderPlacementOnSitusORNexus" class="control-label col-xs-5">Order placement geocode:</label>
+                            @Html.Label("lblOrderPlacementValOnSitusORNexus", "#=TransactionSitusInformationModel.OrderPlacementGeocode#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblOrderAcceptanceOnSitusORNexus" class="control-label col-xs-5">Order acceptance geocode:</label>
+                            @Html.Label("lblOrderApprovalValOnSitusORNexus", "#=TransactionSitusInformationModel.OrderApprovalGeocode#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label id="lblShipToGeocodeOnSitusORNexus" class="control-label col-xs-5">Ship to geocode:</label>
+                            @Html.Label("lblShipToGeocodeValOnSitusORNexus", "#=TransactionSitusInformationModel.ShipToGeocode#", new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+                    </text>
+               );
+                items.Add().Text("Address(s)").LoadContentFrom(@Url.Action("TransactionLineItemAddressDetail", "Transactions") + "?transactionId=" + @ViewBag.TransactionID + "&lineItemId=#=TransactionLineItemProductInformationModel.LineItemID#");
+            })
+     .ToClientTemplate())
+
+
+      
+</script>
+
+
+      

@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="STO4DBModelStoreContainer" CdmEntityContainer="STO4DBEntities">
+    <EntitySetMapping Name="DIVISIONTs">
+      <EntityTypeMapping TypeName="STO4DBModel.DIVISIONT">
+        <MappingFragment StoreEntitySet="DIVISIONT">
+          <ScalarProperty Name="DivisionSurrogate" ColumnName="DivisionSurrogate" />
+          <ScalarProperty Name="DIVISION_ID" ColumnName="DIVISION_ID" />
+          <ScalarProperty Name="ACOPDS" ColumnName="ACOPDS" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Plus4" ColumnName="Plus4" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="EntitySurrogate" ColumnName="EntitySurrogate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTITYTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ENTITYT">
+        <MappingFragment StoreEntitySet="ENTITYT">
+          <ScalarProperty Name="ACORDS" ColumnName="ACORDS" />
+          <ScalarProperty Name="EntitySurrogate" ColumnName="EntitySurrogate" />
+          <ScalarProperty Name="ENTITY_ID" ColumnName="ENTITY_ID" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Plus4" ColumnName="Plus4" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransErrorLogTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransErrorLogT">
+        <MappingFragment StoreEntitySet="TransErrorLogT">
+          <ScalarProperty Name="ErrorLogID" ColumnName="ErrorLogID" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorClass" ColumnName="ErrorClass" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="ErrorShortMessage" ColumnName="ErrorShortMessage" />
+          <ScalarProperty Name="ErrorLevel" ColumnName="ErrorLevel" />
+          <ScalarProperty Name="ErrorLongMessage" ColumnName="ErrorLongMessage" />
+          <ScalarProperty Name="UsrLineItemID" ColumnName="UsrLineItemID" />
+          <ScalarProperty Name="TSINS" ColumnName="TSINS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransItemATs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransItemAT">
+        <MappingFragment StoreEntitySet="TransItemAT">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="UserData" ColumnName="UserData" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="SitusSolicitedOutside" ColumnName="SitusSolicitedOutside" />
+          <ScalarProperty Name="SitusCanRejectDelivery" ColumnName="SitusCanRejectDelivery" />
+          <ScalarProperty Name="SitusFOB" ColumnName="SitusFOB" />
+          <ScalarProperty Name="SitusMailOrder" ColumnName="SitusMailOrder" />
+          <ScalarProperty Name="SitusDeliveryBy" ColumnName="SitusDeliveryBy" />
+          <ScalarProperty Name="SitusShipFromPOB" ColumnName="SitusShipFromPOB" />
+          <ScalarProperty Name="OriginalLineItemID" ColumnName="OriginalLineItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransItemTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransItemT">
+        <MappingFragment StoreEntitySet="TransItemT">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="UsrLineItemID" ColumnName="UsrLineItemID" />
+          <ScalarProperty Name="SKUID" ColumnName="SKUID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="AvgUnitPrice" ColumnName="AvgUnitPrice" />
+          <ScalarProperty Name="LineItemAmount" ColumnName="LineItemAmount" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="CLASSCODE" ColumnName="CLASSCODE" />
+          <ScalarProperty Name="NXSShipToGeoID" ColumnName="NXSShipToGeoID" />
+          <ScalarProperty Name="NXSShipFromGeoID" ColumnName="NXSShipFromGeoID" />
+          <ScalarProperty Name="OrderPlacementGeoID" ColumnName="OrderPlacementGeoID" />
+          <ScalarProperty Name="OrderApprovalGeoID" ColumnName="OrderApprovalGeoID" />
+          <ScalarProperty Name="LocationSurrogate" ColumnName="LocationSurrogate" />
+          <ScalarProperty Name="DataString" ColumnName="DataString" />
+          <ScalarProperty Name="OrderApprovalAddressId" ColumnName="OrderApprovalAddressId" />
+          <ScalarProperty Name="OrderPlacementAddressId" ColumnName="OrderPlacementAddressId" />
+          <ScalarProperty Name="ShipFromAddressId" ColumnName="ShipFromAddressId" />
+          <ScalarProperty Name="ShipToAddressId" ColumnName="ShipToAddressId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransItemTaxTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransItemTaxT">
+        <MappingFragment StoreEntitySet="TransItemTaxT">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="TaxRateID" ColumnName="TaxRateID" />
+          <ScalarProperty Name="CONTRIBUTE" ColumnName="CONTRIBUTE" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="ExemptTaxableAmt" ColumnName="ExemptTaxableAmt" />
+          <ScalarProperty Name="NonTaxableAmt" ColumnName="NonTaxableAmt" />
+          <ScalarProperty Name="TaxableQuantity" ColumnName="TaxableQuantity" />
+          <ScalarProperty Name="ExemptTaxableQty" ColumnName="ExemptTaxableQty" />
+          <ScalarProperty Name="NonTaxableQty" ColumnName="NonTaxableQty" />
+          <ScalarProperty Name="TaxApplied3" ColumnName="TaxApplied3" />
+          <ScalarProperty Name="FeeApplied3" ColumnName="FeeApplied3" />
+          <ScalarProperty Name="TaxableTaxAmount3" ColumnName="TaxableTaxAmount3" />
+          <ScalarProperty Name="CT39zA" ColumnName="CT39zA" />
+          <ScalarProperty Name="Situs" ColumnName="Situs" />
+          <ScalarProperty Name="CustomTransInfo" ColumnName="CustomTransInfo" />
+          <ScalarProperty Name="NonTaxReason" ColumnName="NonTaxReason" />
+          <ScalarProperty Name="CEMCertificateID" ColumnName="CEMCertificateID" />
+          <ScalarProperty Name="PartialRateID" ColumnName="PartialRateID" />
+          <ScalarProperty Name="ReducedRateID" ColumnName="ReducedRateID" />
+          <ScalarProperty Name="RateChangeType" ColumnName="RateChangeType" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransLogTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransLogT">
+        <MappingFragment StoreEntitySet="TransLogT">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="DivisionSurrogate" ColumnName="DivisionSurrogate" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="SourceSystem" ColumnName="SourceSystem" />
+          <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="LiabilityType" ColumnName="LiabilityType" />
+          <ScalarProperty Name="TestTransaction" ColumnName="TestTransaction" />
+          <ScalarProperty Name="NXSShipToGeoID" ColumnName="NXSShipToGeoID" />
+          <ScalarProperty Name="NXSShipFromGeoID" ColumnName="NXSShipFromGeoID" />
+          <ScalarProperty Name="OrderPlacementGeoID" ColumnName="OrderPlacementGeoID" />
+          <ScalarProperty Name="OrderApprovalGeoID" ColumnName="OrderApprovalGeoID" />
+          <ScalarProperty Name="SitusSolicitedOutside" ColumnName="SitusSolicitedOutside" />
+          <ScalarProperty Name="SitusCanRejectDelivery" ColumnName="SitusCanRejectDelivery" />
+          <ScalarProperty Name="SitusFOB" ColumnName="SitusFOB" />
+          <ScalarProperty Name="SitusMailOrder" ColumnName="SitusMailOrder" />
+          <ScalarProperty Name="SitusDeliveryBy" ColumnName="SitusDeliveryBy" />
+          <ScalarProperty Name="SitusShipFromPOB" ColumnName="SitusShipFromPOB" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="OriginalTransactionID" ColumnName="OriginalTransactionID" />
+          <ScalarProperty Name="SUID" ColumnName="SUID" />
+          <ScalarProperty Name="TransactionDescription" ColumnName="TransactionDescription" />
+          <ScalarProperty Name="TSINS" ColumnName="TSINS" />
+          <ScalarProperty Name="TSCHG" ColumnName="TSCHG" />
+          <ScalarProperty Name="OrderApprovalAddressId" ColumnName="OrderApprovalAddressId" />
+          <ScalarProperty Name="OrderPlacementAddressId" ColumnName="OrderPlacementAddressId" />
+          <ScalarProperty Name="ShipFromAddressId" ColumnName="ShipFromAddressId" />
+          <ScalarProperty Name="ShipToAddressId" ColumnName="ShipToAddressId" />
+          <ScalarProperty Name="TransactionReturnStatus" ColumnName="TransactionReturnStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransTaxOnTaxTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransTaxOnTaxT">
+        <MappingFragment StoreEntitySet="TransTaxOnTaxT">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="TaxRateID" ColumnName="TaxRateID" />
+          <ScalarProperty Name="ContributingTransactionID" ColumnName="ContributingTransactionID" />
+          <ScalarProperty Name="ContributingLineItemID" ColumnName="ContributingLineItemID" />
+          <ScalarProperty Name="CONTRIBUTING_TAXID" ColumnName="CONTRIBUTING_TAXID" />
+          <ScalarProperty Name="CONTRIBUTING_TAXRATEID" ColumnName="CONTRIBUTING_TAXRATEID" />
+          <ScalarProperty Name="TaxableTaxAmount3" ColumnName="TaxableTaxAmount3" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERPROFILETs">
+      <EntityTypeMapping TypeName="STO4DBModel.USERPROFILET">
+        <MappingFragment StoreEntitySet="USERPROFILET">
+          <ScalarProperty Name="SUID" ColumnName="SUID" />
+          <ScalarProperty Name="APPLICATION_LOGIN_ID" ColumnName="APPLICATION_LOGIN_ID" />
+          <ScalarProperty Name="PWDCNL" ColumnName="PWDCNL" />
+          <ScalarProperty Name="ACUSER" ColumnName="ACUSER" />
+          <ScalarProperty Name="ACFNAM" ColumnName="ACFNAM" />
+          <ScalarProperty Name="ACMNAM" ColumnName="ACMNAM" />
+          <ScalarProperty Name="ACLNAM" ColumnName="ACLNAM" />
+          <ScalarProperty Name="ACPEDT" ColumnName="ACPEDT" />
+          <ScalarProperty Name="ACPXDT" ColumnName="ACPXDT" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="ACUPPD" ColumnName="ACUPPD" />
+          <ScalarProperty Name="ACPCDT" ColumnName="ACPCDT" />
+          <ScalarProperty Name="ACALYWSLOG" ColumnName="ACALYWSLOG" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="PhExt" ColumnName="PhExt" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxonTaxTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxonTaxT">
+        <MappingFragment StoreEntitySet="TaxonTaxT">
+          <ScalarProperty Name="TAXABLE" ColumnName="TAXABLE" />
+          <ScalarProperty Name="LEGALEXPIRATIONDATE" ColumnName="LEGALEXPIRATIONDATE" />
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="LEGALEFFECTIVEDATE" ColumnName="LEGALEFFECTIVEDATE" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="BaseTaxCat" ColumnName="BaseTaxCat" />
+          <ScalarProperty Name="BaseTaxType" ColumnName="BaseTaxType" />
+          <ScalarProperty Name="BoundaryID" ColumnName="BoundaryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransactionTypeT">
+        <MappingFragment StoreEntitySet="TransactionTypeT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="SitusIndicator" ColumnName="SitusIndicator" />
+          <ScalarProperty Name="TransactionTypeDescription" ColumnName="TransactionTypeDescription" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransTaxTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransTaxT">
+        <MappingFragment StoreEntitySet="TransTaxT">
+          <ScalarProperty Name="ReportingDataID" ColumnName="ReportingDataID" />
+          <ScalarProperty Name="BasicDataID" ColumnName="BasicDataID" />
+          <ScalarProperty Name="TaxableTaxAmount" ColumnName="TaxableTaxAmount" />
+          <ScalarProperty Name="FeeApplied" ColumnName="FeeApplied" />
+          <ScalarProperty Name="TaxApplied" ColumnName="TaxApplied" />
+          <ScalarProperty Name="ExemptTaxableQty" ColumnName="ExemptTaxableQty" />
+          <ScalarProperty Name="NonTaxableAmt" ColumnName="NonTaxableAmt" />
+          <ScalarProperty Name="ExemptTaxableAmt" ColumnName="ExemptTaxableAmt" />
+          <ScalarProperty Name="NonTaxableQty" ColumnName="NonTaxableQty" />
+          <ScalarProperty Name="TaxableQuantity" ColumnName="TaxableQuantity" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionStatusTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransactionStatusT">
+        <MappingFragment StoreEntitySet="TransactionStatusT">
+          <ScalarProperty Name="TransactionStatusDescription" ColumnName="TransactionStatusDescription" />
+          <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTs">
+      <EntityTypeMapping TypeName="STO4DBModel.CustomerT">
+        <MappingFragment StoreEntitySet="CustomerT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="CustomerXRef" ColumnName="CustomerXRef" />
+          <ScalarProperty Name="CustomerDescription" ColumnName="CustomerDescription" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExemptionClassTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ExemptionClassT">
+        <MappingFragment StoreEntitySet="ExemptionClassT">
+          <ScalarProperty Name="TaxHoliday" ColumnName="TaxHoliday" />
+          <ScalarProperty Name="ExemptionClassD" ColumnName="ExemptionClassD" />
+          <ScalarProperty Name="CLASSCODE" ColumnName="CLASSCODE" />
+          <ScalarProperty Name="DivisionSurrogate" ColumnName="DivisionSurrogate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Geocode1T">
+      <EntityTypeMapping TypeName="STO4DBModel.Geocode1T">
+        <MappingFragment StoreEntitySet="Geocode1T">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="ExpReleaseNo" ColumnName="ExpReleaseNo" />
+          <ScalarProperty Name="GNIScode" ColumnName="GNIScode" />
+          <ScalarProperty Name="PartOf" ColumnName="PartOf" />
+          <ScalarProperty Name="ActualGeoCodeDefault" ColumnName="ActualGeoCodeDefault" />
+          <ScalarProperty Name="TaxDistrictDescription" ColumnName="TaxDistrictDescription" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Geocode2T">
+      <EntityTypeMapping TypeName="STO4DBModel.Geocode2T">
+        <MappingFragment StoreEntitySet="Geocode2T">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="ActualGeoCode" ColumnName="ActualGeoCode" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductGroupTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ProductGroupT">
+        <MappingFragment StoreEntitySet="ProductGroupT">
+          <ScalarProperty Name="EntitySurrogate" ColumnName="EntitySurrogate" />
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="LEGALEXPIRATIONDATE" ColumnName="LEGALEXPIRATIONDATE" />
+          <ScalarProperty Name="LEGALEFFECTIVEDATE" ColumnName="LEGALEFFECTIVEDATE" />
+          <ScalarProperty Name="GroupDescription" ColumnName="GroupDescription" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductItemTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ProductItemT">
+        <MappingFragment StoreEntitySet="ProductItemT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="LEGALEXPIRATIONDATE" ColumnName="LEGALEXPIRATIONDATE" />
+          <ScalarProperty Name="LEGALEFFECTIVEDATE" ColumnName="LEGALEFFECTIVEDATE" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProviderTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ProviderT">
+        <MappingFragment StoreEntitySet="ProviderT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="ProviderDescription" ColumnName="ProviderDescription" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReleaseTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ReleaseT">
+        <MappingFragment StoreEntitySet="ReleaseT">
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ReleaseID" ColumnName="ReleaseID" />
+          <ScalarProperty Name="VersionID" ColumnName="VersionID" />
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxabilityStateTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxabilityStateT">
+        <MappingFragment StoreEntitySet="TaxabilityStateT">
+          <ScalarProperty Name="PercentTaxable" ColumnName="PercentTaxable" />
+          <ScalarProperty Name="PercentTaxableType" ColumnName="PercentTaxableType" />
+          <ScalarProperty Name="TAXABLE" ColumnName="TAXABLE" />
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="LEGALEFFECTIVEDATE" ColumnName="LEGALEFFECTIVEDATE" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="TaxabilityStateID" ColumnName="TaxabilityStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxabilityTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxabilityT">
+        <MappingFragment StoreEntitySet="TaxabilityT">
+          <ScalarProperty Name="PercentTaxable" ColumnName="PercentTaxable" />
+          <ScalarProperty Name="PercentTaxableType" ColumnName="PercentTaxableType" />
+          <ScalarProperty Name="LEGALEXPIRATIONDATE" ColumnName="LEGALEXPIRATIONDATE" />
+          <ScalarProperty Name="TAXABLE" ColumnName="TAXABLE" />
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="LEGALEFFECTIVEDATE" ColumnName="LEGALEFFECTIVEDATE" />
+          <ScalarProperty Name="OverrideReasonB" ColumnName="OverrideReasonB" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="ProductGroup" ColumnName="ProductGroup" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="TaxabilityID" ColumnName="TaxabilityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxAuthorityTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxAuthorityT">
+        <MappingFragment StoreEntitySet="TaxAuthorityT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="TaxAuthType" ColumnName="TaxAuthType" />
+          <ScalarProperty Name="TaxAuthorityName" ColumnName="TaxAuthorityName" />
+          <ScalarProperty Name="TaxAuthorityID" ColumnName="TaxAuthorityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxAuthorityTaxTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxAuthorityTaxT">
+        <MappingFragment StoreEntitySet="TaxAuthorityTaxT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="TaxAuthorityID" ColumnName="TaxAuthorityID" />
+          <ScalarProperty Name="EntitySurrogate" ColumnName="EntitySurrogate" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxCatTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxCatT">
+        <MappingFragment StoreEntitySet="TaxCatT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="TaxCategoryDescription" ColumnName="TaxCategoryDescription" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxJurisdictionTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxJurisdictionT">
+        <MappingFragment StoreEntitySet="TaxJurisdictionT">
+          <ScalarProperty Name="LEGALEXPIRATIONDATE" ColumnName="LEGALEXPIRATIONDATE" />
+          <ScalarProperty Name="ReportingTaxOverrideID" ColumnName="ReportingTaxOverrideID" />
+          <ScalarProperty Name="CalcTaxOverrideID" ColumnName="CalcTaxOverrideID" />
+          <ScalarProperty Name="BasicTaxOverrideID" ColumnName="BasicTaxOverrideID" />
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="LEGALEFFECTIVEDATE" ColumnName="LEGALEFFECTIVEDATE" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxOverrideReasonTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxOverrideReasonT">
+        <MappingFragment StoreEntitySet="TaxOverrideReasonT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="OVERRIDEREASON" ColumnName="OVERRIDEREASON" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="TAXOVERRIDEID" ColumnName="TAXOVERRIDEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxRateTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxRateT">
+        <MappingFragment StoreEntitySet="TaxRateT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="MaxUnitBase" ColumnName="MaxUnitBase" />
+          <ScalarProperty Name="MinUnitBase" ColumnName="MinUnitBase" />
+          <ScalarProperty Name="Fee" ColumnName="Fee" />
+          <ScalarProperty Name="MaxTaxBase" ColumnName="MaxTaxBase" />
+          <ScalarProperty Name="MinTaxBase" ColumnName="MinTaxBase" />
+          <ScalarProperty Name="TAXRATE" ColumnName="TAXRATE" />
+          <ScalarProperty Name="Tier" ColumnName="Tier" />
+          <ScalarProperty Name="CalcDataID" ColumnName="CalcDataID" />
+          <ScalarProperty Name="TaxRateID" ColumnName="TaxRateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxTypeT">
+        <MappingFragment StoreEntitySet="TaxTypeT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="TaxTypeDescription" ColumnName="TaxTypeDescription" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExemptionClassesTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ExemptionClassesT">
+        <MappingFragment StoreEntitySet="ExemptionClassesT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FOBTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.FOBTypeT">
+        <MappingFragment StoreEntitySet="FOBTypeT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiabilityTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.LiabilityTypeT">
+        <MappingFragment StoreEntitySet="LiabilityTypeT">
+          <ScalarProperty Name="LiabilityTypeDescription" ColumnName="LiabilityTypeDescription" />
+          <ScalarProperty Name="LiabilityType" ColumnName="LiabilityType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailOrderTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.MailOrderTypeT">
+        <MappingFragment StoreEntitySet="MailOrderTypeT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NonTaxReasonTs">
+      <EntityTypeMapping TypeName="STO4DBModel.NonTaxReasonT">
+        <MappingFragment StoreEntitySet="NonTaxReasonT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransLog1">
+      <EntityTypeMapping TypeName="STO4DBModel.TransLog1">
+        <MappingFragment StoreEntitySet="TransLog1">
+          <ScalarProperty Name="TransactionReturnStatus" ColumnName="TransactionReturnStatus" />
+          <ScalarProperty Name="ShipToAddressId" ColumnName="ShipToAddressId" />
+          <ScalarProperty Name="ShipFromAddressId" ColumnName="ShipFromAddressId" />
+          <ScalarProperty Name="OrderPlacementAddressId" ColumnName="OrderPlacementAddressId" />
+          <ScalarProperty Name="OrderApprovalAddressId" ColumnName="OrderApprovalAddressId" />
+          <ScalarProperty Name="TSCHG" ColumnName="TSCHG" />
+          <ScalarProperty Name="TSINS" ColumnName="TSINS" />
+          <ScalarProperty Name="TransactionDescription" ColumnName="TransactionDescription" />
+          <ScalarProperty Name="APPLICATION_LOGIN_ID" ColumnName="APPLICATION_LOGIN_ID" />
+          <ScalarProperty Name="SUID" ColumnName="SUID" />
+          <ScalarProperty Name="OriginalTransactionID" ColumnName="OriginalTransactionID" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="SitusShipFromPOB" ColumnName="SitusShipFromPOB" />
+          <ScalarProperty Name="SitusDeliveryBy" ColumnName="SitusDeliveryBy" />
+          <ScalarProperty Name="SitusMailOrder" ColumnName="SitusMailOrder" />
+          <ScalarProperty Name="SitusFOB" ColumnName="SitusFOB" />
+          <ScalarProperty Name="SitusCanRejectDelivery" ColumnName="SitusCanRejectDelivery" />
+          <ScalarProperty Name="SitusSolicitedOutside" ColumnName="SitusSolicitedOutside" />
+          <ScalarProperty Name="CT39rA" ColumnName="CT39rA" />
+          <ScalarProperty Name="OrderApprovalGeoID" ColumnName="OrderApprovalGeoID" />
+          <ScalarProperty Name="CT39qA" ColumnName="CT39qA" />
+          <ScalarProperty Name="OrderPlacementGeoID" ColumnName="OrderPlacementGeoID" />
+          <ScalarProperty Name="CT39pA" ColumnName="CT39pA" />
+          <ScalarProperty Name="NXSShipFromGeoID" ColumnName="NXSShipFromGeoID" />
+          <ScalarProperty Name="CT39oA" ColumnName="CT39oA" />
+          <ScalarProperty Name="NXSShipToGeoID" ColumnName="NXSShipToGeoID" />
+          <ScalarProperty Name="TestTransaction" ColumnName="TestTransaction" />
+          <ScalarProperty Name="LiabilityType" ColumnName="LiabilityType" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+          <ScalarProperty Name="SourceSystem" ColumnName="SourceSystem" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="DivisionSurrogate" ColumnName="DivisionSurrogate" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOCATIONTs">
+      <EntityTypeMapping TypeName="STO4DBModel.LOCATIONT">
+        <MappingFragment StoreEntitySet="LOCATIONT">
+          <ScalarProperty Name="DefaultLocation" ColumnName="DefaultLocation" />
+          <ScalarProperty Name="CustomerEffectiveDate" ColumnName="CustomerEffectiveDate" />
+          <ScalarProperty Name="OverrideGeoID" ColumnName="OverrideGeoID" />
+          <ScalarProperty Name="LocationDesc" ColumnName="LocationDesc" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+          <ScalarProperty Name="DivisionSurrogate" ColumnName="DivisionSurrogate" />
+          <ScalarProperty Name="LocationSurrogate" ColumnName="LocationSurrogate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxabilityOverrideTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TaxabilityOverrideT">
+        <MappingFragment StoreEntitySet="TaxabilityOverrideT">
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="PercentTaxable" ColumnName="PercentTaxable" />
+          <ScalarProperty Name="TAXABLE" ColumnName="TAXABLE" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="TaxAuthorityID" ColumnName="TaxAuthorityID" />
+          <ScalarProperty Name="TaxAuthType" ColumnName="TaxAuthType" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="TaxRuleType" ColumnName="TaxRuleType" />
+          <ScalarProperty Name="CustomerExpirationDate" ColumnName="CustomerExpirationDate" />
+          <ScalarProperty Name="CustomerEffectiveDate" ColumnName="CustomerEffectiveDate" />
+          <ScalarProperty Name="DivisionSurrogate" ColumnName="DivisionSurrogate" />
+          <ScalarProperty Name="RuleID" ColumnName="RuleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CanRejectDeliveryTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.CanRejectDeliveryTypeT">
+        <MappingFragment StoreEntitySet="CanRejectDeliveryTypeT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryByTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.DeliveryByTypeT">
+        <MappingFragment StoreEntitySet="DeliveryByTypeT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShipFromPOBTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.ShipFromPOBTypeT">
+        <MappingFragment StoreEntitySet="ShipFromPOBTypeT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitedOutsideTypeTs">
+      <EntityTypeMapping TypeName="STO4DBModel.SolicitedOutsideTypeT">
+        <MappingFragment StoreEntitySet="SolicitedOutsideTypeT">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransItem5">
+      <EntityTypeMapping TypeName="STO4DBModel.TransItem5">
+        <MappingFragment StoreEntitySet="TransItem5">
+          <ScalarProperty Name="ShipToAddressId" ColumnName="ShipToAddressId" />
+          <ScalarProperty Name="ShipFromAddressId" ColumnName="ShipFromAddressId" />
+          <ScalarProperty Name="OrderApprovalAddressId" ColumnName="OrderApprovalAddressId" />
+          <ScalarProperty Name="OrderPlacementAddressId" ColumnName="OrderPlacementAddressId" />
+          <ScalarProperty Name="DataString" ColumnName="DataString" />
+          <ScalarProperty Name="LocationSurrogate" ColumnName="LocationSurrogate" />
+          <ScalarProperty Name="CT39rA" ColumnName="CT39rA" />
+          <ScalarProperty Name="OrderApprovalGeoID" ColumnName="OrderApprovalGeoID" />
+          <ScalarProperty Name="CT39qA" ColumnName="CT39qA" />
+          <ScalarProperty Name="OrderPlacementGeoID" ColumnName="OrderPlacementGeoID" />
+          <ScalarProperty Name="CT39vA" ColumnName="CT39vA" />
+          <ScalarProperty Name="NXSShipFromGeoID" ColumnName="NXSShipFromGeoID" />
+          <ScalarProperty Name="CT39uA" ColumnName="CT39uA" />
+          <ScalarProperty Name="NXSShipToGeoID" ColumnName="NXSShipToGeoID" />
+          <ScalarProperty Name="CLASSCODE" ColumnName="CLASSCODE" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="LineItemAmount" ColumnName="LineItemAmount" />
+          <ScalarProperty Name="AvgUnitPrice" ColumnName="AvgUnitPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SKUID" ColumnName="SKUID" />
+          <ScalarProperty Name="UsrLineItemID" ColumnName="UsrLineItemID" />
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransItemTax2">
+      <EntityTypeMapping TypeName="STO4DBModel.TransItemTax2">
+        <MappingFragment StoreEntitySet="TransItemTax2">
+          <ScalarProperty Name="CEMCertificateID" ColumnName="CEMCertificateID" />
+          <ScalarProperty Name="NonTaxReason" ColumnName="NonTaxReason" />
+          <ScalarProperty Name="CustomTransInfo" ColumnName="CustomTransInfo" />
+          <ScalarProperty Name="Situs" ColumnName="Situs" />
+          <ScalarProperty Name="CT39zA" ColumnName="CT39zA" />
+          <ScalarProperty Name="TaxableTaxAmount3" ColumnName="TaxableTaxAmount3" />
+          <ScalarProperty Name="FeeApplied3" ColumnName="FeeApplied3" />
+          <ScalarProperty Name="TaxApplied3" ColumnName="TaxApplied3" />
+          <ScalarProperty Name="NonTaxableQty" ColumnName="NonTaxableQty" />
+          <ScalarProperty Name="ExemptTaxableQty" ColumnName="ExemptTaxableQty" />
+          <ScalarProperty Name="TaxableQuantity" ColumnName="TaxableQuantity" />
+          <ScalarProperty Name="NonTaxableAmt" ColumnName="NonTaxableAmt" />
+          <ScalarProperty Name="ExemptTaxableAmt" ColumnName="ExemptTaxableAmt" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="CONTRIBUTE" ColumnName="CONTRIBUTE" />
+          <ScalarProperty Name="CalcDataID" ColumnName="CalcDataID" />
+          <ScalarProperty Name="Fee" ColumnName="Fee" />
+          <ScalarProperty Name="TAXRATE" ColumnName="TAXRATE" />
+          <ScalarProperty Name="Tier" ColumnName="Tier" />
+          <ScalarProperty Name="TaxRateID" ColumnName="TaxRateID" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="TaxAuthType" ColumnName="TaxAuthType" />
+          <ScalarProperty Name="TaxAuthorityName" ColumnName="TaxAuthorityName" />
+          <ScalarProperty Name="TaxAuthorityID" ColumnName="TaxAuthorityID" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="LineItemID" ColumnName="LineItemID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransTax2">
+      <EntityTypeMapping TypeName="STO4DBModel.TransTax2">
+        <MappingFragment StoreEntitySet="TransTax2">
+          <ScalarProperty Name="ReportToAuthority" ColumnName="ReportToAuthority" />
+          <ScalarProperty Name="ReportingDataID" ColumnName="ReportingDataID" />
+          <ScalarProperty Name="BaseTypeDescription" ColumnName="BaseTypeDescription" />
+          <ScalarProperty Name="PassTypeDescription" ColumnName="PassTypeDescription" />
+          <ScalarProperty Name="PassFlagDescription" ColumnName="PassFlagDescription" />
+          <ScalarProperty Name="BasicDataID" ColumnName="BasicDataID" />
+          <ScalarProperty Name="TaxableTaxAmount" ColumnName="TaxableTaxAmount" />
+          <ScalarProperty Name="FeeApplied" ColumnName="FeeApplied" />
+          <ScalarProperty Name="TaxApplied" ColumnName="TaxApplied" />
+          <ScalarProperty Name="ExemptTaxableQty" ColumnName="ExemptTaxableQty" />
+          <ScalarProperty Name="NonTaxableAmt" ColumnName="NonTaxableAmt" />
+          <ScalarProperty Name="ExemptTaxableAmt" ColumnName="ExemptTaxableAmt" />
+          <ScalarProperty Name="NonTaxableQty" ColumnName="NonTaxableQty" />
+          <ScalarProperty Name="TaxableQuantity" ColumnName="TaxableQuantity" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="EntitySurrogate" ColumnName="EntitySurrogate" />
+          <ScalarProperty Name="TaxCat" ColumnName="TaxCat" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="AuthorityTypeDescription" ColumnName="AuthorityTypeDescription" />
+          <ScalarProperty Name="TaxAuthorityName" ColumnName="TaxAuthorityName" />
+          <ScalarProperty Name="TaxAuthorityID" ColumnName="TaxAuthorityID" />
+          <ScalarProperty Name="TaxID" ColumnName="TaxID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddressTs">
+      <EntityTypeMapping TypeName="STO4DBModel.AddressT">
+        <MappingFragment StoreEntitySet="AddressT">
+          <ScalarProperty Name="GeoCode" ColumnName="GeoCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Plus4" ColumnName="Plus4" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryTs">
+      <EntityTypeMapping TypeName="STO4DBModel.CountryT">
+        <MappingFragment StoreEntitySet="CountryT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="Country3" ColumnName="Country3" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StateTs">
+      <EntityTypeMapping TypeName="STO4DBModel.StateT">
+        <MappingFragment StoreEntitySet="StateT">
+          <ScalarProperty Name="ReleaseNo" ColumnName="ReleaseNo" />
+          <ScalarProperty Name="GeoID" ColumnName="GeoID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionInvoiceMappingTs">
+      <EntityTypeMapping TypeName="STO4DBModel.TransactionInvoiceMappingT">
+        <MappingFragment StoreEntitySet="TransactionInvoiceMappingT">
+          <ScalarProperty Name="TransactionInvoiceMappingSurrogate" ColumnName="TransactionInvoiceMappingSurrogate" />
+          <ScalarProperty Name="InvoicePath" ColumnName="InvoicePath" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,221 @@
+﻿
+@{
+    var serviceUrl = WK.TaxFormalizer.Common.Utils.GetAppSettingValue("ServiceUrl");
+    var stoHubUrl = serviceUrl + "signalr/hubs";
+    var signalRJsUrl = serviceUrl + "Scripts/jquery.signalR-2.2.0.min.js";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="~/Content/images/fevicon_icon.png" type="image/x-icon" />
+    <!-- HTML5 Shim  IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <title>Tax Formalizer</title>
+
+    @Styles.Render("~/Content/kendoui")
+    <link href="~/Content/Controls.css" rel="stylesheet" />
+    @Styles.Render("~/Content/Default/css", "~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Scripts")
+    @Scripts.Render("~/bundles/kendo/scripts")
+
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+
+        var stoSaas = {
+            urls: {
+               
+                transaction: {
+                    saveGridSettings: '@Url.Action("SaveTransactionGridSettings", "Transactions", new { Area = "" })',
+                    loadTransaction: '@Url.Action("TransactionDetails", "Transactions", new { Area = "" })',
+                    downloadInvoice: '@Url.Action("DownloadInvoice", "Transactions", new { Area = "" })',
+                },
+            },
+        };
+
+        $(document).ready(function () {
+            var heightwindow = $(document).height();
+            $('#ModalDialog .modal-content').css('height', heightwindow - 75);
+
+        });
+        $(window).resize(function () {
+            var heightwindow = $(document).height();
+            $('#ModalDialog .modal-content').css('height', heightwindow - 75);
+        });
+
+
+       
+        
+    </script>
+
+
+</head>
+<body>
+
+    <div id="divLoadingMask" class="k-loading-image" style="position:absolute;top:5%;display:none;z-index:99999999999"></div>
+
+    <div class="modal displayNone" id="ModalDialog" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="btnModalDialogClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" style="color: white"><b></b></h4>
+                </div>
+
+                <div class="modal-body" id="modalDialogContent">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="divOverlay" class="k-overlay" style="display: none; z-index: 10002; opacity: 0.5;"> </div>
+
+    <div class="container-fluid">
+        <!--Header Section -->
+        <header class="row">
+
+
+
+            <div class="col-md-3 pull-right login-status">
+                <img class="img-responsive cch_logo" src="~/Content/images/cchLogo.png" /><br />
+
+                <p style="margin-top: 20px;">
+
+
+                    <a id="lnkUserGuide" href="" target="_blank">User Guide</a> / <a id="lnkSupport" href="">Customer Support</a> /
+                    @*@Html.ActionLink("Sign Out", "LogOff", "Account", new { Area = "" }, new { @id = "lnkLogOff", onclick = "saveTransactionGridStateOnlogOff();" })*@
+                </p>
+                @*<span id="infoUserEnvironment">    @Html.Raw(string.Format("{0} <b>({1})</b>", ""))</span>*@
+            </div>
+            <div class="header-bg" style="padding-left:20px;">
+                <img class="img-responsive" src="~/Content/images/wk_sto_logo3.png" style="height:54px;" />
+
+
+                <nav>
+                    <ul id="nav" class="nav nav-tabs nav-tabs-text" style="padding-left:3px;">
+                        @*<li id="home" title="Home">@Html.ActionLink("Home", "Index", "Home", new { Area = "" }, new { })</li>
+
+                        <li id="company" title="Company Configuration">@Html.ActionLink("Company Configuration", "CompanyConfig", "Home", new { Area = "" }, new { }) </li>
+                        <li id="admin" title="Administration">@Html.ActionLink("Administration", "Administration", "Home", new { Area = "" }, new { })</li>*@
+                        @*<li id="custExemp">@Html.ActionLink("Customer Exemptions", "CustomerExemption", "Home")</li>*@
+                        @*@if (attribute.IsAuthorized(STOConstant.TransactionManagement, STOConstant.FULLAccess + "," + STOConstant.ROAccess))
+                        {*@
+                        <li id="transmgmt" title="Formalized Transactions">@Html.ActionLink("Formalized Transactions", "MaintainTransactions", "Transactions", new { Area = "" }, new { })</li>
+                        @*}
+                        else
+                        {
+                            <li id="transmgmt" title="Transaction Management"> <a href="#" class="button-disable">Transaction Management</a></li>
+                        }*@
+                        @*<li id="research">@Html.ActionLink("Research", "Research", "Home")</li>*@
+                        @*<li id="reporting" title="Reporting">@Html.ActionLink("Research", "Reporting", "Home", new { Area = "" }, new { })</li>*@
+                    </ul>
+
+                </nav>
+            </div>
+            <div id="divToaster" class="alert alert-success toaster-top displayNone">
+                <p></p>
+                <a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            </div>
+            <div id="divToasterDanger" class="alert alert-danger toaster-top displayNone">
+                <p></p>
+                <a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            </div>
+            <!--Navigation Section-->
+
+
+        </header>
+
+        <!-- Full Width Content-->
+        <div class="modal displayNone" draggable="true" id="customModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #0B4D83">
+                        <button type="button" id="btnModalClose" style="color: white" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" style="color: white"><b></b></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+
+                        <input id="btnNo" type="button" class="btn pull-right displayNone" value="No" style="color: white" />
+                        <input id="btnYes" type="button" class="btn pull-right displayNone" value="Yes" style="color: white" />
+                        <input id="btnOk" type="button" class="btn pull-right displayNone" value="Ok" style="color: white" />
+                        <br /><br />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divOverlay1" class="k-overlay1" style="display: none; z-index: 99999; opacity: 0.5;"> </div>
+
+        <section class="col-lg-12" style="margin-top:25px;padding-left:0!important;margin-bottom:50px;">@RenderBody() </section>
+
+        <!-- Footer Section -->
+        <footer class="row">
+            <div class="navbar navbar-fixed-bottom footer-bg">
+                <div class="navbar-inner navbar-content-center">
+                    <div class="col-xs-4 footer-text" id="infoCopyright">
+                        &copy; @DateTime.Now.Date.Year Tax Formalizer INCORPORATED. All Rights Reserved.
+                    </div>
+                    <!--  <div class="col-xs-4 pull-right footer-text-customer"><a href="javascript:OpenInNewWindow('http://support.cch.com/ticket/contactus.aspx?pid=1308')">Customer Support</a></div> -->
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+</body>
+</html>
+<script src=@signalRJsUrl></script>
+<script src=@stoHubUrl></script>
+<script type="text/javascript">
+    $(function () {
+
+        
+        //detect chrome
+        var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+
+        //Define url for cross domain hub connection
+        $.connection.hub.url = '@serviceUrl'+"signalr/hubs";
+        // Declare a proxy to reference the stonotification hub.
+        var notificationHubProxy = $.connection.notificationHub;
+
+
+
+            console.log('Connecting to the STO Notification Hub');
+
+            $.connection.hub.start({
+                jsonp: isChrome
+            }).done(function () {
+                console.log('Subscribing to STO Notification Hub #' + userId);
+                notificationHubProxy.server.subscribe(userId);
+            });
+
+            notificationHubProxy.client.notify = function (response, status) {
+                //if (userId == userid) {
+                //    var finalRes = response;
+                //    if (status == 1) {
+                //        var tag = "<a href='#' onclick=downloadReport(" + reportId + ")> Click here</a> to download.";
+                //        finalRes = response + tag;
+                //    }
+                showToasterMessage("divToaster", response, 30000);
+                if (status == 2) {
+                    $('#transactionGrid').data('kendoGrid').dataSource.read();
+                }
+                //}
+            };
+        });
+</script>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54F1F522-47CF-4B87-9004-99983CF6B1CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WK.TaxFormalizer.Core</RootNamespace>
+    <AssemblyName>WK.TaxFormalizer.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.MODI">
+      <HintPath>..\..\Shared Assemblies\Interop.MODI.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="Hubs\NotificationHub.cs" />
+    <Compile Include="Implementation\ImageDigitizer.cs" />
+    <Compile Include="Implementation\Transaction.cs" />
+    <Compile Include="Interfaces\IImageDigitizer.cs" />
+    <Compile Include="Interfaces\ITransaction.cs" />
+    <Compile Include="Models\AddressDetails.cs" />
+    <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\MaintainTransactionModel.cs" />
+    <Compile Include="Models\TransactionAddressModel.cs" />
+    <Compile Include="Models\TransactionInformationModel.cs" />
+    <Compile Include="Models\TransactionLineItemAddressModel.cs" />
+    <Compile Include="Models\TransactionLineItemModel.cs" />
+    <Compile Include="Models\TransactionLineItemProductInformationModel.cs" />
+    <Compile Include="Models\TransactionLineItemTaxDetailsModel.cs" />
+    <Compile Include="Models\TransactionModel.cs" />
+    <Compile Include="Models\TransactionProcessLogModel.cs" />
+    <Compile Include="Models\TransactionSitusInformationModel.cs" />
+    <Compile Include="Models\TransactionTaxabilityModel.cs" />
+    <Compile Include="Models\TransactionTaxDetailsModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CalculationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WK.TaxFormalizer.Data\WK.TaxFormalizer.Data.csproj">
+      <Project>{da7e4868-c1f3-49b7-b4bb-fff2aead0b14}</Project>
+      <Name>WK.TaxFormalizer.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\CalculationService\Service4.wsdl" />
+    <None Include="Service References\CalculationService\Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service412.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service413.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service414.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service415.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service416.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service417.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service418.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service419.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service420.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service421.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service422.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service423.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service424.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service425.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service426.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service427.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service428.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service429.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service430.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service431.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service432.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service433.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service434.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service435.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service436.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service48.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\Service49.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalculationService\STOService.wsdl" />
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.CustomerCertificatesExport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.DataValues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.GeoblockInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.GeographyLookupResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.TaxLiabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.TaxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CalculationService\WK.TaxFormalizer.Core.CalculationService.TransactionDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CalculationService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalculationService\Service4.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalculationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalculationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalculationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

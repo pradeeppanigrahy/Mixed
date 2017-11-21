@@ -1,0 +1,41 @@
+﻿/*Created on 09-05-2014. Author: Kunal Deshmukh*/
+
+body {
+}
+/*Custom CSS*/
+.sidebar-default {
+    background-color: AppWorkspace;
+}
+
+.nav-tabs-text {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+span.collapsed {
+    height: 14px;
+    width: 16px;
+    margin-right: 10px;
+    background: url("../Default/sprite.png") no-repeat;
+    display: inline-block;
+    cursor:pointer;
+           text-align: center;
+   
+        background-position: -32px -64px;
+}
+
+span.expanded {
+    height: 16px;
+    cursor:pointer;
+    width: 16px;
+    margin-right: 10px;
+    background: url("../Default/sprite.png") no-repeat;
+    display: inline-block;
+    text-align: center;
+   
+        background-position: -64px -287px;
+}
+
+
+
+

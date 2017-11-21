@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32cfe1875d454b54864e4cf6c6ef790e" Name="Diagram1">
+        <EntityTypeShape EntityType="STO4DBModel.DIVISIONT" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.ENTITYT" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.TransErrorLogT" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.TransItemAT" Width="1.5" PointX="9.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.TransItemT" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.TransItemTaxT" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.TransLogT" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.TransTaxOnTaxT" Width="1.5" PointX="12" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STO4DBModel.USERPROFILET" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="STO4DBModel.DIVISIONT_2_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="STO4DBModel.TransLogT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="STO4DBModel.TransItemAT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="STO4DBModel.TransItemT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="STO4DBModel.TransItemTaxT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="STO4DBModel.TransTaxOnTaxT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="STO4DBModel.TransLogT_2_FK" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxonTaxT" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TransactionTypeT" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TransTaxT" Width="1.5" PointX="7.5" PointY="13.5" />
+        <EntityTypeShape EntityType="STO4DBModel.TransactionStatusT" Width="1.5" PointX="9.375" PointY="0.75" />
+        <AssociationConnector Association="STO4DBModel.TransTaxT_FK" />
+        <EntityTypeShape EntityType="STO4DBModel.CustomerT" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="STO4DBModel.ExemptionClassT" Width="1.5" PointX="8.25" PointY="23.375" />
+        <EntityTypeShape EntityType="STO4DBModel.Geocode1T" Width="1.5" PointX="8.25" PointY="19" />
+        <EntityTypeShape EntityType="STO4DBModel.Geocode2T" Width="1.5" PointX="3" PointY="19" />
+        <EntityTypeShape EntityType="STO4DBModel.ProductGroupT" Width="1.5" PointX="2.25" PointY="4.125" />
+        <EntityTypeShape EntityType="STO4DBModel.ProductItemT" Width="1.5" PointX="1.5" PointY="8" />
+        <EntityTypeShape EntityType="STO4DBModel.ProviderT" Width="1.5" PointX="3" PointY="24.5" />
+        <EntityTypeShape EntityType="STO4DBModel.ReleaseT" Width="1.5" PointX="0.75" PointY="12.375" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxabilityStateT" Width="1.5" PointX="15.625" PointY="14.375" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxabilityT" Width="1.5" PointX="17.625" PointY="8.375" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxAuthorityT" Width="1.5" PointX="6" PointY="20.25" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxAuthorityTaxT" Width="1.5" PointX="8.25" PointY="14.125" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxCatT" Width="1.5" PointX="3" PointY="22" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxJurisdictionT" Width="1.5" PointX="18.75" PointY="15.625" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxOverrideReasonT" Width="1.5" PointX="13.5" PointY="19.875" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxRateT" Width="1.5" PointX="10.5" PointY="18.875" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxTypeT" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="STO4DBModel.ExemptionClassesT" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STO4DBModel.FOBTypeT" Width="1.5" PointX="15.375" PointY="3.75" />
+        <EntityTypeShape EntityType="STO4DBModel.LiabilityTypeT" Width="1.5" PointX="16.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STO4DBModel.MailOrderTypeT" Width="1.5" PointX="17.375" PointY="3.75" />
+        <EntityTypeShape EntityType="STO4DBModel.NonTaxReasonT" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TransLog1" Width="1.5" PointX="20.375" PointY="0.75" />
+        <AssociationConnector Association="STO4DBModel.CustomerT_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityStateT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.DIVISIONT_FK" />
+        <AssociationConnector Association="STO4DBModel.ExemptionClassT_FK" />
+        <AssociationConnector Association="STO4DBModel.ENTITYT_FK" />
+        <AssociationConnector Association="STO4DBModel.ProductGroupT_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxAuthorityTaxT_FK" />
+        <AssociationConnector Association="STO4DBModel.Geocode1T_2_FK" />
+        <AssociationConnector Association="STO4DBModel.Geocode1T_3_FK" />
+        <AssociationConnector Association="STO4DBModel.Geocode2T_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxJurisdictionT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.ProductItemT_FK" />
+        <AssociationConnector Association="STO4DBModel.ProviderT_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityStateT_3_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityT_3_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityStateT_5_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityT_5_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxAuthorityT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxAuthorityTaxT_3_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxCatT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxJurisdictionT_3_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxonTaxT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxOverrideReasonT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxRateT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxTypeT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TransactionTypeT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityStateT_4_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityT_4_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityT_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxAuthorityTaxT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxJurisdictionT_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxOverrideReasonT_FK" />
+        <AssociationConnector Association="STO4DBModel.TransItemTaxT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TransTaxT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxJurisdictionT_4_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxJurisdictionT_5_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxJurisdictionT_6_FK" />
+        <AssociationConnector Association="STO4DBModel.TransItemTaxT_3_FK" />
+        <EntityTypeShape EntityType="STO4DBModel.LOCATIONT" Width="1.5" PointX="12.375" PointY="3.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TaxabilityOverrideT" Width="1.5" PointX="5.25" PointY="14.375" />
+        <EntityTypeShape EntityType="STO4DBModel.CanRejectDeliveryTypeT" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STO4DBModel.DeliveryByTypeT" Width="1.5" PointX="12.375" PointY="7.75" />
+        <EntityTypeShape EntityType="STO4DBModel.ShipFromPOBTypeT" Width="1.5" PointX="14.375" PointY="6.75" />
+        <EntityTypeShape EntityType="STO4DBModel.SolicitedOutsideTypeT" Width="1.5" PointX="14.375" PointY="9.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TransItem5" Width="1.5" PointX="16.375" PointY="20.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TransItemTax2" Width="1.5" PointX="18.375" PointY="20.75" />
+        <EntityTypeShape EntityType="STO4DBModel.TransTax2" Width="1.5" PointX="20.375" PointY="20.75" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityOverrideT_FK" />
+        <EntityTypeShape EntityType="STO4DBModel.AddressT" Width="1.5" PointX="21.375" PointY="15.75" />
+        <EntityTypeShape EntityType="STO4DBModel.CountryT" Width="1.5" PointX="12.25" PointY="14.75" />
+        <EntityTypeShape EntityType="STO4DBModel.StateT" Width="1.5" PointX="20.5" PointY="11.5" />
+        <AssociationConnector Association="STO4DBModel.CountryT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.CountryT_FK" />
+        <AssociationConnector Association="STO4DBModel.StateT_FK" />
+        <AssociationConnector Association="STO4DBModel.Geocode1T_FK" />
+        <AssociationConnector Association="STO4DBModel.StateT_2_FK" />
+        <AssociationConnector Association="STO4DBModel.StateT_3_FK" />
+        <AssociationConnector Association="STO4DBModel.TaxabilityStateT_FK" />
+        <EntityTypeShape EntityType="STO4DBModel.TransactionInvoiceMappingT" Width="1.5" PointX="22.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

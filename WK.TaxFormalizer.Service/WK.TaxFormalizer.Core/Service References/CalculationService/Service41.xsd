@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/LineItemTax/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/LineItemTax/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd6" namespace="http://schemas.cch.com/TaxDetail/4.0" />
+  <xs:complexType name="ArrayOfLineItemTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineItemTax" nillable="true" type="tns:LineItemTax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineItemTax" nillable="true" type="tns:ArrayOfLineItemTax" />
+  <xs:complexType name="LineItemTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrProvince" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.cch.com/TaxDetail/4.0" minOccurs="0" name="TaxDetails" nillable="true" type="q1:ArrayOfTaxDetail" />
+      <xs:element minOccurs="0" name="TotalTaxApplied" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LineItemTax" nillable="true" type="tns:LineItemTax" />
+</xs:schema>

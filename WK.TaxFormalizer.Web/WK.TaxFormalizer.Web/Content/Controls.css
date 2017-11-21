@@ -1,0 +1,558 @@
+﻿.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+.form-horizontal .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-horizontal .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.pager:before,
+.pager:after,
+.panel-body:before,
+.panel-body:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table;
+}
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-footer:after {
+  clear: both;
+}
+a.k-grid-edit {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-edit:hover,
+a.k-grid-edit:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-edit:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\270f';
+  padding: 5px !important;
+}
+a.k-grid-edit:after:hover,
+a.k-grid-edit:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-edit:after:active,
+a.k-grid-edit:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-edit:after.disabled,
+a.k-grid-edit:after[disabled],
+fieldset[disabled] a.k-grid-edit:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-edit span.k-edit {
+  display: none;
+}
+
+/*button start for edit icon on add transaction line item info grid*/
+a.k-grid-edit1 {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-edit1:hover,
+a.k-grid-edit1:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-edit1:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\270f';
+  padding: 5px !important;
+}
+a.k-grid-edit1:after:hover,
+a.k-grid-edit1:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-edit1:after:active,
+a.k-grid-edit1:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-edit1:after.disabled,
+a.k-grid-edit1:after[disabled],
+fieldset[disabled] a.k-grid-edit:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-edit1 span.k-edit1 {
+  display: none;
+}
+
+/*button end for edit icon on add transaction line item info grid*/
+
+a.k-grid-delete {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-delete:hover,
+a.k-grid-delete:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-delete:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\e020';
+  padding: 5px !important;
+}
+a.k-grid-delete:after:hover,
+a.k-grid-delete:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-delete:after:active,
+a.k-grid-delete:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-delete:after.disabled,
+a.k-grid-delete:after[disabled],
+fieldset[disabled] a.k-grid-delete:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-delete span.k-delete {
+  display: none;
+}
+a.k-grid-update {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-update:hover,
+a.k-grid-update:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-update:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\e013';
+  padding: 5px !important;
+}
+a.k-grid-update:after:hover,
+a.k-grid-update:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-update:after:active,
+a.k-grid-update:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-update:after.disabled,
+a.k-grid-update:after[disabled],
+fieldset[disabled] a.k-grid-update:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-update span.k-update {
+  display: none;
+}
+a.k-grid-cancel {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-cancel:hover,
+a.k-grid-cancel:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-cancel:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\e014';
+  padding: 5px !important;
+}
+a.k-grid-cancel:after:hover,
+a.k-grid-cancel:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-cancel:after:active,
+a.k-grid-cancel:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-cancel:after.disabled,
+a.k-grid-cancel:after[disabled],
+fieldset[disabled] a.k-grid-cancel:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-cancel span.k-cancel {
+  display: none;
+}
+a.k-grid-Select {
+  font-size: 0;
+  border-style: none;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  color: #428bca;
+  min-width: 15px !important;
+  padding: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+a.k-grid-Select:hover,
+a.k-grid-Select:focus {
+  color: #2a6496;
+  background-image: none;
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+a.k-grid-Select:after {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  position: relative !important;
+  top: 1px !important;
+  display: inline-block !important;
+  font-family: 'Glyphicons Halflings' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  content: '\e084';
+  padding: 5px !important;
+}
+a.k-grid-Select:after:hover,
+a.k-grid-Select:after:focus {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+a.k-grid-Select:after:active,
+a.k-grid-Select:after.active {
+  outline: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+}
+a.k-grid-Select:after.disabled,
+a.k-grid-Select:after[disabled],
+fieldset[disabled] a.k-grid-Select:after {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+a.k-grid-Select span.k-cancel {
+  display: none;
+}
+
+td.editGridCompany {
+    padding: 0px;
+}
+
+td.commandGridCell {
+    padding: 0px;
+}
+/*# sourceMappingURL=Controls.css.map */

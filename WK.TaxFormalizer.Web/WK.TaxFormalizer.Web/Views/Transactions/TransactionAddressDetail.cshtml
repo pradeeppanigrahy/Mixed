@@ -1,0 +1,621 @@
+﻿@model WK.TaxFormalizer.Core.Models.AddressDetails
+@{
+    Layout = null;
+}
+
+<style>
+    .container {
+        margin-left: -10px !important;
+    }
+
+    .trans_top {
+        margin-top: 30px;
+    }
+
+   
+
+    .column_left {
+    
+    
+    margin-left:-60px;}
+
+    .hrform {
+  margin-left: -3px !important;
+  width:88% !important;
+  float: left;
+  margin-top: 0px;
+}
+
+
+    
+   
+</style>
+
+<fieldset class="fieldset">
+    <div class="col-md-6">
+        <div class="row">
+            <div style="font-weight:bold;">
+                <p>Ship To:</p>
+                <hr class="hrform">
+            </div>
+            @if (Model.ShipToAddress != null)
+            {
+               
+                    
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipToStreetAddress">Street address: </label>
+                                @Html.Label("lblShipToStreetAddressVal", Model.ShipToAddress.StreetAddress ?? string.Empty, new { @class = "col-xs-7 label_left", @id = "lblShipToStreetAddressVal" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipToAddress2">Address 2: </label>
+                                @Html.Label("lblShipToAddress2Val", Model.ShipToAddress.Address2 ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+
+                   
+              
+
+
+
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToCity">City: </label>
+                                @Html.Label("lblShipToCityVal", Model.ShipToAddress.City ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToCounty">County: </label>
+                                @Html.Label("lblShipToCountyVal", Model.ShipToAddress.County ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToState">State: </label>
+                                @Html.Label("lblShipToStateVal", Model.ShipToAddress.State ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 example">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToCountry">Country: </label>
+                                @Html.Label("lblShipToCountryVal", Model.ShipToAddress.Country ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToZip">Zip code: </label>
+                                @Html.Label("lblShipToZip", (Model.ShipToAddress.Zip ?? string.Empty) + (string.IsNullOrEmpty(Model.ShipToAddress.Plus4) ? string.Empty : "-" + Model.ShipToAddress.Plus4), new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToGeocode">Geocode:</label>
+                                @Html.Label("lblShipToGeocodeVal", Model.ShipToAddress.Geocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                
+                   
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipToStreetAddress">Street address: </label>
+                                @Html.Label("lblShipToStreetAddressVal", string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipToAddress2">Address 2: </label>
+                                @Html.Label("lblShipToAddress2Val", string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+                   
+              
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToCity">City: </label>
+                                @Html.Label("lblShipToCityVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToCounty">County: </label>
+                                @Html.Label("lblShipToCountyVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToState">State:</label>
+                                @Html.Label("lblShipToStateVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="col-md-6 example">
+        <div class="row">
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToCountry">Country: </label>
+                    @Html.Label("lblShipToCountryVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToZip">Zip code: </label>
+                    @Html.Label("lblShipToZip", string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToGeocode">Geocode:</label>
+                    @Html.Label("lblShipToGeocodeVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                </div>
+            </div>
+        </div>
+    </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-6 column_left ">
+
+
+
+        <div style="font-weight:bold;">
+            <p>Ship From:</p>
+            <hr class="hrform">
+        </div>
+        @if (Model.ShipFromAddress != null)
+        {
+           
+                
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipFromStreetAddress">Street address: </label>
+                            @Html.Label("lblShipFromStreetAddressVal", Model.ShipFromAddress.StreetAddress ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipFromAddress2">Address 2: </label>
+                            @Html.Label("lblShipFromAddress2Val", Model.ShipFromAddress.Address2 ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+               
+            
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromCity">City: </label>
+                            @Html.Label("lblShipFromCityVal", Model.ShipFromAddress.City ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromCounty">County: </label>
+                            @Html.Label("lblShipFromCountyVal", Model.ShipFromAddress.County ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromState">State: </label>
+                            @Html.Label("lblShipFromStateVal", Model.ShipFromAddress.State ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 example">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromCountry">Country: </label>
+                            @Html.Label("lblShipFromCountryVal", Model.ShipFromAddress.Country ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromZip">Zip code: </label>
+                            @Html.Label("lblShipFromZip", (Model.ShipFromAddress.Zip ?? string.Empty) + (string.IsNullOrEmpty(Model.ShipFromAddress.Plus4) ? string.Empty : "-" + Model.ShipFromAddress.Plus4), new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromGeocode">Geocode:</label>
+                            @Html.Label("lblShipFromGeocodeVal", Model.ShipFromAddress.Geocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+
+           
+               
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipFromStreetAddress">Street address: </label>
+                            @Html.Label("lblShipFromStreetAddressVal", string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblShipFromAddress2">Address 2: </label>
+                            @Html.Label("lblShipFromAddress2Val", string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+              
+           
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromCity">City: </label>
+                            @Html.Label("lblShipFromCityVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromCounty">County: </label>
+                            @Html.Label("lblShipFromCountyVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromState">State: </label>
+                            @Html.Label("lblShipFromStateVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 example">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromCountry">Country: </label>
+                            @Html.Label("lblShipFromCountryVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromZip">Zip code: </label>
+                            @Html.Label("lblShipFromZip", string.Empty, new { @class = "col-xs-5 trans_details" })
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipFromGeocode">Geocode:</label>
+                            @Html.Label("lblShipFromGeocodeVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+
+
+
+
+    <div class="col-md-6 trans_top">
+        <div class="row">
+            <div style="font-weight:bold;">
+                <p>Order Approval:</p>
+                <hr class="hrform">
+            </div>
+            @if (Model.OrderApprovalAddress != null)
+            {
+                
+                   
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderApprovalStreetAddress">Street address: </label>
+                                @Html.Label("lblOrderApprovalStreetAddressVal", Model.OrderApprovalAddress.StreetAddress ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderApprovalAddress2">Address 2: </label>
+                                @Html.Label("lblOrderApprovalAddress2Val", Model.OrderApprovalAddress.Address2 ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+                    
+               
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalCity">City: </label>
+                                @Html.Label("lblOrderApprovalCityVal", Model.OrderApprovalAddress.City ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalCounty">County:</label>
+                                @Html.Label("lblOrderApprovalCountyVal", Model.OrderApprovalAddress.County ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToState">State: </label>
+                                @Html.Label("lblOrderApprovalStateVal", Model.OrderApprovalAddress.State ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 example">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalCountry">Country:</label>
+                                @Html.Label("lblOrderApprovalCountryVal", Model.OrderApprovalAddress.Country ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalZip">Zip code:</label>
+                                @Html.Label("lblOrderApprovalZip", (Model.OrderApprovalAddress.Zip ?? string.Empty) + (string.IsNullOrEmpty(Model.OrderApprovalAddress.Plus4) ? string.Empty : "-" + Model.OrderApprovalAddress.Plus4), new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalGeocode">Geocode:</label>
+                                @Html.Label("lblOrderApprovalGeocodeVal", Model.OrderApprovalAddress.Geocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderApprovalStreetAddress">Street address:</label>
+                                @Html.Label("lblOrderApprovalStreetAddressVal", string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderApprovalAddress2">Address 2: </label>
+                                @Html.Label("lblOrderApprovalAddress2Val", string.Empty, new { @class = "col-xs-7 label_left" })
+                            </div>
+                        </div>
+                 
+
+
+
+
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalCity">City:</label>
+                                @Html.Label("lblOrderApprovalCityVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalCounty">County:</label>
+                                @Html.Label("lblOrderApprovalCountyVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblShipToState">State:</label>
+                                @Html.Label("lblOrderApprovalStateVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 example">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalCountry">Country:</label>
+                                @Html.Label("lblOrderApprovalCountryVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalZip">Zip code:</label>
+                                @Html.Label("lblOrderApprovalZip", string.Empty, new { @class = "trans_details" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderApprovalGeocode">Geocode:</label>
+                                @Html.Label("lblOrderApprovalGeocodeVal", string.Empty, new { @class = "trans_details" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+
+    <div class="col-md-6 trans_top column_left ">
+
+
+        <div style="font-weight:bold;">
+            <p>Order Placement:</p>
+            <hr class="hrform">
+        </div>
+
+        @if (Model.OrderPlacementAddress != null)
+        {
+            
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderPlacementStreetAddress">Street address:</label>
+                            @Html.Label("lblOrderPlacementStreetAddressVal", Model.OrderPlacementAddress.StreetAddress ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderPlacementAddress2">Address 2:</label>
+                            @Html.Label("lblOrderPlacementAddress2Val", Model.OrderPlacementAddress.Address2 ?? string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+              
+
+
+
+
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementCity">City:</label>
+                            @Html.Label("lblOrderPlacementCityVal", Model.OrderPlacementAddress.City ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementCounty">County:</label>
+                            @Html.Label("lblOrderPlacementCountyVal", Model.OrderPlacementAddress.County ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementState">State:</label>
+                            @Html.Label("lblOrderPlacementStateVal", Model.OrderPlacementAddress.State ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 example">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementCountry">Country:</label>
+                            @Html.Label("lblOrderPlacementCountryVal", Model.OrderPlacementAddress.Country ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementZip">Zip code:</label>
+                            @Html.Label("lblOrderPlacementZip", (Model.OrderPlacementAddress.Zip ?? string.Empty) + (string.IsNullOrEmpty(Model.OrderPlacementAddress.Plus4) ? string.Empty : "-" + Model.OrderPlacementAddress.Plus4), new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementGeocode">Geocode:</label>
+                            @Html.Label("lblOrderPlacementGeocodeVal", Model.OrderPlacementAddress.Geocode ?? string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            
+
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderPlacementStreetAddress">Street address:</label>
+                            @Html.Label("lblOrderPlacementStreetAddressVal", string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+
+                            <label for="user_title" class="control-label col-xs-2 primary_adr" name="lblOrderPlacementAddress2">Address 2:</label>
+                            @Html.Label("lblOrderPlacementAddress2Val", string.Empty, new { @class = "col-xs-7 label_left" })
+                        </div>
+                    </div>
+            
+
+
+
+
+
+
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementCity">City:</label>
+                            @Html.Label("lblOrderPlacementCityVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementCounty">County:</label>
+                            @Html.Label("lblOrderPlacementCountyVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementState">State:</label>
+                            @Html.Label("lblOrderPlacementStateVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 example">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementCountry">Country:</label>
+                            @Html.Label("lblOrderPlacementCountryVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementZip">Zip code:</label>
+                            @Html.Label("lblOrderPlacementZip", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="user_title" class="control-label col-xs-3 secondary_adr" name="lblOrderPlacementGeocode">Geocode:</label>
+                            @Html.Label("lblOrderPlacementGeocodeVal", string.Empty, new { @class = "col-xs-5 trans_details" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+    </fieldset>
+
+
+

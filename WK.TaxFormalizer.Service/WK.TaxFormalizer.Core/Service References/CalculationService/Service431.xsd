@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/Certificate/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/Certificate/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/Service4.0.svc?xsd=xsd14" namespace="http://schemas.cch.com/ProductInfo/4.0" />
+  <xs:complexType name="ArrayOfCertificate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Certificate" nillable="true" type="tns:Certificate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCertificate" nillable="true" type="tns:ArrayOfCertificate" />
+  <xs:complexType name="Certificate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrProvince" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificateNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificateDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBlanketCertificate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InvoiceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsStateCertificate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LocalUsesStateCertificate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CertificateStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCertificateOnFile" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SSTID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SSTTypeOfBusiness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SSTTypeOfBusinessDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExemptReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExemptReasonDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificateType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriversLicenceState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IgnoreExpirationDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CustomerEffectiveDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerExpirationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CertExemptions" nillable="true" type="tns:ArrayOfCEMExemption" />
+      <xs:element minOccurs="0" name="TaxAuthorityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplyStateToAllLocal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Certificate" nillable="true" type="tns:Certificate" />
+  <xs:complexType name="ArrayOfCEMExemption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CEMExemption" nillable="true" type="tns:CEMExemption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCEMExemption" nillable="true" type="tns:ArrayOfCEMExemption" />
+  <xs:complexType name="CEMExemption">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.cch.com/ProductInfo/4.0" minOccurs="0" name="Productinfo" nillable="true" type="q1:ProductInfo" />
+      <xs:element minOccurs="0" name="Percent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExempDesc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CEMExemption" nillable="true" type="tns:CEMExemption" />
+  <xs:complexType name="CertificateFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrProvince" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificateNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificateDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CertificateFilter" nillable="true" type="tns:CertificateFilter" />
+</xs:schema>

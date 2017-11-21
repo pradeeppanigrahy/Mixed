@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.cch.com/TaxItem/4.0" elementFormDefault="qualified" targetNamespace="http://schemas.cch.com/TaxItem/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTaxItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxItem" nillable="true" type="tns:TaxItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaxItem" nillable="true" type="tns:ArrayOfTaxItem" />
+  <xs:complexType name="TaxItem">
+    <xs:sequence>
+      <xs:element name="AuthorityName" nillable="true" type="xs:string" />
+      <xs:element name="AuthorityType" nillable="true" type="xs:string" />
+      <xs:element name="Fee" type="xs:decimal" />
+      <xs:element name="ImposedFee" type="xs:decimal" />
+      <xs:element name="ImposedRate" type="xs:decimal" />
+      <xs:element name="IsTieredTax" type="xs:boolean" />
+      <xs:element name="PercentTaxable" type="xs:decimal" />
+      <xs:element name="Rate" type="xs:decimal" />
+      <xs:element name="TaxName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxItem" nillable="true" type="tns:TaxItem" />
+</xs:schema>
